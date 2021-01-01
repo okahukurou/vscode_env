@@ -1,0 +1,36 @@
+# extensions
+
+- Better Jinja
+- Bracket Pair Colorizer
+- Code Spell Checker
+- Docker
+- Draw.io integration
+- empty-indent
+- Git Graph
+- GitLens
+- Go
+- indent-rainbow
+- json2yaml
+- Jupyter
+- Log File Highlighter
+- Markdown All in One
+- Markdown Preview Mermaid Support
+- markdownlint
+- Nasc VSCode Touchbar
+- OpenAPI (Swagger) Editor
+- OpenAPI Preview
+- openapi-designer
+- Partial Diff
+- Pylance
+- Python
+- Python Docstring Generator
+- Python indent
+- Rainbow CSV
+- Remote SSH
+- Remote SSH Editing Configuration Files
+- REST Client
+- SQLite
+- Visual Studio Keymap
+- vscode-icons
+- XML
+- YAML

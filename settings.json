@@ -1,0 +1,71 @@
+{
+  // basic settings
+  "editor.fontSize": 16,
+  "terminal.integrated.fontSize": 16,
+  "editor.insertSpaces": true,
+  "editor.tabSize": 2,
+  "files.trimTrailingWhitespace": true,
+  "diffEditor.ignoreTrimWhitespace": true,
+  "editor.renderWhitespace": "all",
+  "files.insertFinalNewline": true,
+  "editor.minimap.enabled": false,
+  "editor.lineNumbers": "relative",
+  // vim settings
+  "vim.useSystemClipboard": true,
+  "vim.hlsearch": true,
+  "vim.visualstar": true,
+  "vim.useCtrlKeys": true,
+  "vim.ignorecase": true,
+  "vim.incsearch": true,
+  "vim.leader": "<space>",
+  "vim.easymotion": true,
+  "vim.replaceWithRegister": true,
+  "vim.easymotionKeys": "sdfghjklqwertyuiopzxcvbnm",
+  "vim.cursorStylePerMode.replace": "underline",
+  "vim.insertModeKeyBindings": [
+    {
+      "before": [
+        "j",
+        "j"
+      ],
+      "after": [
+        "<Esc>"
+      ]
+    }
+  ],
+  // settings for vim
+  "workbench.editor.labelFormat": "short",
+  "workbench.editor.revealIfOpen": true,
+  "workbench.editor.showIcons": false,
+  "workbench.editor.highlightModifiedTabs": true,
+  "workbench.editor.tabSizing": "shrink",
+  "workbench.editor.pinnedTabSizing": "shrink",
+  "workbench.editor.tabCloseButton": "off",
+  "workbench.startupEditor": "none",
+  "workbench.editor.openPositioning": "first",
+  "workbench.list.automaticKeyboardNavigation": false,
+  "explorer.openEditors.visible": 0,
+  "workbench.editor.showTabs": true,
+  "workbench.editor.enablePreview": true,
+  "workbench.editor.enablePreviewFromQuickOpen": true,
+  "workbench.editor.closeEmptyGroups": false,
+  "workbench.editor.limit.enabled": true,
+  "workbench.editor.limit.perEditorGroup": true,
+  "workbench.editor.limit.value": 5,
+  // other my settings
+  "editor.wordWrap": "on",
+  "editorFormatOnSave": true,
+  "editor.glyphMargin": false,
+  "editor.cursorSurroundingLines": 5,
+  "git.pruneOnFetch": true,
+  "terminal.integrated.confirmOnExit": true,
+  "breadcrumbs.enabled": true,
+  "debug.inlineValues": true,
+  "explorer.confirmDragAndDrop": false,
+  "editor.rulers": [
+    {
+      "column": 80,
+      "color": "#552355"
+    }
+  ],
+}
