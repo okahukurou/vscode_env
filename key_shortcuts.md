@@ -18,21 +18,20 @@
 
 ## Tab Control
 
-|                            |                                          |     |
-| -------------------------- | ---------------------------------------- | --- |
-| `^<Tab>` / `gt`            | Next Tab                                 |     |
-| `^⇧<Tab>` / `gT`           | Previous Tab                             |     |
-| `^w` `c` / `^W` `^c`/ `⌘w` | Close Tab                                | *   |
-| `^w` `o` / `^W` `^o`       | Close Other Tabs                         | *   |
-| `^w` `L` (`H`)             | Move Tab to Next (Previous) Editor Group | *   |
-| `⌘1` (`⌘2`, `⌘3`)          | Focus First (Second, Third) Tab          |     |
+|                                    |                                          |     |
+| ---------------------------------- | ---------------------------------------- | --- |
+| `^<Tab>` (`^⇧<Tab>`) / `gt` (`gT`) | Next (Previous) Tab                      |     |
+| `^w` `c` / `^W` `^c`/ `⌘w`         | Close Tab                                | *   |
+| `^w` `o` / `^W` `^o`               | Close Other Tabs                         | *   |
+| `^w` `L` (`H`)                     | Move Tab to Next (Previous) Editor Group | *   |
+| `⌘1` (`⌘2`, `⌘3`)                  | Focus First (Second, Third) Tab          |     |
 
 ## Terminal
 
 |               |                               |     |
 | ------------- | ----------------------------- | --- |
 | `^<Enter>`    | Run Selected Text in Terminal | *   |
-| `^⇧@`         | Focus Terminal                | *   |
+| `⌘⇧@` / `^⇧@` | Focus Terminal                | *   |
 | `⌘n`          | New Terminal                  | *   |
 | `⌘w`          | Kill Terminal                 | *   |
 | `⌘⇧d`         | Split Terminal                | *   |
@@ -54,26 +53,33 @@
 | ----------------------- | ---------------------------------- | --- |
 | `jj`                    | Return to Normal Mode              | *   |
 | `^j` (`^k`, `^l`, `^h`) | Move Cursor Down (Up, Right, Left) | *   |
+| `^<BS>`                 | Delete Next Character              | *   |
 
 ## F12
 
-|            |                             |     |
-| ---------- | --------------------------- | --- |
-| `F12`      | Go To Definition            |     |
-| `⌥F12`     | Peek Definition             |     |
-| `^w` `F12` | Open Definition to the Side | *   |
-| `⇧F12`     | Go To References            |     |
-| `⇧⌥F12`    | Find All References         |     |
+|              |                             |     |
+| ------------ | --------------------------- | --- |
+| `F12` (`gd`) | Go To Definition            |     |
+| `⌥F12`       | Peek Definition             |     |
+| `^w` `F12`   | Open Definition to the Side | *   |
+| `⇧F12`       | Go To References            |     |
+| `⇧⌥F12`      | Find All References         |     |
 
 ## Other Useful Vim Mapping
 
-|                  |                                      |     |
-| ---------------- | ------------------------------------ | --- |
-| `>>` (`<<`)      | indent (unindent)                    |     |
-| `^`              | jump to start of line                |     |
-| `gu` (`gU`)      | Change to lowercase (uppercase)      |     |
-| `gr`             | Replace With Register                |     |
-| `:%s/abd/def/gc` | Replace With Confirm (y: yes, n: no) |     |
+|                               |                                              |     |
+| ----------------------------- | -------------------------------------------- | --- |
+| `>>` (`<<`)                   | Indent (Unindent)                            |     |
+| `^`                           | Jump to start of line                        |     |
+| `%`                           | Jump to Matching Braces                      |     |
+| `gu` (`gU`)                   | Change to Lowercase (Uppercase)              |     |
+| `gr`                          | Replace With Register                        |     |
+| `gh`                          | Instead of Hovering Mouse                    |     |
+| `gc`                          | Toggle Line Comment                          |     |
+| `gC`                          | Toggle Block Comment                         |     |
+| `<op>ii` (`<op>ai`, `<op>aI`) | Target indent block (for python, for C++/go) |     |
+| `^t`                          | Jump to Older Position                       |     |
+| `:%s/abd/def/gc`              | Replace With Confirm (y: yes, n: no)         |     |
 
 ## Other Useful Vscode Mapping
 
@@ -86,3 +92,6 @@
 | `^-` (`^⇧-`)             | Navigate Back (Forward)                         |     |
 | `⌘<Enter>` (`⌘⇧<Enter>`) | Insert Line After (Before)                      |     |
 | `⌘+` (`⌘-`)              | Zoom In (Out)                                   |     |
+| `^⇧[` (`^⇧]`)            | Fold (Unfold)                                   |     |
+| `^j` (`^k`)              | Select Next (Previous) Item                     | *   |
+| `^y` (`^e`)              | Scroll Up (Down)                                | *   |

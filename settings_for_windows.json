@@ -1,0 +1,30 @@
+{
+  // extensions
+  "workbench.iconTheme": "vscode-icons",
+  "vsicons.dontShowNewVersionMessage": true,
+  "terminal.integrated.shell.windows": "C:\\WINDOWS\\system32\\cmd.exe",
+  "extensions.ignoreRecommendations": false,
+  // for each language
+  "python.jediEnabled": false,
+  "python.languageServer": "Microsoft",
+  "go.gopath": "C:\\Users\\Makoto Okada\\go",
+  "go.autocompleteUnimportedPackages": true,
+  "go.goroot": "C:\\Users\\Makoto Okada\\.gvm\\versions\\go1.14.2.windows.amd64",
+  "[go]": {
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true,
+    },
+    // Optional: Disable snippets, as they conflict with completion ranking.
+    "editor.snippetSuggestions": "none"
+  },
+  "go.lintFlags": [
+    "--exclude=\"\bexported \\w+ (\\S*['.]*)([a-zA-Z'.*]*) should have comment or be unexported\b\""
+  ],
+  "go.formatTool": "goimports",
+  "go.toolsEnvVars": {
+    "GO111MODULE": "auto"
+  },
+  "gvm.pathToDefaultTerminal": "C:\\WINDOWS\\System32\\cmd.exe",
+  "gvm.setVersionWithDefault": false,
+}
