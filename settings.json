@@ -20,10 +20,14 @@
   "vim.incsearch": true,
   "vim.leader": "<space>",
   "vim.easymotion": true,
+  "vim.sneak": true,
+  "vim.sneakReplacesF": true,
   "vim.replaceWithRegister": true,
   "vim.foldfix": true,
   "vim.easymotionKeys": "sdfghjklqwertyuiopzxcvbnm",
   "vim.cursorStylePerMode.replace": "underline",
+  "vim.highlightedyank.enable": true,
+  "vim.highlightedyank.duration": 500,
   "vim.insertModeKeyBindings": [
     {
       "before": [
