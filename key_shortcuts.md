@@ -26,6 +26,14 @@
 | `^w` `L` (`H`)                     | Move Tab to Next (Previous) Editor Group | *   |
 | `⌘1` (`⌘2`, `⌘3`)                  | Focus First (Second, Third) Tab          |     |
 
+## Git
+
+|                                          |                         |     |
+| ---------------------------------------- | ----------------------- | --- |
+| `<leader>gc`                             | Open Changes            | *   |
+| `<leader>go`                             | Open File               | *   |
+| `<leader>n` (`<leader>p`) / `F7` (`⇧F7`) | Next (Previous) Changes | *   |
+
 ## Terminal
 
 |               |                               |     |
@@ -52,8 +60,8 @@
 |                         |                                    |     |
 | ----------------------- | ---------------------------------- | --- |
 | `jj`                    | Return to Normal Mode              | *   |
-| `^j` (`^k`, `^l`, `^h`) | Move Cursor Down (Up, Right, Left) | *   |
 | `^<BS>`                 | Delete Next Character              | *   |
+| `^j` (`^k`, `^l`, `^h`) | Move Cursor Down (Up, Right, Left) | *   |
 
 ## F12
 
@@ -80,6 +88,7 @@
 | `<op>ii` (`<op>ai`, `<op>aI`) | Target indent block (for python, for C++/go) |     |
 | `^t`                          | Jump to Older Position                       |     |
 | `:%s/abd/def/gc`              | Replace With Confirm (y: yes, n: no)         |     |
+| `^j` (`^k`, `^l`, `^h`)       | Move Cursor Down (Up, Right, Left)           | *   |
 
 ## Other Useful Vscode Mapping
 

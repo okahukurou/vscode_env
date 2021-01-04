@@ -35,6 +35,76 @@
       ]
     }
   ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "<leader>",
+        "n"
+      ],
+      "commands": [
+        "workbench.action.compareEditor.nextChange",
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "p"
+      ],
+      "commands": [
+        "workbench.action.compareEditor.previousChange",
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "g",
+        "c"
+      ],
+      "commands": [
+        "git.openChange",
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "g",
+        "o"
+      ],
+      "commands": [
+        "git.openFile",
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "g",
+        "n"
+      ],
+      "commands": [
+        "workbench.action.compareEditor.nextChange",
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "g",
+        "p"
+      ],
+      "commands": [
+        "workbench.action.compareEditor.previousChange",
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "g",
+        "r"
+      ],
+      "commands": [
+        "git.revertSelectedRanges",
+      ]
+    },
+  ],
   // settings for vim
   "workbench.editor.labelFormat": "short",
   "workbench.editor.revealIfOpen": true,
@@ -53,6 +123,7 @@
   "workbench.editor.limit.perEditorGroup": true,
   "workbench.editor.limit.value": 5,
   // other my settings
+  "workbench.colorTheme": "Default Dark+",
   "editor.wordWrap": "off",
   "diffEditor.wordWrap": "off",
   "editor.accessibilitySupport": "on",
@@ -60,7 +131,7 @@
   "editor.glyphMargin": false,
   "editor.cursorSurroundingLines": 5,
   "git.pruneOnFetch": true,
-  "terminal.integrated.confirmOnExit": true,
+  "git-graph.referenceLabels.combineLocalAndRemoteBranchLabels": false,
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "breadcrumbs.enabled": true,
   "debug.inlineValues": true,
@@ -71,4 +142,58 @@
       "color": "#552355"
     }
   ],
+  "indentRainbow.colors": [
+    "rgba(255,0,0,0.2)",
+    "rgba(255,165,0,0.2)",
+    "rgba(255,255,0,0.2)",
+    "rgba(0,128,0,0.2)",
+    "rgba(0,255,255,0.2)",
+    "rgba(0,0,255,0.4)",
+    "rgba(128,0,128,0.4)",
+  ],
+  "indentRainbow.errorColor": "rgba(255,255,255,0.5)",
+  // gitlens
+  "gitlens.menus": {
+    "editor": {
+      "blame": false,
+      "clipboard": true,
+      "compare": true,
+      "history": false,
+      "remote": false
+    },
+    "editorGroup": {
+      "blame": false,
+      "compare": false
+    },
+    "editorTab": {
+      "clipboard": true,
+      "compare": true,
+      "history": true,
+      "remote": true
+    },
+    "explorer": {
+      "clipboard": true,
+      "compare": true,
+      "history": true,
+      "remote": true
+    },
+    "scm": {
+      "authors": true
+    },
+    "scmGroupInline": {
+      "stash": false
+    },
+    "scmGroup": {
+      "compare": true,
+      "openClose": true,
+      "stash": true
+    },
+    "scmItem": {
+      "clipboard": true,
+      "compare": true,
+      "history": true,
+      "remote": false,
+      "stash": true
+    }
+  },
 }
