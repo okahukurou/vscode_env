@@ -36,17 +36,19 @@
 
 ## Terminal
 
-|               |                               |     |
-| ------------- | ----------------------------- | --- |
-| `^<Enter>`    | Run Selected Text in Terminal | *   |
-| `⌘⇧@` / `^⇧@` | Focus Terminal                | *   |
-| `⌘n`          | New Terminal                  | *   |
-| `⌘w`          | Kill Terminal                 | *   |
-| `⌘⇧d`         | Split Terminal                | *   |
-| `⌘⇧j` (`⌘⇧k`) | Next (Previous) Terminal      | *   |
-| `⌘⇧l` (`⌘⇧h`) | Next (Previous) Terminal Pane | *   |
-| `⌘j`          | Toggle Panel                  |     |
-
+|                     |                               |     |
+| ------------------- | ----------------------------- | --- |
+| `^<Enter>`          | Run Selected Text in Terminal | *   |
+| `⌘i` `@`            | Focus Terminal                | *   |
+| `⌘i` `c`            | New Terminal                  |     |
+| `⌘i` `d`            | Kill Terminal                 |     |
+| `⌘i` `.` (`^i` `,`) | Next (Previous) Terminal      |     |
+| `⌘i` `m`            | Toggle Maximize Terminal      |     |
+| `⌘i` `s`            | Split Terminal                | *   |
+| `⌘i` `l` (`⌘i` `h`) | Next (Previous) Terminal Pane | *   |
+| `⌘j`                | Toggle Panel                  |     |
+| `^y` (`^e`)         | Scroll Up (Down)              | *   |
+| `^.`                | Scroll to Bottom              | *   |
 ## Sidebar (General)
 
 |             |                              |     |
@@ -86,7 +88,7 @@
 | `gc`                          | Toggle Line Comment                          |     |
 | `gC`                          | Toggle Block Comment                         |     |
 | `<op>ii` (`<op>ai`, `<op>aI`) | Target indent block (for python, for C++/go) |     |
-| `^t`                          | Jump to Older Position                       |     |
+| `^o`                          | Jump to Older Position                       |     |
 | `:%s/abd/def/gc`              | Replace With Confirm (y: yes, n: no)         |     |
 | `^j` (`^k`, `^l`, `^h`)       | Move Cursor Down (Up, Right, Left)           | *   |
 
@@ -96,7 +98,7 @@
 | ------------------------ | ----------------------------------------------- | --- |
 | `F8` (`⇧F8`, `⌥F8`)      | Next Problem (Previous Problem, Global Problem) |     |
 | `⌘⇧m`                    | Open Problem Panel                              |     |
-| `⌘⌥r`                    | Send Request (Rest Client)                      |     |
+| `⌘⌥r` / `^<Enter>`       | Send Request (Rest Client)                      |     |
 | `⌘⌥k`                    | Cancel Request (Rest Client)                    |     |
 | `^-` (`^⇧-`)             | Navigate Back (Forward)                         |     |
 | `⌘<Enter>` (`⌘⇧<Enter>`) | Insert Line After (Before)                      |     |
