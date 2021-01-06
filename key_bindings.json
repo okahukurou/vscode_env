@@ -63,6 +63,38 @@
     "command": "workbench.action.focusPreviousGroup"
   },
   {
+    "key": "ctrl+w s",
+    "command": "workbench.action.splitEditorDown"
+  },
+  {
+    "key": "ctrl+w v",
+    "command": "workbench.action.splitEditorRight"
+  },
+  {
+    "key": "ctrl+w ctrl+s",
+    "command": "workbench.action.splitEditorDown"
+  },
+  {
+    "key": "ctrl+w ctrl+v",
+    "command": "workbench.action.splitEditorRight"
+  },
+  {
+    "key": "ctrl+w shift+v",
+    "command": "workbench.action.splitEditorLeft"
+  },
+  {
+    "key": "ctrl+w shift+s",
+    "command": "workbench.action.splitEditorUp"
+  }
+  {
+    "key": "ctrl+w m",
+    "command": "workbench.action.toggleEditorWidths"
+  },
+  {
+    "key": "ctrl+w ctrl+m",
+    "command": "workbench.action.toggleEditorWidths"
+  },
+  {
     "key": "ctrl+w oem_minus",
     "command": "workbench.action.decreaseViewSize"
   },
@@ -78,6 +110,10 @@
     "key": "ctrl+w shift+p",
     "command": "markdown.showPreviewToSide",
     "when": "!notebookEditorFocused && editorLangId == 'markdown'"
+  },
+  {
+    "key": "ctrl+shift+w",
+    "command": "workbench.action.switchWindow"
   },
   // vim control
   {
@@ -162,16 +198,6 @@
   },
   // terminal control
   {
-    "key": "shift+cmd+j",
-    "command": "workbench.action.terminal.focusNext",
-    "when": "terminalFocus"
-  },
-  {
-    "key": "shift+cmd+k",
-    "command": "workbench.action.terminal.focusPrevious",
-    "when": "terminalFocus"
-  },
-  {
     "key": "cmd+i l",
     "command": "workbench.action.terminal.focusNextPane",
     "when": "terminalFocus && terminalProcessSupported"
@@ -180,6 +206,14 @@
     "key": "cmd+i h",
     "command": "workbench.action.terminal.focusPreviousPane",
     "when": "terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "cmd+i j",
+    "command": "workbench.action.terminal.focusNext"
+  },
+  {
+    "key": "cmd+i k",
+    "command": "workbench.action.terminal.focusPrevious"
   },
   {
     "key": "cmd+i s",
@@ -192,7 +226,11 @@
     "when": "!config.terminalAllInOne.disableAllKeybindings"
   },
   {
-    "key": "cmd+i oem_3",
+    "key": "ctrl+w [BracketLeft]",
+    "command": "terminal.focus"
+  },
+  {
+    "key": "cmd+i [BracketLeft]",
     "command": "workbench.action.terminal.toggleTerminal"
   },
   // ctrl+jk
@@ -335,24 +373,24 @@
   {
     "key": "ctrl+2",
     "command": "-workbench.action.openEditorAtIndex2"
-  }
-    {
+  },
+  {
     "key": "cmd+3",
     "command": "workbench.action.openEditorAtIndex3"
   },
   {
     "key": "ctrl+3",
     "command": "-workbench.action.openEditorAtIndex3"
-  }
-    {
+  },
+  {
     "key": "cmd+4",
     "command": "workbench.action.openEditorAtIndex4"
   },
   {
     "key": "ctrl+4",
     "command": "-workbench.action.openEditorAtIndex4"
-  }
-    {
+  },
+  {
     "key": "cmd+5",
     "command": "workbench.action.openEditorAtIndex5"
   },

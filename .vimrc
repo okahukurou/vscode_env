@@ -47,7 +47,7 @@ set hidden
 inoremap <silent> jj <ESC>
 
 " yank to system clipboard by default (without using "*)
-set clipboard=unnamed
+set clipboard+=unnamed
 
 " map space as a leader
 let mapleader = "\<Space>"

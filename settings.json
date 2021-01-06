@@ -28,6 +28,7 @@
   "vim.cursorStylePerMode.replace": "underline",
   "vim.highlightedyank.enable": true,
   "vim.highlightedyank.duration": 500,
+  "vim.searchHighlightColor": "#553311",
   "vim.insertModeKeyBindings": [
     {
       "before": [
