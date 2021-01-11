@@ -129,8 +129,7 @@
   "workbench.editor.limit.value": 5,
   // other my settings
   "workbench.colorTheme": "Default High Contrast",
-  "editor.wordWrap": "off",
-  "diffEditor.wordWrap": "off",
+  "editor.wordWrap": "on",
   "editor.accessibilitySupport": "on",
   "search.useIgnoreFiles": false,
   "editor.formatOnSave": true,

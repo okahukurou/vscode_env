@@ -17,6 +17,8 @@
 | `^w` `+`                          | Increase Editor Group Size                   | *   |
 | `^w` `=`                          | Even Editor Group Size                       | *   |
 | `^w` `P`                          | Show Preview to Side                         | *   |
+| `^w` `n`                          | Focus Notification                           | *   |
+| `^w` `@` / `^w` `^@`              | Focus Terminal                               | *   |
 | `^1` (`^2`, `^3`)                 | Focus First (Second, Third) Editor Group     | *   |
 
 ## Tab Control
@@ -39,20 +41,26 @@
 
 ## Terminal
 
-|                                            |                               |     |
-| ------------------------------------------ | ----------------------------- | --- |
-| `^<Enter>`                                 | Run Selected Text in Terminal | *   |
-| `^w` `@` / `^w` `^@`                       | Focus Terminal                | *   |
-| `⌘i` `@`                                   | Toggle Terminal               | *   |
-| `⌘i` `c`                                   | New Terminal                  |     |
-| `⌘i` `d`                                   | Kill Terminal                 |     |
-| `⌘i` `.` (`⌘i` `,`) /  `⌘i` `j` (`⌘i` `k`) | Next (Previous) Terminal      | *   |
-| `⌘i` `m`                                   | Toggle Maximize Terminal      |     |
-| `⌘i` `s`                                   | Split Terminal                | *   |
-| `⌘i` `l` (`⌘i` `h`)                        | Next (Previous) Terminal Pane | *   |
-| `⌘j`                                       | Toggle Panel                  |     |
-| `^y` (`^e`)                                | Scroll Up (Down)              | *   |
-| `^.`                                       | Scroll to Bottom              | *   |
+|                                            |                                      |     |
+| ------------------------------------------ | ------------------------------------ | --- |
+| `^<Enter>`                                 | Run Selected Text in Terminal        | *   |
+| `⌘i` `@`                                   | Toggle Terminal                      | *   |
+| `⌘i` `c`                                   | New Terminal                         |     |
+| `⌘i` `d`                                   | Kill Terminal                        |     |
+| `⌘i` `.` (`⌘i` `,`) /  `⌘i` `j` (`⌘i` `k`) | Next (Previous) Terminal             | *   |
+| `⌘i` `m`                                   | Toggle Maximize Terminal             |     |
+| `⌘i` `s`                                   | Split Terminal                       | *   |
+| `⌘i` `l` (`⌘i` `h`)                        | Next (Previous) Terminal Pane        | *   |
+| `⌘j`                                       | Toggle Panel                         |     |
+| `⌘i` `1` (`2`, `3`)                        | Focus First (Second, Third) Terminal | *   |
+| `^.`                                       | Scroll to Bottom                     | *   |
+| `⌥y` (`⌥e`)                                | Scroll Up (Down) Line                | *   |
+| `⌥⇧y` (`⌥⇧e`)                              | Scroll Up (Down) Page                | *   |
+| `⌥k` (`⌥j`)                                | Select To Previous (Next) Line       | *   |
+| `⌥⇧k` (`⌥⇧j`)                              | Select To Previous (Next) Command    | *   |
+| `^a` (`^e`)                                | Move Cursor to Head (End)            |     |
+| `^p` (`^n`)                                | Previous (Next) Command in History   |     |
+| `^u` (`^k`)                                | Cut Text From Cursor To Head (End)   |     |
 ## Sidebar (General)
 
 |             |                              |     |
@@ -77,7 +85,7 @@
 | `⌥F12`       | Peek Definition             |     |
 | `^w` `F12`   | Open Definition to the Side | *   |
 | `⇧F12`       | Go To References            |     |
-| `⇧⌥F12`      | Find All References         |     |
+| `⌥⇧F12`      | Find All References         |     |
 
 ## Other Useful Vim Mapping
 
@@ -108,6 +116,7 @@
 | `⌘⌥k`                    | Cancel Request (Rest Client)                    |     |
 | `⌘<Enter>` (`⌘⇧<Enter>`) | Insert Line After (Before)                      |     |
 | `⌘+` (`⌘-`)              | Zoom In (Out)                                   |     |
+| `⌥z`                     | Toggle Word Wrap                                |     |
 | `^⇧w`                    | Switch Workspace                                | *   |
 | `^j` (`^k`)              | Select Next (Previous) Item                     | *   |
 | `^y` (`^e`)              | Scroll Up (Down)                                | *   |

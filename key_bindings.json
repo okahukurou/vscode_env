@@ -200,20 +200,22 @@
   {
     "key": "cmd+i l",
     "command": "workbench.action.terminal.focusNextPane",
-    "when": "terminalFocus && terminalProcessSupported"
+    "when": "terminalProcessSupported"
   },
   {
     "key": "cmd+i h",
     "command": "workbench.action.terminal.focusPreviousPane",
-    "when": "terminalFocus && terminalProcessSupported"
+    "when": "terminalProcessSupported"
   },
   {
     "key": "cmd+i j",
-    "command": "workbench.action.terminal.focusNext"
+    "command": "workbench.action.terminal.focusNext",
+    "when": "terminalProcessSupported"
   },
   {
     "key": "cmd+i k",
-    "command": "workbench.action.terminal.focusPrevious"
+    "command": "workbench.action.terminal.focusPrevious",
+    "when": "terminalProcessSupported"
   },
   {
     "key": "cmd+i s",
@@ -226,12 +228,162 @@
     "when": "!config.terminalAllInOne.disableAllKeybindings"
   },
   {
+    "key": "alt+y",
+    "command": "workbench.action.terminal.scrollUp",
+    "when": "terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "alt+e",
+    "command": "workbench.action.terminal.scrollDown",
+    "when": "terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "shift+alt+y",
+    "command": "workbench.action.terminal.scrollUpPage",
+    "when": "terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "shift+alt+e",
+    "command": "workbench.action.terminal.scrollDown",
+    "when": "terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "alt+k",
+    "command": "workbench.action.terminal.selectToPreviousLine",
+    "when": "terminalFocus && terminalProcessSupported && terminalTextSelected"
+  },
+  {
+    "key": "alt+j",
+    "command": "workbench.action.terminal.selectToNextLine",
+    "when": "terminalFocus && terminalProcessSupported && terminalTextSelected"
+  },
+  {
+    "key": "shift+alt+k",
+    "command": "workbench.action.terminal.selectToPreviousCommand",
+    "when": "terminalFocus && terminalProcessSupported && terminalTextSelected"
+  },
+  {
+    "key": "shift+alt+j",
+    "command": "workbench.action.terminal.selectToNextCommand",
+    "when": "terminalFocus && terminalProcessSupported && terminalTextSelected"
+  }
+  {
     "key": "ctrl+w [BracketLeft]",
+    "command": "terminal.focus"
+  },
+  {
+    "key": "ctrl+w ctrl+[BracketLeft]",
     "command": "terminal.focus"
   },
   {
     "key": "cmd+i [BracketLeft]",
     "command": "workbench.action.terminal.toggleTerminal"
+  },
+  {
+    "key": "cmd+i 0",
+    "command": "-terminalAllInOne.runScript",
+    "when": "!config.terminalAllInOne.disableAllKeybindings"
+  },
+  {
+    "key": "cmd+i 1",
+    "command": "-terminalAllInOne.runScript",
+    "when": "!config.terminalAllInOne.disableAllKeybindings"
+  },
+  {
+    "key": "cmd+i 2",
+    "command": "-terminalAllInOne.runScript",
+    "when": "!config.terminalAllInOne.disableAllKeybindings"
+  },
+  {
+    "key": "cmd+i 3",
+    "command": "-terminalAllInOne.runScript",
+    "when": "!config.terminalAllInOne.disableAllKeybindings"
+  },
+  {
+    "key": "cmd+i 4",
+    "command": "-terminalAllInOne.runScript",
+    "when": "!config.terminalAllInOne.disableAllKeybindings"
+  },
+  {
+    "key": "cmd+i 5",
+    "command": "-terminalAllInOne.runScript",
+    "when": "!config.terminalAllInOne.disableAllKeybindings"
+  },
+  {
+    "key": "cmd+i 6",
+    "command": "-terminalAllInOne.runScript",
+    "when": "!config.terminalAllInOne.disableAllKeybindings"
+  },
+  {
+    "key": "cmd+i 7",
+    "command": "-terminalAllInOne.runScript",
+    "when": "!config.terminalAllInOne.disableAllKeybindings"
+  },
+  {
+    "key": "cmd+i 8",
+    "command": "-terminalAllInOne.runScript",
+    "when": "!config.terminalAllInOne.disableAllKeybindings"
+  },
+  {
+    "key": "cmd+i 9",
+    "command": "-terminalAllInOne.runScript",
+    "when": "!config.terminalAllInOne.disableAllKeybindings"
+  },
+  {
+    "key": "cmd+i 1",
+    "command": "workbench.action.terminal.focusAtIndex1"
+  },
+  {
+    "key": "cmd+i 2",
+    "command": "workbench.action.terminal.focusAtIndex2"
+  },
+  {
+    "key": "cmd+i 3",
+    "command": "workbench.action.terminal.focusAtIndex3"
+  },
+  {
+    "key": "cmd+i 4",
+    "command": "workbench.action.terminal.focusAtIndex4"
+  },
+  {
+    "key": "cmd+i 5",
+    "command": "workbench.action.terminal.focusAtIndex5"
+  },
+  {
+    "key": "cmd+i 6",
+    "command": "workbench.action.terminal.focusAtIndex6"
+  },
+  {
+    "key": "cmd+i 7",
+    "command": "workbench.action.terminal.focusAtIndex7"
+  },
+  {
+    "key": "cmd+i 8",
+    "command": "workbench.action.terminal.focusAtIndex8"
+  },
+  {
+    "key": "cmd+i 9",
+    "command": "workbench.action.terminal.focusAtIndex9"
+  },
+  {
+    "key": "alt+k",
+    "command": "workbench.action.terminal.scrollUp",
+    "when": "terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "alt+j",
+    "command": "workbench.action.terminal.scrollDown",
+    "when": "terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "shift+alt+k",
+    "command": "workbench.action.terminal.scrollUpPage",
+    "when": "terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "shift+alt+j",
+    "command": "workbench.action.terminal.scrollDownPage",
+    "when": "terminalFocus && terminalProcessSupported"
   },
   // ctrl+jk
   {
@@ -320,16 +472,6 @@
     "when": "problemsFilterFocus"
   },
   // ctrl+ey
-  {
-    "key": "ctrl+e",
-    "command": "workbench.action.terminal.scrollDown",
-    "when": "terminalFocus && terminalProcessSupported"
-  },
-  {
-    "key": "ctrl+y",
-    "command": "workbench.action.terminal.scrollUp",
-    "when": "terminalFocus && terminalProcessSupported"
-  },
   {
     "key": "ctrl+e",
     "command": "list.scrollDown",
@@ -467,5 +609,13 @@
     "key": "cmd+b",
     "command": "-markdown.extension.editing.toggleBold",
     "when": "editorTextFocus && !editorReadonly && editorLangId == 'markdown'"
+  },
+  {
+    "key": "ctrl+k ctrl+d",
+    "command": "-editor.action.formatDocument"
+  },
+  {
+    "key": "ctrl+k ctrl+x",
+    "command": "-insertSnippet"
   },
 ]

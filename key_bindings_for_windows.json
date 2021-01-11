@@ -102,5 +102,85 @@
   {
     "key": "ctrl+shift+p",
     "command": "-workbench.action.showCommands"
+  },
+  {
+    "key": "alt+i m",
+    "command": "terminalAllInOne.toggleMaxTerm",
+    "when": "!config.terminalAllInOne.disableAllKeybindings"
+  },
+  {
+    "key": "ctrl+i m",
+    "command": "-terminalAllInOne.toggleMaxTerm",
+    "when": "!config.terminalAllInOne.disableAllKeybindings"
+  },
+  {
+    "key": "alt+i b",
+    "command": "terminalAllInOne.toggleBlinkingCursor",
+    "when": "!config.terminalAllInOne.disableAllKeybindings"
+  },
+  {
+    "key": "ctrl+i b",
+    "command": "-terminalAllInOne.toggleBlinkingCursor",
+    "when": "!config.terminalAllInOne.disableAllKeybindings"
+  },
+  {
+    "key": "alt+i oem_period",
+    "command": "terminalAllInOne.focusNextTerminal",
+    "when": "!config.terminalAllInOne.disableAllKeybindings"
+  },
+  {
+    "key": "ctrl+i oem_period",
+    "command": "-terminalAllInOne.focusNextTerminal",
+    "when": "!config.terminalAllInOne.disableAllKeybindings"
+  },
+  {
+    "key": "alt+i oem_comma",
+    "command": "terminalAllInOne.focusPreviousTerminal",
+    "when": "!config.terminalAllInOne.disableAllKeybindings"
+  },
+  {
+    "key": "ctrl+i oem_comma",
+    "command": "-terminalAllInOne.focusPreviousTerminal",
+    "when": "!config.terminalAllInOne.disableAllKeybindings"
+  },
+  {
+    "key": "alt+i c",
+    "command": "terminalAllInOne.createNewTerminal",
+    "when": "!config.terminalAllInOne.disableAllKeybindings"
+  },
+  {
+    "key": "ctrl+i c",
+    "command": "-terminalAllInOne.createNewTerminal",
+    "when": "!config.terminalAllInOne.disableAllKeybindings"
+  },
+  {
+    "key": "alt+i d",
+    "command": "terminalAllInOne.deleteCurrentTerminal",
+    "when": "!config.terminalAllInOne.disableAllKeybindings"
+  },
+  {
+    "key": "ctrl+i d",
+    "command": "-terminalAllInOne.deleteCurrentTerminal",
+    "when": "!config.terminalAllInOne.disableAllKeybindings"
+  },
+  {
+    "key": "alt+i backspace",
+    "command": "terminalAllInOne.clearTerminal",
+    "when": "!config.terminalAllInOne.disableAllKeybindings"
+  },
+  {
+    "key": "ctrl+i backspace",
+    "command": "-terminalAllInOne.clearTerminal",
+    "when": "!config.terminalAllInOne.disableAllKeybindings"
+  },
+  {
+    "key": "alt+i r",
+    "command": "terminalAllInOne.renameCurrentTerminal",
+    "when": "!config.terminalAllInOne.disableAllKeybindings"
+  },
+  {
+    "key": "ctrl+i r",
+    "command": "-terminalAllInOne.renameCurrentTerminal",
+    "when": "!config.terminalAllInOne.disableAllKeybindings"
   }
 ]
