@@ -250,23 +250,43 @@
   {
     "key": "alt+k",
     "command": "workbench.action.terminal.selectToPreviousLine",
-    "when": "terminalFocus && terminalProcessSupported && terminalTextSelected"
+    "when": "terminalFocus && terminalProcessSupported"
   },
   {
     "key": "alt+j",
     "command": "workbench.action.terminal.selectToNextLine",
-    "when": "terminalFocus && terminalProcessSupported && terminalTextSelected"
+    "when": "terminalFocus && terminalProcessSupported"
   },
   {
     "key": "shift+alt+k",
     "command": "workbench.action.terminal.selectToPreviousCommand",
-    "when": "terminalFocus && terminalProcessSupported && terminalTextSelected"
+    "when": "terminalFocus && terminalProcessSupported"
   },
   {
     "key": "shift+alt+j",
     "command": "workbench.action.terminal.selectToNextCommand",
-    "when": "terminalFocus && terminalProcessSupported && terminalTextSelected"
-  }
+    "when": "terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "alt+y",
+    "command": "workbench.action.terminal.scrollUp",
+    "when": "terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "alt+e",
+    "command": "workbench.action.terminal.scrollDown",
+    "when": "terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "shift+alt+y",
+    "command": "workbench.action.terminal.scrollUpPage",
+    "when": "terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "shift+alt+e",
+    "command": "workbench.action.terminal.scrollDownPage",
+    "when": "terminalFocus && terminalProcessSupported"
+  },
   {
     "key": "ctrl+w [BracketLeft]",
     "command": "terminal.focus"
@@ -364,26 +384,6 @@
   {
     "key": "cmd+i 9",
     "command": "workbench.action.terminal.focusAtIndex9"
-  },
-  {
-    "key": "alt+k",
-    "command": "workbench.action.terminal.scrollUp",
-    "when": "terminalFocus && terminalProcessSupported"
-  },
-  {
-    "key": "alt+j",
-    "command": "workbench.action.terminal.scrollDown",
-    "when": "terminalFocus && terminalProcessSupported"
-  },
-  {
-    "key": "shift+alt+k",
-    "command": "workbench.action.terminal.scrollUpPage",
-    "when": "terminalFocus && terminalProcessSupported"
-  },
-  {
-    "key": "shift+alt+j",
-    "command": "workbench.action.terminal.scrollDownPage",
-    "when": "terminalFocus && terminalProcessSupported"
   },
   // ctrl+jk
   {

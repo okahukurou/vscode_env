@@ -38,6 +38,24 @@
       "after": [
         "<Esc>"
       ]
+    },
+    {
+      "before": [
+        "<C-a>"
+      ],
+      "after": [
+        "<C-o>",
+        "^"
+      ]
+    },
+    {
+      "before": [
+        "<C-e>"
+      ],
+      "after": [
+        "<C-o>",
+        "$"
+      ]
     }
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
@@ -129,8 +147,7 @@
   "workbench.editor.limit.value": 5,
   // other my settings
   "workbench.colorTheme": "Default High Contrast",
-  "editor.wordWrap": "on",
-  "editor.accessibilitySupport": "on",
+  "editor.wordWrap": "off",
   "search.useIgnoreFiles": false,
   "editor.formatOnSave": true,
   "editor.glyphMargin": false,
@@ -158,6 +175,7 @@
   ],
   "indentRainbow.errorColor": "rgba(255,255,255,0.5)",
   // terminal all in one
+  "terminal.integrated.cursorStyle": "line",
   "terminalAllInOne.terminalTheme": "Greenscreen",
   "workbench.colorCustomizations": {
     "terminal.background": "#001100",

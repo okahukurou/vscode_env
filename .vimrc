@@ -52,8 +52,15 @@ set clipboard+=unnamed
 " map space as a leader
 let mapleader = "\<Space>"
 
-"So I can move around in insert
+"move around in insert
 inoremap <C-k> <C-o>gk
 inoremap <C-h> <Left>
 inoremap <C-l> <Right>
 inoremap <C-j> <C-o>gj
+
+"terminal like mapping in insert mode
+inoremap <C-a> <C-o>^
+inoremap <C-e> <C-o>$
+
+"syntax highlight
+syntax enable
