@@ -389,6 +389,14 @@
     "key": "cmd+i 9",
     "command": "workbench.action.terminal.focusAtIndex9"
   },
+  {
+    "key": "ctrl+r",
+    "command": "workbench.action.terminal.sendSequence",
+    "args": {
+      "text": "\u0012"
+    },
+    "when": "terminalFocus"
+  },
   // ctrl+jk
   {
     "key": "ctrl+j",
