@@ -80,6 +80,15 @@
     {
       "before": [
         "<leader>",
+        "s"
+      ],
+      "commands": [
+        "workbench.action.compareEditor.focusOtherSide",
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
         "g",
         "c"
       ],

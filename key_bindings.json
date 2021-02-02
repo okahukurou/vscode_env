@@ -115,6 +115,10 @@
     "key": "ctrl+shift+w",
     "command": "workbench.action.switchWindow"
   },
+  {
+    "key": "ctrl+w n",
+    "command": "notifications.focusToasts"
+  },
   // vim control
   {
     "key": "ctrl+h",
@@ -470,6 +474,11 @@
     "key": "ctrl+j",
     "command": "problems.action.focusProblemsFromFilter",
     "when": "problemsFilterFocus"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "search.action.focusSearchList",
+    "when": "inSearchEditor"
   },
   // ctrl+ey
   {

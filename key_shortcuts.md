@@ -38,6 +38,8 @@
 | `<leader>gc`                             | Open Changes            | *   |
 | `<leader>go`                             | Open File               | *   |
 | `<leader>n` (`<leader>p`) / `F7` (`⇧F7`) | Next (Previous) Changes | *   |
+| `<leader>s`                              | Focus Other Side        | *   |
+| `<leader>gr`                             | Revert Selected Range   | *   |
 
 ## Terminal
 
