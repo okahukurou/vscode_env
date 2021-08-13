@@ -4,14 +4,15 @@
 - Bracket Pair Colorizer
 - Code Spell Checker
 - Docker
+- DotENV
 - Draw.io integration
 - empty-indent
 - Git Graph
 - GitLens
 - Go
 - indent-rainbow
-- json2yaml
 - Jupyter
+- Kubernetes
 - Log File Highlighter
 - Markdown All in One
 - Markdown Preview Mermaid Support
@@ -21,13 +22,16 @@
 - OpenAPI Preview
 - openapi-designer
 - Partial Diff
+- Prettier - Code formatter
 - Pylance
 - Python
 - Python Docstring Generator
 - Python indent
 - Rainbow CSV
-- Remote SSH
-- Remote SSH Editing Configuration Files
+- Red Hat Commons
+- Remote - Containers
+- Remote - SSH
+- Remote - SSH Editing Configuration Files
 - REST Client
 - SQLite
 - Terminal All in One

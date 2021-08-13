@@ -1,16 +1,22 @@
 {
   // basic settings
   "editor.fontSize": 12,
-  "terminal.integrated.fontSize": 12,
   "window.zoomLevel": 0,
-  "editor.insertSpaces": true,
+  "editor.insertSpaces": false,
   "editor.tabSize": 2,
   "files.trimTrailingWhitespace": true,
-  "diffEditor.ignoreTrimWhitespace": true,
+  "diffEditor.ignoreTrimWhitespace": false,
   "editor.renderWhitespace": "all",
   "files.insertFinalNewline": true,
   "editor.minimap.enabled": false,
-  "editor.lineNumbers": "relative",
+  "editor.lineNumbers": "on",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // terminal
+  "terminal.integrated.fontSize": 12,
+  "terminal.integrated.cursorWidth": 1,
+  "terminal.integrated.tabs.hideCondition": "never",
+  "terminal.integrated.tabs.showActiveTerminal": "always",
+  "terminal.integrated.tabs.enabled": true,
   // vim settings
   "vim.useSystemClipboard": true,
   "vim.hlsearch": true,
@@ -23,7 +29,7 @@
   "vim.sneak": true,
   "vim.sneakReplacesF": true,
   "vim.replaceWithRegister": true,
-  "vim.foldfix": true,
+  "vim.foldfix": false,
   "vim.easymotionKeys": "sdfghjklqwertyuiopzxcvbnm",
   "vim.cursorStylePerMode.replace": "underline",
   "vim.highlightedyank.enable": true,
@@ -65,7 +71,7 @@
         "n"
       ],
       "commands": [
-        "workbench.action.compareEditor.nextChange",
+        "workbench.action.compareEditor.nextChange"
       ]
     },
     {
@@ -74,7 +80,7 @@
         "p"
       ],
       "commands": [
-        "workbench.action.compareEditor.previousChange",
+        "workbench.action.compareEditor.previousChange"
       ]
     },
     {
@@ -83,7 +89,7 @@
         "s"
       ],
       "commands": [
-        "workbench.action.compareEditor.focusOtherSide",
+        "workbench.action.compareEditor.focusOtherSide"
       ]
     },
     {
@@ -93,7 +99,7 @@
         "c"
       ],
       "commands": [
-        "git.openChange",
+        "git.openChange"
       ]
     },
     {
@@ -103,7 +109,7 @@
         "o"
       ],
       "commands": [
-        "git.openFile",
+        "git.openFile"
       ]
     },
     {
@@ -113,7 +119,7 @@
         "n"
       ],
       "commands": [
-        "workbench.action.compareEditor.nextChange",
+        "workbench.action.compareEditor.nextChange"
       ]
     },
     {
@@ -123,7 +129,7 @@
         "p"
       ],
       "commands": [
-        "workbench.action.compareEditor.previousChange",
+        "workbench.action.compareEditor.previousChange"
       ]
     },
     {
@@ -133,9 +139,39 @@
         "r"
       ],
       "commands": [
-        "git.revertSelectedRanges",
+        "git.revertSelectedRanges"
       ]
     },
+    {
+      "before": [
+        "<leader>",
+        "g",
+        "a"
+      ],
+      "commands": [
+        "git.stageSelectedRanges"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "g",
+        "u"
+      ],
+      "commands": [
+        "git.unstageSelectedRanges"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "g",
+        "v"
+      ],
+      "commands": [
+        "git-graph.view"
+      ]
+    }
   ],
   // settings for vim
   "workbench.editor.labelFormat": "short",
@@ -180,9 +216,13 @@
     "rgba(0,128,0,0.2)",
     "rgba(0,255,255,0.2)",
     "rgba(0,0,255,0.4)",
-    "rgba(128,0,128,0.4)",
+    "rgba(128,0,128,0.4)"
   ],
   "indentRainbow.errorColor": "rgba(255,255,255,0.5)",
+  "indentRainbow.ignoreErrorLanguages": [
+    "markdown",
+    "python"
+  ],
   // terminal all in one
   "terminal.integrated.cursorStyle": "line",
   "terminalAllInOne.terminalTheme": "Greenscreen",
@@ -209,6 +249,8 @@
     "terminal.ansiYellow": "#007700"
   },
   // gitlens
+  "gitlens.showWelcomeOnInstall": false,
+  "gitlens.views.searchAndCompare.pullRequests.showForCommits": false,
   "gitlens.menus": {
     "editor": {
       "blame": false,
@@ -252,4 +294,55 @@
       "stash": true
     }
   },
+  // rest-clinet
+  "rest-client.previousOption": "exchange",
+  "rest-client.logLevel": "warn",
+  "rest-client.previewResponsePanelTakeFocus": false,
+  "rest-client.previewResponseInUntitledDocument": true,
+  "rest-client.requestNameAsResponseTabTitle": true,
+  // yaml
+  "[yaml,yml]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.autoIndent": true,
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "yaml.completion": false,
+  "yaml.format.bracketSpacing": false,
+  // markdown
+  "markdownlint.config": {
+    "MD13": false
+  },
+  "markdown.extension.orderedList.marker": "one",
+  "markdown.extension.orderedList.autoRenumber": false,
+  "markdown.extension.syntax.decorations": false,
+  "markdown.extension.tableFormatter.enabled": false,
+  // python
+  "[python]": {
+    "editor.defaultFormatter": null,
+    "gitlens.codeLens.symbolScopes": [
+      "!Module"
+    ],
+    "editor.wordBasedSuggestions": false
+  },
+  "python.linting.pylintEnabled": false,
+  "python.linting.flake8Enabled": true,
+  "python.linting.flake8Args": [
+    "--ignore=W503"
+  ],
+  "python.formatting.provider": "autopep8",
+  "python.formatting.autopep8Args": [
+    "--aggressive",
+    "--aggressive",
+    "--ignore=E402"
+  ],
+  "python.languageServer": "Pylance",
+  "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.autoImportCompletions": false,
+  "autoDocstring.docstringFormat": "google",
+  // delays
+  "editor.quickSuggestionsDelay": 600,
+  "indentRainbow.updateDelay": 800,
+  "bracketPairColorizer.timeOut": 800,
+  "cSpell.spellCheckDelayMs": 200,
 }

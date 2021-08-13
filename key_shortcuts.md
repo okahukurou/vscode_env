@@ -4,22 +4,23 @@
 
 ## Editor Group Control
 
-|                                   |                                              |     |
-| --------------------------------- | -------------------------------------------- | --- |
-| `^w` `w` / `^w` `^w`              | Navigate Editor Group                        |     |
-| `^w` `w` / `^w` `^w`              | Focus Editor (when SideBar or Panel focused) | *   |
-| `^w` `l` (`h`) / `^w` `^l` (`^h`) | Next (Previous) Editor Group                 | *   |
-| `^w` `v` (`s`) / `^w` `^v` (`^s`) | Split Editor Right (Down)                    | *   |
-| `^w` `V` (`S`)                    | Split Editor Left (Up)                       | *   |
-| `^w` `C`                          | Close Editor Group                           | *   |
-| `^w` `m` / `^w` `^m`              | Toggle Maximize Editor Group                 | *   |
-| `^w` `-`                          | Decrease Editor Group Size                   | *   |
-| `^w` `+`                          | Increase Editor Group Size                   | *   |
-| `^w` `=`                          | Even Editor Group Size                       | *   |
-| `^w` `P`                          | Show Preview to Side                         | *   |
-| `^w` `n`                          | Focus Notification                           | *   |
-| `^w` `@` / `^w` `^@`              | Focus Terminal                               | *   |
-| `^1` (`^2`, `^3`)                 | Focus First (Second, Third) Editor Group     | *   |
+|                                   |                                          |     |
+| --------------------------------- | ---------------------------------------- | --- |
+| `^w` `w` / `^w` `^w`              | Navigate Editor Group                    |     |
+| `^w` `l` (`h`) / `^w` `^l` (`^h`) | Next (Previous) Editor Group             | *   |
+| `^w` `j` / `^w` `^j`              | Focus Terminal                           | *   |
+| `^w` `k` / `^w` `^k`              | Focus Editor                             | *   |
+| `^w` `v` (`s`) / `^w` `^v` (`^s`) | Split Editor Right (Down)                | *   |
+| `^w` `V` (`S`)                    | Split Editor Left (Up)                   | *   |
+| `^w` `C`                          | Close Editor Group                       | *   |
+| `^w` `m` / `^w` `^m`              | Toggle Maximize Editor Group             | *   |
+| `^w` `-`                          | Decrease Editor Group Size               | *   |
+| `^w` `+`                          | Increase Editor Group Size               | *   |
+| `^w` `=`                          | Even Editor Group Size                   | *   |
+| `^w` `P`                          | Show Preview to Side                     | *   |
+| `^w` `n`                          | Focus Notification                       | *   |
+| `^w` `@` / `^w` `^@`              | Focus Terminal                           | *   |
+| `^1` (`^2`, `^3`)                 | Focus First (Second, Third) Editor Group | *   |
 
 ## Tab Control
 
@@ -39,7 +40,10 @@
 | `<leader>go`                             | Open File               | *   |
 | `<leader>n` (`<leader>p`) / `F7` (`⇧F7`) | Next (Previous) Changes | *   |
 | `<leader>s`                              | Focus Other Side        | *   |
+| `<leader>ga`                             | Stage Selected Range    | *   |
+| `<leader>gu`                             | Unstage Selected Range  | *   |
 | `<leader>gr`                             | Revert Selected Range   | *   |
+| `<leader>gv`                             | View Git Graph          | *   |
 
 ## Terminal
 
@@ -52,6 +56,7 @@
 | `⌘i` `.` (`⌘i` `,`) /  `⌘i` `j` (`⌘i` `k`) | Next (Previous) Terminal             | *   |
 | `⌘i` `m`                                   | Toggle Maximize Terminal             |     |
 | `⌘i` `s`                                   | Split Terminal                       | *   |
+| `⌘i` `e` (`E`)                             | Move Terminal To Editor  (To Panel)  | *   |
 | `⌘i` `l` (`⌘i` `h`)                        | Next (Previous) Terminal Pane        | *   |
 | `⌘j`                                       | Toggle Panel                         |     |
 | `⌘i` `1` (`2`, `3`)                        | Focus First (Second, Third) Terminal | *   |

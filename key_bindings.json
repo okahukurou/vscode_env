@@ -9,16 +9,6 @@
     "command": "workbench.action.navigateEditorGroups"
   },
   {
-    "key": "ctrl+w w",
-    "command": "workbench.action.focusActiveEditorGroup",
-    "when": "sideBarFocus || panelFocus"
-  },
-  {
-    "key": "ctrl+w ctrl+w",
-    "command": "workbench.action.focusActiveEditorGroup",
-    "when": "sideBarFocus || panelFocus"
-  },
-  {
     "key": "ctrl+w c",
     "command": "workbench.action.closeActiveEditor"
   },
@@ -85,7 +75,7 @@
   {
     "key": "ctrl+w shift+s",
     "command": "workbench.action.splitEditorUp"
-  }
+  },
   {
     "key": "ctrl+w m",
     "command": "workbench.action.toggleEditorWidths"
@@ -95,7 +85,7 @@
     "command": "workbench.action.toggleEditorWidths"
   },
   {
-    "key": "ctrl+w oem_minus",
+    "key": "ctrl+w [Minus]",
     "command": "workbench.action.decreaseViewSize"
   },
   {
@@ -112,12 +102,56 @@
     "when": "!notebookEditorFocused && editorLangId == 'markdown'"
   },
   {
-    "key": "ctrl+shift+w",
-    "command": "workbench.action.switchWindow"
-  },
-  {
     "key": "ctrl+w n",
     "command": "notifications.focusToasts"
+  },
+  {
+    "key": "ctrl+w l",
+    "command": "workbench.action.terminal.focusNextPane",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+w ctrl+l",
+    "command": "workbench.action.terminal.focusNextPane",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+w h",
+    "command": "workbench.action.terminal.focusPreviousPane",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+w ctrl+h",
+    "command": "workbench.action.terminal.focusPreviousPane",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+w k",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+w ctrl+k",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+w j",
+    "command": "workbench.action.terminal.focus",
+    "when": "editorFocus && terminalProcessSupported"
+  },
+  {
+    "key": "ctrl+w ctrl+j",
+    "command": "workbench.action.terminal.focus",
+    "when": "editorFocus && terminalProcessSupported"
+  },
+  {
+    "key": "ctrl+w",
+    "command": "-workbench.action.switchWindow"
+  },
+  {
+    "key": "ctrl+shift+w",
+    "command": "workbench.action.switchWindow"
   },
   // vim control
   {
@@ -224,7 +258,7 @@
   {
     "key": "cmd+i s",
     "command": "workbench.action.terminal.split",
-    "when": "terminalFocus && terminalProcessSupported"
+    "when": "terminalProcessSupported"
   },
   {
     "key": "cmd+i s",
@@ -390,6 +424,14 @@
     "command": "workbench.action.terminal.focusAtIndex9"
   },
   {
+    "key": "cmd+i e",
+    "command": "workbench.action.terminal.moveToEditor"
+  },
+  {
+    "key": "cmd+i shift+e",
+    "command": "workbench.action.terminal.moveToTerminalPanel"
+  },
+  {
     "key": "ctrl+r",
     "command": "workbench.action.terminal.sendSequence",
     "args": {
@@ -489,6 +531,11 @@
     "when": "inSearchEditor"
   },
   // ctrl+ey
+  {
+    "key": "ctrl+.",
+    "command": "workbench.action.terminal.scrollToBottom",
+    "when": "terminalFocus && terminalProcessSupported"
+  },
   {
     "key": "ctrl+e",
     "command": "list.scrollDown",
