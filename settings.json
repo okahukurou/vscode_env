@@ -227,6 +227,10 @@
   "terminal.integrated.cursorStyle": "line",
   "terminalAllInOne.terminalTheme": "Greenscreen",
   "workbench.colorCustomizations": {
+    "diffEditor.insertedTextBorder": "#000000",
+    "diffEditor.insertedTextBackground": "#004400",
+    "diffEditor.removeTExtBorder": "#000000",
+    "diffEditor.removeTextBackground": "#004400",
     "terminal.background": "#001100",
     "terminal.foreground": "#00BB00",
     "terminalCursor.background": "#00BB00",
