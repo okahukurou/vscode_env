@@ -34,7 +34,6 @@
 - Remote - SSH Editing Configuration Files
 - REST Client
 - SQLite
-- Terminal All in One
 - Vim
 - Visual Studio Keymap
 - vscode-icons

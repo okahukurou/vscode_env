@@ -261,9 +261,19 @@
     "when": "terminalProcessSupported"
   },
   {
-    "key": "cmd+i s",
-    "command": "-terminalAllInOne.selectDefaultShell",
-    "when": "!config.terminalAllInOne.disableAllKeybindings"
+    "key": "cmd+i c",
+    "command": "workbench.action.terminal.new",
+    "when": "terminalProcessSupported"
+  },
+  {
+    "key": "cmd+i d",
+    "command": "workbench.action.terminal.kill",
+    "when": "terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "cmd+i r",
+    "command": "workbench.action.terminal.rename",
+    "when": "terminalFocus && terminalProcessSupported"
   },
   {
     "key": "alt+y",
@@ -336,56 +346,6 @@
   {
     "key": "cmd+i [BracketLeft]",
     "command": "workbench.action.terminal.toggleTerminal"
-  },
-  {
-    "key": "cmd+i 0",
-    "command": "-terminalAllInOne.runScript",
-    "when": "!config.terminalAllInOne.disableAllKeybindings"
-  },
-  {
-    "key": "cmd+i 1",
-    "command": "-terminalAllInOne.runScript",
-    "when": "!config.terminalAllInOne.disableAllKeybindings"
-  },
-  {
-    "key": "cmd+i 2",
-    "command": "-terminalAllInOne.runScript",
-    "when": "!config.terminalAllInOne.disableAllKeybindings"
-  },
-  {
-    "key": "cmd+i 3",
-    "command": "-terminalAllInOne.runScript",
-    "when": "!config.terminalAllInOne.disableAllKeybindings"
-  },
-  {
-    "key": "cmd+i 4",
-    "command": "-terminalAllInOne.runScript",
-    "when": "!config.terminalAllInOne.disableAllKeybindings"
-  },
-  {
-    "key": "cmd+i 5",
-    "command": "-terminalAllInOne.runScript",
-    "when": "!config.terminalAllInOne.disableAllKeybindings"
-  },
-  {
-    "key": "cmd+i 6",
-    "command": "-terminalAllInOne.runScript",
-    "when": "!config.terminalAllInOne.disableAllKeybindings"
-  },
-  {
-    "key": "cmd+i 7",
-    "command": "-terminalAllInOne.runScript",
-    "when": "!config.terminalAllInOne.disableAllKeybindings"
-  },
-  {
-    "key": "cmd+i 8",
-    "command": "-terminalAllInOne.runScript",
-    "when": "!config.terminalAllInOne.disableAllKeybindings"
-  },
-  {
-    "key": "cmd+i 9",
-    "command": "-terminalAllInOne.runScript",
-    "when": "!config.terminalAllInOne.disableAllKeybindings"
   },
   {
     "key": "cmd+i 1",
