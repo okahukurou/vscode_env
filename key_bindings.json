@@ -345,7 +345,7 @@
   },
   {
     "key": "cmd+i [BracketLeft]",
-    "command": "workbench.action.terminal.toggleTerminal"
+    "command": "terminal.focus"
   },
   {
     "key": "cmd+i 1",

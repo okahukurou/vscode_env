@@ -51,10 +51,9 @@
 | ------------------------------------------ | ------------------------------------ | --- |
 | `^<Enter>`                                 | Run Selected Text in Terminal        | *   |
 | `⌘i` `@`                                   | Toggle Terminal                      | *   |
-| `⌘i` `c`                                   | New Terminal                         |     |
-| `⌘i` `d`                                   | Kill Terminal                        |     |
+| `⌘i` `c`                                   | New Terminal                         | *   |
+| `⌘i` `d`                                   | Kill Terminal                        | *   |
 | `⌘i` `.` (`⌘i` `,`) /  `⌘i` `j` (`⌘i` `k`) | Next (Previous) Terminal             | *   |
-| `⌘i` `m`                                   | Toggle Maximize Terminal             |     |
 | `⌘i` `s`                                   | Split Terminal                       | *   |
 | `⌘i` `e` (`E`)                             | Move Terminal To Editor  (To Panel)  | *   |
 | `⌘i` `l` (`⌘i` `h`)                        | Next (Previous) Terminal Pane        | *   |

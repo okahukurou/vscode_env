@@ -3,12 +3,9 @@
 - Better Jinja
 - Bracket Pair Colorizer
 - Code Spell Checker
-- Docker
-- DotENV
 - Draw.io integration
 - empty-indent
 - Git Graph
-- GitLens
 - Go
 - indent-rainbow
 - Jupyter
@@ -17,25 +14,37 @@
 - Markdown All in One
 - Markdown Preview Mermaid Support
 - markdownlint
-- Nasc VSCode Touchbar
-- OpenAPI (Swagger) Editor
-- OpenAPI Preview
-- openapi-designer
 - Partial Diff
 - Prettier - Code formatter
 - Pylance
 - Python
-- Python Docstring Generator
 - Python indent
 - Rainbow CSV
 - Red Hat Commons
-- Remote - Containers
 - Remote - SSH
-- Remote - SSH Editing Configuration Files
 - REST Client
-- SQLite
 - Vim
 - Visual Studio Keymap
 - vscode-icons
-- XML
 - YAML
+
+# let's try
+
+- Path Intellisense
+
+# uninstall candidate
+
+- Docker
+- GitLens
+- SQLite
+- Remote - Containers
+- Swagger Viewer
+- Remove OpenAPI系
+- Python Docstring Generator
+- XML
+- DotENV
+- OpenAPI (Swagger) Editor
+- OpenAPI Preview
+- openapi-designer
+- Nasc VSCode Touchbar
+- Remote - SSH Editing Configuration Files

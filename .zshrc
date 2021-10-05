@@ -21,15 +21,22 @@ zinit light-mode for \
 
 ### End of Zinit's installer chunk
 
+
+### plugins
 zinit ice multisrc'shell/{key-bindings,completion}.zsh'
 zinit light junegunn/fzf
+
+zinit ice bindmap'\ej -> ^k'
+
+zinit light reegnz/jq-zsh-plugin
 
 zinit light-mode for \
     zdharma/fast-syntax-highlighting \
     Aloxaf/fzf-tab \
-    olets/command-execution-timer \
-    reegnz/jq-zsh-plugin
+    olets/command-execution-timer
 
+
+### history
 HISTFILE=~/.zsh_history
 HISTSIZE=100000
 SAVEHIST=100000
@@ -39,16 +46,12 @@ setopt hist_reduce_blanks
 setopt append_history
 setopt inc_append_history
 
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
-export LANG=ja_JP.UTF-8
-setopt print_eight_bit
+### completions
+autoload -Uz compinit && compinit
 
-setopt nolistbeep
 
-export COMMAND_EXECUTION_TIMER_PREFIX=""
-export COMMAND_EXECUTION_TIMER_THRESHOLD=0
-
+### prompt
 export PROMPT="%F{cyan}[%. %T]%F{green}%# "
 change_rprompt() {
     if [[ $? == 0 ]]; then
@@ -61,15 +64,55 @@ change_rprompt() {
 autoload -Uz add-zsh-hook
 add-zsh-hook precmd change_rprompt
 
+
+### key bindings
+# bindkey -d
+bindkey '^a' beginning-of-line
+bindkey '^e' end-of-line
+
+
+### enable Japanese
+export LANG=ja_JP.UTF-8
+setopt print_eight_bit
+
+
+### other settings
+setopt no_list_beep
+setopt no_promptcr
+export COMMAND_EXECUTION_TIMER_PREFIX=""
+export COMMAND_EXECUTION_TIMER_THRESHOLD=0
+
+
+### ls
+export CLICOLOR=1
+export LSCOLORS=GxFxCxDxBxegedabagaced
+alias ls='ls -G'
+alias ll='ls -lG'
+
+
+### style
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+zstyle ':completion:*:descriptions' format '[%d]'
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+zstyle ':completion:*:git-checkout:*' sort false
+zstyle ':completion:*' insert-tab false
+zstyle ':fzf-tab:*' switch-group ',' '.'
+
+
+### functions
 zd() {
     local dir
     dir=$(fd $1 --type=d | fzf)
     cd "$dir"
 }
 
-alias ls='ls -G'
-alias ll='ls -lG'
 
+### kubectl
+source <(kubectl completion zsh)
+alias k='kubectl'
+
+
+### pyenv
 export PYENV_ROOT="/usr/local/var/pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init --path)"
@@ -77,13 +120,7 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 
+
+### other path
 eval "$(nodenv init -)"
 export PATH="/usr/local/opt/libpq/bin:$PATH"
-
-source <(kubectl completion zsh)
-alias k='kubectl'
-
-export PATH="${PATH:+${PATH}:}/home/makoto/.fzf/bin"
-
-autoload -Uz _zinit
-(( ${+_comps} )) && _comps[zinit]=_zinit
