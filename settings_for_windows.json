@@ -1,19 +1,50 @@
 {
-  // extensions
-  "workbench.iconTheme": "vscode-icons",
-  "vsicons.dontShowNewVersionMessage": true,
-  "terminal.integrated.shell.windows": "C:\\WINDOWS\\system32\\cmd.exe",
-  "extensions.ignoreRecommendations": false,
-  // for each language
-  "python.jediEnabled": false,
-  "python.languageServer": "Microsoft",
+  // terminal profiles
+  "terminal.integrated.useWslProfiles": false,
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "icon": "terminal-powershell"
+    },
+    "Command Prompt": {
+      "path": [
+        "${env:windir}\\Sysnative\\cmd.exe",
+        "${env:windir}\\System32\\cmd.exe"
+      ],
+      "args": [],
+      "icon": "terminal-cmd"
+    },
+    "Git Bash": {
+      "source": "Git Bash",
+      "path": [
+        "D:\\ProgramFiles\\Git\\usr\\bin\\bin.bash"
+      ],
+      "icon": "terminal-bash"
+    },
+    "Ubuntu": {
+      "path": [
+        "C:\\Windows\\System32\\wsl.exe"
+      ],
+      "args": [
+        "-d",
+        "Ubuntu",
+        "-e",
+        "zsh"
+      ],
+      "icon": "terminal-ubuntu"
+    }
+  },
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  },
+  // go
   "go.gopath": "C:\\Users\\Makoto Okada\\go",
-  "go.autocompleteUnimportedPackages": true,
   "go.goroot": "C:\\Users\\Makoto Okada\\.gvm\\versions\\go1.14.2.windows.amd64",
   "[go]": {
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
-      "source.organizeImports": true,
+      "source.organizeImports": false,
     },
     // Optional: Disable snippets, as they conflict with completion ranking.
     "editor.snippetSuggestions": "none"
@@ -21,10 +52,14 @@
   "go.lintFlags": [
     "--exclude=\"\bexported \\w+ (\\S*['.]*)([a-zA-Z'.*]*) should have comment or be unexported\b\""
   ],
-  "go.formatTool": "goimports",
   "go.toolsEnvVars": {
     "GO111MODULE": "auto"
   },
-  "gvm.pathToDefaultTerminal": "C:\\WINDOWS\\System32\\cmd.exe",
-  "gvm.setVersionWithDefault": false,
+  "go.inferGopath": true,
+  "go.lintOnSave": "off",
+  "go.toolsManagement.autoUpdate": true,
+  // delays
+  "editor.quickSuggestionsDelay": 600,
+  "indentRainbow.updateDelay": 800,
+  "cSpell.spellCheckDelayMs": 200,
 }

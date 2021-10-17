@@ -10,13 +10,15 @@
   "files.insertFinalNewline": true,
   "editor.minimap.enabled": false,
   "editor.lineNumbers": "on",
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "search.searchOnType": true,
   // terminal
   "terminal.integrated.fontSize": 12,
   "terminal.integrated.cursorWidth": 1,
   "terminal.integrated.tabs.hideCondition": "never",
   "terminal.integrated.tabs.showActiveTerminal": "always",
   "terminal.integrated.tabs.enabled": true,
+  "terminal.integrated.cursorStyle": "block",
+  "terminal.integrated.cursorBlinking": false,
   // vim settings
   "vim.useSystemClipboard": true,
   "vim.hlsearch": true,
@@ -29,7 +31,7 @@
   "vim.sneak": true,
   "vim.sneakReplacesF": true,
   "vim.replaceWithRegister": true,
-  "vim.foldfix": false,
+  "vim.foldfix": true,
   "vim.easymotionKeys": "sdfghjklqwertyuiopzxcvbnm",
   "vim.cursorStylePerMode.replace": "underline",
   "vim.highlightedyank.enable": true,
@@ -209,6 +211,14 @@
       "color": "#552355"
     }
   ],
+  "workbench.colorCustomizations": {
+    "editor.findMatchHighlightBackground": "#553311",
+    "diffEditor.insertedTextBorder": "#000000",
+    "diffEditor.insertedTextBackground": "#004400",
+    "diffEditor.removeTextBorder": "#000000",
+    "diffEditor.removeTextBackground": "#004400"
+  },
+  // indentRainbow
   "indentRainbow.colors": [
     "rgba(255,0,0,0.2)",
     "rgba(255,165,0,0.2)",
@@ -223,38 +233,13 @@
     "markdown",
     "python"
   ],
-  // terminal all in one
-  "terminal.integrated.cursorStyle": "line",
-  "terminalAllInOne.terminalTheme": "Greenscreen",
-  "workbench.colorCustomizations": {
-    "diffEditor.insertedTextBorder": "#000000",
-    "diffEditor.insertedTextBackground": "#004400",
-    "diffEditor.removeTExtBorder": "#000000",
-    "diffEditor.removeTextBackground": "#004400",
-    "terminal.background": "#001100",
-    "terminal.foreground": "#00BB00",
-    "terminalCursor.background": "#00BB00",
-    "terminalCursor.foreground": "#00BB00",
-    "terminal.ansiBlack": "#001100",
-    "terminal.ansiBlue": "#009900",
-    "terminal.ansiBrightBlack": "#007700",
-    "terminal.ansiBrightBlue": "#009900",
-    "terminal.ansiBrightCyan": "#005500",
-    "terminal.ansiBrightGreen": "#00BB00",
-    "terminal.ansiBrightMagenta": "#00BB00",
-    "terminal.ansiBrightRed": "#007700",
-    "terminal.ansiBrightWhite": "#00FF00",
-    "terminal.ansiBrightYellow": "#007700",
-    "terminal.ansiCyan": "#005500",
-    "terminal.ansiGreen": "#00BB00",
-    "terminal.ansiMagenta": "#00BB00",
-    "terminal.ansiRed": "#007700",
-    "terminal.ansiWhite": "#00BB00",
-    "terminal.ansiYellow": "#007700"
-  },
+  // vscode icons
+  "workbench.iconTheme": "vscode-icons",
+  "vsicons.dontShowNewVersionMessage": true,
   // gitlens
   "gitlens.showWelcomeOnInstall": false,
   "gitlens.views.searchAndCompare.pullRequests.showForCommits": false,
+  "gitlens.views.fileHistory.avatars": false,
   "gitlens.menus": {
     "editor": {
       "blame": false,
@@ -343,10 +328,10 @@
   "python.languageServer": "Pylance",
   "python.analysis.typeCheckingMode": "basic",
   "python.analysis.autoImportCompletions": false,
-  "autoDocstring.docstringFormat": "google",
+  // drawio
+  "hediet.vscode-drawio.theme": "dark",
   // delays
   "editor.quickSuggestionsDelay": 600,
   "indentRainbow.updateDelay": 800,
-  "bracketPairColorizer.timeOut": 800,
   "cSpell.spellCheckDelayMs": 200,
 }
