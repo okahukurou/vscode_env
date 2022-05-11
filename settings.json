@@ -19,8 +19,11 @@
   "terminal.integrated.tabs.enabled": true,
   "terminal.integrated.cursorStyle": "block",
   "terminal.integrated.cursorBlinking": false,
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "terminal.integrated.enableMultiLinePasteWarning": false,
   // vim settings
   "vim.useSystemClipboard": true,
+  "vim.foldfix": true,
   "vim.hlsearch": true,
   "vim.visualstar": true,
   "vim.useCtrlKeys": true,
@@ -31,7 +34,6 @@
   "vim.sneak": true,
   "vim.sneakReplacesF": true,
   "vim.replaceWithRegister": true,
-  "vim.foldfix": true,
   "vim.easymotionKeys": "sdfghjklqwertyuiopzxcvbnm",
   "vim.cursorStylePerMode.replace": "underline",
   "vim.highlightedyank.enable": true,
@@ -168,6 +170,16 @@
       "before": [
         "<leader>",
         "g",
+        "u"
+      ],
+      "commands": [
+        "git.revertSelectedRanges"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "g",
         "v"
       ],
       "commands": [
@@ -193,6 +205,7 @@
   "workbench.editor.limit.perEditorGroup": true,
   "workbench.editor.limit.value": 5,
   // other my settings
+  "editor.bracketPairColorization.enabled": true,
   "workbench.colorTheme": "Default High Contrast",
   "editor.wordWrap": "off",
   "search.useIgnoreFiles": false,
@@ -200,6 +213,7 @@
   "editor.glyphMargin": false,
   "editor.cursorSurroundingLines": 5,
   "git.pruneOnFetch": true,
+  "git.showUnpublishedCommitsButton": "never",
   "git-graph.referenceLabels.combineLocalAndRemoteBranchLabels": false,
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "breadcrumbs.enabled": true,
@@ -216,7 +230,8 @@
     "diffEditor.insertedTextBorder": "#000000",
     "diffEditor.insertedTextBackground": "#004400",
     "diffEditor.removeTextBorder": "#000000",
-    "diffEditor.removeTextBackground": "#004400"
+    "diffEditor.removeTextBackground": "#440000",
+    "terminal.ansiBlue": "#00a1f9",
   },
   // indentRainbow
   "indentRainbow.colors": [
@@ -289,18 +304,25 @@
   "rest-client.previewResponsePanelTakeFocus": false,
   "rest-client.previewResponseInUntitledDocument": true,
   "rest-client.requestNameAsResponseTabTitle": true,
+  // remote
+  "remote.SSH.enableAgentForwarding": false,
+  "remote.SSH.enableDynamicForwarding": false,
+  "remote.SSH.remotePlatform": {},
+  "remote.SSH.connectTimeout": 120,
+  "remote.SSH.useLocalServer": "false",
   // yaml
   "[yaml,yml]": {
     "editor.insertSpaces": true,
     "editor.tabSize": 2,
-    "editor.autoIndent": true,
+    "editor.autoIndent": "keep",
     "editor.defaultFormatter": "redhat.vscode-yaml"
   },
   "yaml.completion": false,
   "yaml.format.bracketSpacing": false,
   // markdown
   "markdownlint.config": {
-    "MD13": false
+    "MD13": false,
+    "MD14": false
   },
   "markdown.extension.orderedList.marker": "one",
   "markdown.extension.orderedList.autoRenumber": false,
@@ -308,7 +330,7 @@
   "markdown.extension.tableFormatter.enabled": false,
   // python
   "[python]": {
-    "editor.defaultFormatter": null,
+    "editor.tabSize": 4,
     "gitlens.codeLens.symbolScopes": [
       "!Module"
     ],
@@ -316,22 +338,34 @@
   },
   "python.linting.pylintEnabled": false,
   "python.linting.flake8Enabled": true,
-  "python.linting.flake8Args": [
-    "--ignore=W503"
-  ],
   "python.formatting.provider": "autopep8",
-  "python.formatting.autopep8Args": [
-    "--aggressive",
-    "--aggressive",
-    "--ignore=E402"
-  ],
+  // "python.linting.flake8Args": [
+  //   "--ignore=W503"
+  // ],
+  // "python.formatting.autopep8Args": [
+  //   "--aggressive",
+  //   "--aggressive",
+  //   "--ignore=E402"
+  // ],
   "python.languageServer": "Pylance",
   "python.analysis.typeCheckingMode": "basic",
   "python.analysis.autoImportCompletions": false,
+  "python.analysis.activateEnvironment": false,
   // drawio
   "hediet.vscode-drawio.theme": "dark",
   // delays
   "editor.quickSuggestionsDelay": 600,
   "indentRainbow.updateDelay": 800,
   "cSpell.spellCheckDelayMs": 200,
+  // associations
+  "files.associations": {
+    "Dockerfile*": "dockerfile",
+    "*.json": "jinja-json"
+  },
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  },
+  "files.watcherExclude": {
+    "**/venv/**": true
+  }
 }

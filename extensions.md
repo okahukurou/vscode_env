@@ -1,27 +1,31 @@
 # extensions
 
+- autoDocstring
 - Better Jinja
-- Bracket Pair Colorizer
 - Code Spell Checker
+- DotENV
 - Draw.io integration
 - empty-indent
 - Git Graph
 - Go
 - indent-rainbow
+- json2yaml
 - Jupyter
+- Jupyter Keymap
 - Kubernetes
 - Log File Highlighter
 - Markdown All in One
 - Markdown Preview Mermaid Support
 - markdownlint
 - Partial Diff
-- Prettier - Code formatter
 - Pylance
 - Python
 - Python indent
 - Rainbow CSV
 - Red Hat Commons
+- Remote - Containers
 - Remote - SSH
+- Remote - SSH: Editing Configuration Files
 - REST Client
 - Vim
 - Visual Studio Keymap
@@ -31,6 +35,9 @@
 # let's try
 
 - Path Intellisense
+- Openapi系
+- Terminal Capture
+- Prettier - Code formatter
 
 # uninstall candidate
 

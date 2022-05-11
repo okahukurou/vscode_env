@@ -64,3 +64,6 @@ inoremap <C-e> <C-o>$
 
 "syntax highlight
 syntax enable
+
+" backspace in insert mode
+set backspace=indent,eol,start

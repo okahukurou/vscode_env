@@ -76,8 +76,16 @@ export LANG=ja_JP.UTF-8
 setopt print_eight_bit
 
 
+### highlight
+zle_highlight+=(paste:none)
+
+
+### nonmatch (https://qiita.com/ponsuke0531/items/8dd9ba566a13edc03fe2)
+setopt nonomatch
+
+
 ### other settings
-setopt no_list_beep
+setopt nolistbeep
 setopt no_promptcr
 export COMMAND_EXECUTION_TIMER_PREFIX=""
 export COMMAND_EXECUTION_TIMER_THRESHOLD=0
@@ -124,3 +132,9 @@ export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 ### other path
 eval "$(nodenv init -)"
 export PATH="/usr/local/opt/libpq/bin:$PATH"
+export PATH="${HOME}/scripts:$PATH"
+
+
+### after source
+autoload -Uz _zinit
+(( ${+_comps} )) && _comps[zinit]=_zinit
