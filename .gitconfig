@@ -1,0 +1,13 @@
+# [http]
+#   proxy =
+
+[alias]
+  lg = log --graph --all --decorate --date=format:'%m%d %H:%M' --format=format: '%C(yellow)%h %C(green)%ad%C(auto)%d %C(reset)%s' -15
+  lga = log --graph --all --decorate --date=format:'%m%d %H:%M' --format=format: '%C(yellow)%h %C(green)%ad%C(auto)%d %C(reset)%s'
+
+# [user]
+#   name =
+#   email =
+
+[credential]
+  helper = cache
