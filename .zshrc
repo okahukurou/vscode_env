@@ -1,37 +1,31 @@
-### Added by Zinit's installer
-if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
-    print -P "%F{33}▓▒░ %F{220}Installing %F{33}DHARMA%F{220} Initiative Plugin Manager (%F{33}zdharma/zinit%F{220})…%f"
-    command mkdir -p "$HOME/.zinit" && command chmod g-rwX "$HOME/.zinit"
-    command git clone https://github.com/zdharma/zinit "$HOME/.zinit/bin" && \
-        print -P "%F{33}▓▒░ %F{34}Installation successful.%f%b" || \
-        print -P "%F{160}▓▒░ The clone has failed.%f%b"
+### Added by zi's installer
+if [[ ! -f $HOME/.zi/bin/zi.zsh ]]; then
+  sh -c "$(curl -fsSL https://git.io/get-zi)" -- -a annexes
 fi
 
-source "$HOME/.zinit/bin/zinit.zsh"
-autoload -Uz _zinit
-(( ${+_comps} )) && _comps[zinit]=_zinit
+source "$HOME/.zi/bin/zi.zsh"
+autoload -Uz _zi
+(( ${+_comps} )) && _comps[zi]=_zi
 
-# Load a few important annexes, without Turbo
-# (this is currently required for annexes)
-zinit light-mode for \
-    zinit-zsh/z-a-rust \
-    zinit-zsh/z-a-as-monitor \
-    zinit-zsh/z-a-patch-dl \
-    zinit-zsh/z-a-bin-gem-node
+zi ice multisrc'shell/{key-bindings,completion}.zsh'
+zi light junegunn/fzf
 
-### End of Zinit's installer chunk
+zi ice bindmap'\ef -> ^j'
+zi light reegnz/jq-zsh-plugin
+
+### End of zi's installer chunk
 
 
 ### plugins
-zinit ice multisrc'shell/{key-bindings,completion}.zsh'
-zinit light junegunn/fzf
+zi ice multisrc'shell/{key-bindings,completion}.zsh'
+zi light junegunn/fzf
 
-zinit ice bindmap'\ej -> ^k'
+zi ice bindmap'\ej -> ^k'
 
-zinit light reegnz/jq-zsh-plugin
+zi light reegnz/jq-zsh-plugin
 
-zinit light-mode for \
-    zdharma/fast-syntax-highlighting \
+zi light-mode for \
+    zdharma/zsh-syntax-highlighting \
     Aloxaf/fzf-tab \
     olets/command-execution-timer
 
@@ -78,6 +72,9 @@ setopt print_eight_bit
 
 ### highlight
 zle_highlight+=(paste:none)
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main line brackets pattern cursor)
+typeset -A ZSH_HIGHLIGHT_STYLES
+ZSH_HIGHLIGHT_STYLES[line]='bold'
 
 
 ### nonmatch (https://qiita.com/ponsuke0531/items/8dd9ba566a13edc03fe2)
