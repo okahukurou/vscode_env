@@ -75,18 +75,6 @@
       "commands": [
         "vspacecode.space"
       ]
-    },
-    {
-      "before": [
-        ","
-      ],
-      "commands": [
-        "vspacecode.space",
-        {
-          "command": "whichkey.triggerKey",
-          "args": "m"
-        }
-      ]
     }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
@@ -96,18 +84,6 @@
       ],
       "commands": [
         "vspacecode.space"
-      ]
-    },
-    {
-      "before": [
-        ","
-      ],
-      "commands": [
-        "vspacecode.space",
-        {
-          "command": "whichkey.triggerKey",
-          "args": "m"
-        }
       ]
     }
   ],
