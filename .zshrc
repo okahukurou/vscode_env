@@ -25,7 +25,7 @@ zi ice bindmap'\ej -> ^k'
 zi light reegnz/jq-zsh-plugin
 
 zi light-mode for \
-    zdharma/zsh-syntax-highlighting \
+    zsh-users/zsh-syntax-highlighting \
     Aloxaf/fzf-tab \
     olets/command-execution-timer
 
@@ -72,9 +72,8 @@ setopt print_eight_bit
 
 ### highlight
 zle_highlight+=(paste:none)
-ZSH_HIGHLIGHT_HIGHLIGHTERS=(main line brackets pattern cursor)
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main line brackets)
 typeset -A ZSH_HIGHLIGHT_STYLES
-ZSH_HIGHLIGHT_STYLES[line]='bold'
 
 
 ### nonmatch (https://qiita.com/ponsuke0531/items/8dd9ba566a13edc03fe2)
@@ -82,7 +81,7 @@ setopt nonomatch
 
 
 ### other settings
-setopt nolistbeep
+setopt no_list_beep
 setopt no_promptcr
 export COMMAND_EXECUTION_TIMER_PREFIX=""
 export COMMAND_EXECUTION_TIMER_THRESHOLD=0
@@ -118,7 +117,7 @@ alias k='kubectl'
 
 
 ### pyenv
-export PYENV_ROOT="/usr/local/var/pyenv"
+export PYENV_ROOT="${HOME}/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
@@ -133,5 +132,5 @@ export PATH="${HOME}/scripts:$PATH"
 
 
 ### after source
-autoload -Uz _zinit
-(( ${+_comps} )) && _comps[zinit]=_zinit
+autoload -Uz _zi
+(( ${+_comps} )) && _comps[zi]=_zi

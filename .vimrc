@@ -67,3 +67,6 @@ syntax enable
 
 " backspace in insert mode
 set backspace=indent,eol,start
+
+" turn off beep
+set belloff=all

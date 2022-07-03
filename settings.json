@@ -2,8 +2,8 @@
   // basic settings
   "editor.fontSize": 12,
   "window.zoomLevel": 0,
-  "editor.insertSpaces": false,
   "editor.tabSize": 2,
+  "editor.insertSpaces": true,
   "files.trimTrailingWhitespace": true,
   "diffEditor.ignoreTrimWhitespace": false,
   "editor.renderWhitespace": "all",
@@ -29,7 +29,6 @@
   "vim.useCtrlKeys": true,
   "vim.ignorecase": true,
   "vim.incsearch": true,
-  "vim.leader": "<space>",
   "vim.easymotion": true,
   "vim.sneak": true,
   "vim.sneakReplacesF": true,
@@ -71,119 +70,231 @@
   "vim.normalModeKeyBindingsNonRecursive": [
     {
       "before": [
-        "<leader>",
-        "n"
+        "<space>"
       ],
       "commands": [
-        "workbench.action.compareEditor.nextChange"
+        "vspacecode.space"
       ]
     },
     {
       "before": [
-        "<leader>",
-        "p"
+        ","
       ],
       "commands": [
-        "workbench.action.compareEditor.previousChange"
+        "vspacecode.space",
+        {
+          "command": "whichkey.triggerKey",
+          "args": "m"
+        }
+      ]
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "<space>"
+      ],
+      "commands": [
+        "vspacecode.space"
       ]
     },
     {
       "before": [
-        "<leader>",
-        "s"
+        ","
       ],
       "commands": [
-        "workbench.action.compareEditor.focusOtherSide"
+        "vspacecode.space",
+        {
+          "command": "whichkey.triggerKey",
+          "args": "m"
+        }
+      ]
+    }
+  ],
+  "vspacecode.bindingOverrides": [
+    {
+      "keys": " ",
+      "name": "Easy motion",
+      "type": "bindings",
+      "bindings": [
+        {
+          "key": "s",
+          "name": "Search character",
+          "type": "command",
+          "command": "vim.remap",
+          "args": {
+            "after": [
+              "<leader>",
+              "<leader>",
+              "s"
+            ]
+          }
+        },
+        {
+          "key": "j",
+          "name": "Start of line backwards",
+          "type": "command",
+          "command": "vim.remap",
+          "args": {
+            "after": [
+              "<leader>",
+              "<leader>",
+              "j"
+            ]
+          }
+        },
+        {
+          "key": "k",
+          "name": "Start of line backwards",
+          "type": "command",
+          "command": "vim.remap",
+          "args": {
+            "after": [
+              "<leader>",
+              "<leader>",
+              "k"
+            ]
+          }
+        },
+        {
+          "key": "l",
+          "name": "Beginning & ending of word forwards",
+          "type": "command",
+          "command": "vim.remap",
+          "args": {
+            "after": [
+              "<leader>",
+              "<leader>",
+              "l"
+            ]
+          }
+        },
+        {
+          "key": "h",
+          "name": "Beginning & ending of word backwards",
+          "type": "command",
+          "command": "vim.remap",
+          "args": {
+            "after": [
+              "<leader>",
+              "<leader>",
+              "h"
+            ]
+          }
+        },
+        {
+          "key": "f",
+          "name": "Find character forwards",
+          "type": "command",
+          "command": "vim.remap",
+          "args": {
+            "after": [
+              "<leader>",
+              "<leader>",
+              "f"
+            ]
+          }
+        },
+        {
+          "key": "F",
+          "name": "Find character backwards",
+          "type": "command",
+          "command": "vim.remap",
+          "args": {
+            "after": [
+              "<leader>",
+              "<leader>",
+              "F"
+            ]
+          }
+        },
+        {
+          "key": "t",
+          "name": "Till character forwards",
+          "type": "command",
+          "command": "vim.remap",
+          "args": {
+            "after": [
+              "<leader>",
+              "<leader>",
+              "t"
+            ]
+          }
+        },
+        {
+          "key": "T",
+          "name": "Till character backwards",
+          "type": "command",
+          "command": "vim.remap",
+          "args": {
+            "after": [
+              "<leader>",
+              "<leader>",
+              "T"
+            ]
+          }
+        }
       ]
     },
     {
-      "before": [
-        "<leader>",
-        "g",
-        "c"
-      ],
-      "commands": [
-        "git.openChange"
-      ]
-    },
-    {
-      "before": [
-        "<leader>",
-        "g",
-        "o"
-      ],
-      "commands": [
-        "git.openFile"
-      ]
-    },
-    {
-      "before": [
-        "<leader>",
-        "g",
-        "n"
-      ],
-      "commands": [
-        "workbench.action.compareEditor.nextChange"
-      ]
-    },
-    {
-      "before": [
-        "<leader>",
-        "g",
-        "p"
-      ],
-      "commands": [
-        "workbench.action.compareEditor.previousChange"
-      ]
-    },
-    {
-      "before": [
-        "<leader>",
-        "g",
-        "r"
-      ],
-      "commands": [
-        "git.revertSelectedRanges"
-      ]
-    },
-    {
-      "before": [
-        "<leader>",
-        "g",
-        "a"
-      ],
-      "commands": [
-        "git.stageSelectedRanges"
-      ]
-    },
-    {
-      "before": [
-        "<leader>",
-        "g",
-        "u"
-      ],
-      "commands": [
-        "git.unstageSelectedRanges"
-      ]
-    },
-    {
-      "before": [
-        "<leader>",
-        "g",
-        "u"
-      ],
-      "commands": [
-        "git.revertSelectedRanges"
-      ]
-    },
-    {
-      "before": [
-        "<leader>",
-        "g",
-        "v"
-      ],
-      "commands": [
-        "git-graph.view"
+      "keys": "g",
+      "name": "Git",
+      "type": "bindings",
+      "bindings": [
+        {
+          "key": "c",
+          "name": "Open changes",
+          "type": "command",
+          "command": "git.openChange"
+        },
+        {
+          "key": "o",
+          "name": "Open files",
+          "type": "command",
+          "command": "git.openFile"
+        },
+        {
+          "key": "s",
+          "name": "Focus other side",
+          "type": "command",
+          "command": "workbench.action.compareEditor.focusOtherSide"
+        },
+        {
+          "key": "n",
+          "name": "Next changes",
+          "type": "command",
+          "command": "workbench.action.compareEditor.nextChange"
+        },
+        {
+          "key": "p",
+          "name": "Previous changes",
+          "type": "command",
+          "command": "workbench.action.compareEditor.previousChange"
+        },
+        {
+          "key": "a",
+          "name": "Stage selected range",
+          "type": "command",
+          "command": "git.stageSelectedRanges"
+        },
+        {
+          "key": "u",
+          "name": "Unstage selected range",
+          "type": "command",
+          "command": "git.unstageSelectedRanges"
+        },
+        {
+          "key": "r",
+          "name": "Revert selected range",
+          "type": "command",
+          "command": "git.revertSelectedRanges"
+        },
+        {
+          "key": "v",
+          "name": "Git graph",
+          "type": "command",
+          "command": "git-graph.view"
+        }
       ]
     }
   ],
@@ -231,7 +342,7 @@
     "diffEditor.insertedTextBackground": "#004400",
     "diffEditor.removeTextBorder": "#000000",
     "diffEditor.removeTextBackground": "#440000",
-    "terminal.ansiBlue": "#00a1f9",
+    "terminal.ansiBlue": "#4488ff",
   },
   // indentRainbow
   "indentRainbow.colors": [
@@ -251,59 +362,15 @@
   // vscode icons
   "workbench.iconTheme": "vscode-icons",
   "vsicons.dontShowNewVersionMessage": true,
-  // gitlens
-  "gitlens.showWelcomeOnInstall": false,
-  "gitlens.views.searchAndCompare.pullRequests.showForCommits": false,
-  "gitlens.views.fileHistory.avatars": false,
-  "gitlens.menus": {
-    "editor": {
-      "blame": false,
-      "clipboard": true,
-      "compare": true,
-      "history": false,
-      "remote": false
-    },
-    "editorGroup": {
-      "blame": false,
-      "compare": false
-    },
-    "editorTab": {
-      "clipboard": true,
-      "compare": true,
-      "history": true,
-      "remote": true
-    },
-    "explorer": {
-      "clipboard": true,
-      "compare": true,
-      "history": true,
-      "remote": true
-    },
-    "scm": {
-      "authors": true
-    },
-    "scmGroupInline": {
-      "stash": false
-    },
-    "scmGroup": {
-      "compare": true,
-      "openClose": true,
-      "stash": true
-    },
-    "scmItem": {
-      "clipboard": true,
-      "compare": true,
-      "history": true,
-      "remote": false,
-      "stash": true
-    }
-  },
   // rest-clinet
-  "rest-client.previousOption": "exchange",
+  "rest-client.previewOption": "exchange",
   "rest-client.logLevel": "warn",
   "rest-client.previewResponsePanelTakeFocus": false,
   "rest-client.previewResponseInUntitledDocument": true,
   "rest-client.requestNameAsResponseTabTitle": true,
+  "rest-client.excludeHostsForProxy": [
+    "localhost"
+  ],
   // remote
   "remote.SSH.enableAgentForwarding": false,
   "remote.SSH.enableDynamicForwarding": false,
@@ -312,7 +379,6 @@
   "remote.SSH.useLocalServer": "false",
   // yaml
   "[yaml,yml]": {
-    "editor.insertSpaces": true,
     "editor.tabSize": 2,
     "editor.autoIndent": "keep",
     "editor.defaultFormatter": "redhat.vscode-yaml"
@@ -350,9 +416,12 @@
   "python.languageServer": "Pylance",
   "python.analysis.typeCheckingMode": "basic",
   "python.analysis.autoImportCompletions": false,
-  "python.analysis.activateEnvironment": false,
   // drawio
   "hediet.vscode-drawio.theme": "dark",
+  // vs-kubernetes
+  "vs-kubernetes": {
+    "vs-kubernetes.crd-code-completion": "disabled"
+  },
   // delays
   "editor.quickSuggestionsDelay": 600,
   "indentRainbow.updateDelay": 800,
@@ -366,6 +435,9 @@
     "*.ipynb": "jupyter-notebook"
   },
   "files.watcherExclude": {
-    "**/venv/**": true
+    "**/venv/**": true,
+    "**/__pycache__/**": true,
+    "**/.mypy_cache/**": true,
+    "**/*egg-info/**": true
   }
 }

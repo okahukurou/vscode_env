@@ -1,0 +1,24 @@
+{
+  "recommendations": [
+    "hediet.vscode-drawio",
+    "njpwerner.autodocstring",
+    "samuelcolvin.jinjahtml",
+    "vspacecode.vspacecode",
+    "streetsidesoftware.code-spell-checker",
+    "mikestead.dotenv",
+    "dmitrydorofeev.empty-indent",
+    "mhutchie.git-graph",
+    "oderwat.indent-rainbow",
+    "tuxtina.json2yaml",
+    "ms-kubernetes-tools.vscode-kubernetes-tools",
+    "davidanson.vscode-markdownlint",
+    "bierner.markdown-mermaid",
+    "ryu1kn.partial-diff",
+    "ms-python.vscode-pylance",
+    "ms-vscode-remote.remote-containers",
+    "ms-vscode-remote.remote-ssh",
+    "humao.rest-client",
+    "vscodevim.vim",
+    "vscode-icons-team.vscode-icons"
+  ]
+}

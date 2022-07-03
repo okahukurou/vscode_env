@@ -32,19 +32,6 @@
 | `^w` `L` (`H`)                     | Move Tab to Next (Previous) Editor Group | *   |
 | `⌘1` (`⌘2`, `⌘3`)                  | Focus First (Second, Third) Tab          | *   |
 
-## Git
-
-|                                          |                         |     |
-| ---------------------------------------- | ----------------------- | --- |
-| `<leader>gc`                             | Open Changes            | *   |
-| `<leader>go`                             | Open File               | *   |
-| `<leader>n` (`<leader>p`) / `F7` (`⇧F7`) | Next (Previous) Changes | *   |
-| `<leader>s`                              | Focus Other Side        | *   |
-| `<leader>ga`                             | Stage Selected Range    | *   |
-| `<leader>gu`                             | Unstage Selected Range  | *   |
-| `<leader>gr`                             | Revert Selected Range   | *   |
-| `<leader>gv`                             | View Git Graph          | *   |
-
 ## Terminal
 
 |                                            |                                      |     |
@@ -67,6 +54,7 @@
 | `^a` (`^e`)                                | Move Cursor to Head (End)            |     |
 | `^p` (`^n`)                                | Previous (Next) Command in History   |     |
 | `^u` (`^k`)                                | Cut Text From Cursor To Head (End)   |     |
+
 ## Sidebar (General)
 
 |             |                              |     |
