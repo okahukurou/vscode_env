@@ -379,7 +379,12 @@
   "editor.glyphMargin": false,
   "editor.cursorSurroundingLines": 5,
   "git.pruneOnFetch": true,
-  "git.showUnpublishedCommitsButton": "never",
+  "git.mergeEditor": true,
+  "git.showActionButton": {
+    "commit": false,
+    "publish": false,
+    "sync": false
+  },
   "git-graph.referenceLabels.combineLocalAndRemoteBranchLabels": false,
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "breadcrumbs.enabled": true,
