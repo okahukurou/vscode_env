@@ -1,7 +1,6 @@
 {
   // basic settings
   "editor.fontSize": 12,
-  "window.zoomLevel": 0,
   "editor.tabSize": 2,
   "editor.insertSpaces": true,
   "files.trimTrailingWhitespace": true,
@@ -75,6 +74,35 @@
       "commands": [
         "vspacecode.space"
       ]
+    },
+    {
+      "before": [
+        "<ESC>",
+        "<ESC>"
+      ],
+      "commands": [
+        ":nohlsearch"
+      ]
+    },
+    {
+      "before": [
+        "x"
+      ],
+      "after": [
+        "\"",
+        "_",
+        "x"
+      ]
+    },
+    {
+      "before": [
+        "s"
+      ],
+      "after": [
+        "\"",
+        "_",
+        "s"
+      ]
     }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
@@ -84,6 +112,26 @@
       ],
       "commands": [
         "vspacecode.space"
+      ]
+    },
+    {
+      "before": [
+        ">"
+      ],
+      "after": [
+        ">",
+        "g",
+        "v"
+      ]
+    },
+    {
+      "before": [
+        "<"
+      ],
+      "after": [
+        "<",
+        "g",
+        "v"
       ]
     }
   ],
@@ -270,6 +318,37 @@
           "name": "Git graph",
           "type": "command",
           "command": "git-graph.view"
+        }
+      ]
+    },
+    {
+      "keys": "p",
+      "name": "Project",
+      "type": "bindings",
+      "bindings": [
+        {
+          "key": "o",
+          "name": "Open project",
+          "type": "command",
+          "command": "projectManager.listProjects"
+        },
+        {
+          "key": "O",
+          "name": "Open project with new window",
+          "type": "command",
+          "command": "projectManager.listProjectsNewWindow"
+        },
+        {
+          "key": "s",
+          "name": "Save project",
+          "type": "command",
+          "command": "projectManager.saveProject"
+        },
+        {
+          "key": "e",
+          "name": "Edit projects",
+          "type": "command",
+          "command": "projectManager.editProjects"
         }
       ]
     }
