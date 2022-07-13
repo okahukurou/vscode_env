@@ -318,6 +318,18 @@
           "name": "Git graph",
           "type": "command",
           "command": "git-graph.view"
+        },
+        {
+          "key": "m",
+          "name": "Magit dispatch",
+          "type": "command",
+          "command": "magit.dispatch"
+        },
+        {
+          "key": "s",
+          "name": "Magit status",
+          "type": "command",
+          "command": "magit.status"
         }
       ]
     },
