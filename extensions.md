@@ -6,6 +6,7 @@
 - DotENV
 - Draw.io integration
 - empty-indent
+- Error Lens
 - Git Graph
 - Go
 - indent-rainbow
@@ -38,6 +39,9 @@
 - Openapi系
 - Terminal Capture
 - Prettier - Code formatter
+- Git History
+- Sonar Lint
+- Peacock
 
 # uninstall candidate
 
@@ -49,7 +53,6 @@
 - Remove OpenAPI系
 - Python Docstring Generator
 - XML
-- DotENV
 - OpenAPI (Swagger) Editor
 - OpenAPI Preview
 - openapi-designer
