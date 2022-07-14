@@ -278,7 +278,7 @@
           "command": "git.openFile"
         },
         {
-          "key": "s",
+          "key": "w",
           "name": "Focus other side",
           "type": "command",
           "command": "workbench.action.compareEditor.focusOtherSide"
@@ -469,9 +469,6 @@
   // python
   "[python]": {
     "editor.tabSize": 4,
-    "gitlens.codeLens.symbolScopes": [
-      "!Module"
-    ],
     "editor.wordBasedSuggestions": false
   },
   "python.linting.pylintEnabled": false,
