@@ -269,17 +269,17 @@
   {
     "key": "s",
     "command": "git.stage",
-    "when": "sideBarFocus && activeViewlet == 'workbench.view.scm'"
+    "when": "sideBarFocus && activeViewlet == 'workbench.view.scm' && !textInputFocus"
   },
   {
     "key": "u",
     "command": "git.unstage",
-    "when": "sideBarFocus && activeViewlet == 'workbench.view.scm'"
+    "when": "sideBarFocus && activeViewlet == 'workbench.view.scm' && !textInputFocus"
   },
   {
     "key": "x",
     "command": "git.clean",
-    "when": "sideBarFocus && activeViewlet == 'workbench.view.scm'"
+    "when": "sideBarFocus && activeViewlet == 'workbench.view.scm' && !textInputFocus"
   },
   // magit
   {
@@ -634,6 +634,11 @@
     "key": "ctrl+j",
     "command": "search.action.focusSearchList",
     "when": "inSearchEditor"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "search.focus.previousInputBox",
+    "when": "inSearchEditor || searchViewletFocus"
   },
   // ctrl+ey
   {
