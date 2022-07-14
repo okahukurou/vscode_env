@@ -774,6 +774,21 @@
     "command": "-markdown.extension.editing.toggleBold",
     "when": "editorTextFocus && !editorReadonly && editorLangId == 'markdown'"
   },
+  {
+    "key": "cmd+f",
+    "command": "-actions.find",
+    "when": "editorFocus || editorIsOpen"
+  },
+  {
+    "key": "cmd+f",
+    "command": "vim.remap",
+    "args": {
+      "after": [
+        "/"
+      ]
+    },
+    "when": "editorFocus || editorIsOpen"
+  },
   // rest client
   {
     "key": "ctrl+enter",
