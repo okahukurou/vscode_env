@@ -312,11 +312,6 @@
     "command": "-magit.discard-at-point"
   },
   {
-    "key": "-",
-    "command": "magit.reverse-at-point",
-    "when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
-  },
-  {
     "key": "v",
     "command": "-magit.reverse-at-point"
   },
@@ -330,21 +325,26 @@
     "command": "-magit.reverting"
   },
   {
-    "key": "shift+o",
-    "command": "magit.resetting",
-    "when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
-  },
-  {
-    "key": "shift+x",
-    "command": "-magit.resetting"
-  },
-  {
     "key": "x",
     "command": "-magit.reset-mixed"
   },
   {
     "key": "ctrl+u x",
     "command": "-magit.reset-hard"
+  },
+  {
+    "key": "l",
+    "command": "-magit.logging"
+  },
+  {
+    "key": "shift+l",
+    "command": "magit.logging",
+    "when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
+  },
+  {
+    "key": "shift+c",
+    "command": "magit.status",
+    "when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
   },
   // enter (execute, insert line)
   {
@@ -810,17 +810,6 @@
     "key": "space",
     "command": "vspacecode.space",
     "when": "sideBarFocus && !inputFocus && !whichkeyActive"
-  },
-  // Keybindings required for edamagit
-  // Extra ref menu support for edamagit with the key "y"
-  {
-    "key": "y",
-    "command": "-magit.show-refs"
-  },
-  {
-    "key": "y",
-    "command": "vspacecode.showMagitRefMenu",
-    "when": "editorTextFocus && editorLangId == 'magit' && vim.mode == 'Normal'"
   },
   // only for windows
   {
