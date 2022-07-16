@@ -26,7 +26,6 @@
   "vim.hlsearch": true,
   "vim.visualstar": true,
   "vim.useCtrlKeys": true,
-  "vim.ignorecase": true,
   "vim.incsearch": true,
   "vim.easymotion": true,
   "vim.sneak": true,
@@ -36,7 +35,6 @@
   "vim.cursorStylePerMode.replace": "underline",
   "vim.highlightedyank.enable": true,
   "vim.highlightedyank.duration": 500,
-  "vim.searchHighlightColor": "#553311",
   "vim.insertModeKeyBindings": [
     {
       "before": [
@@ -77,11 +75,15 @@
     },
     {
       "before": [
-        "<ESC>",
+        "<ESC>"
+      ],
+      "after": [
         "<ESC>"
       ],
       "commands": [
-        ":nohlsearch"
+        {
+          "command": ":nohlsearch"
+        }
       ]
     },
     {
@@ -96,14 +98,13 @@
     },
     {
       "before": [
-        "s"
+        "<C-n>"
       ],
       "after": [
-        "\"",
-        "_",
-        "s"
+        "g",
+        "b"
       ]
-    }
+    },
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
     {
@@ -118,22 +119,27 @@
       "before": [
         ">"
       ],
-      "after": [
-        ">",
-        "g",
-        "v"
+      "commands": [
+        "editor.action.indentLines"
       ]
     },
     {
       "before": [
         "<"
       ],
-      "after": [
-        "<",
-        "g",
-        "v"
+      "commands": [
+        "editor.action.outdentLines"
       ]
-    }
+    },
+    {
+      "before": [
+        "<C-n>"
+      ],
+      "after": [
+        "g",
+        "b"
+      ]
+    },
   ],
   "vspacecode.bindingOverrides": [
     {
@@ -384,9 +390,10 @@
   "workbench.editor.limit.value": 5,
   // other my settings
   "editor.bracketPairColorization.enabled": true,
-  "workbench.colorTheme": "Default High Contrast",
+  "workbench.colorTheme": "GitHub Dark Default",
   "editor.wordWrap": "off",
   "search.useIgnoreFiles": false,
+  "editor.formatOnType": true,
   "editor.formatOnSave": true,
   "editor.glyphMargin": false,
   "editor.cursorSurroundingLines": 5,
@@ -400,7 +407,7 @@
   "git-graph.referenceLabels.combineLocalAndRemoteBranchLabels": false,
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "breadcrumbs.enabled": true,
-  "debug.inlineValues": true,
+  "debug.inlineValues": "auto",
   "explorer.confirmDragAndDrop": false,
   "editor.rulers": [
     {
@@ -408,25 +415,18 @@
       "color": "#552355"
     }
   ],
-  "workbench.colorCustomizations": {
-    "editor.findMatchHighlightBackground": "#553311",
-    "diffEditor.insertedTextBorder": "#000000",
-    "diffEditor.insertedTextBackground": "#004400",
-    "diffEditor.removeTextBorder": "#000000",
-    "diffEditor.removeTextBackground": "#440000",
-    "terminal.ansiBlue": "#4488ff",
-  },
   // indentRainbow
   "indentRainbow.colors": [
-    "rgba(255,0,0,0.2)",
-    "rgba(255,165,0,0.2)",
-    "rgba(255,255,0,0.2)",
-    "rgba(0,128,0,0.2)",
-    "rgba(0,255,255,0.2)",
-    "rgba(0,0,255,0.4)",
-    "rgba(128,0,128,0.4)"
+    "rgba(255,0,0,0.5)",
+    "rgba(255,165,0,0.5)",
+    "rgba(255,255,0,0.5)",
+    "rgba(0,128,0,0.5)",
+    "rgba(0,255,255,0.5)",
+    "rgba(0,0,255,0.5)",
+    "rgba(128,0,128,0.5)"
   ],
   "indentRainbow.errorColor": "rgba(255,255,255,0.5)",
+  "indentRainbow.indicatorStyle": "light",
   "indentRainbow.ignoreErrorLanguages": [
     "markdown",
     "python"

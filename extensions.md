@@ -1,5 +1,7 @@
 # extensions
 
+## favorite
+
 - autoDocstring
 - Better Jinja
 - Code Spell Checker
@@ -8,7 +10,6 @@
 - empty-indent
 - Error Lens
 - Git Graph
-- Go
 - indent-rainbow
 - json2yaml
 - Jupyter
@@ -33,17 +34,17 @@
 - vscode-icons
 - YAML
 
-# let's try
+## let's try
 
+- Go
 - Path Intellisense
 - Openapi系
 - Terminal Capture
 - Prettier - Code formatter
 - Git History
 - Sonar Lint
-- Peacock
 
-# uninstall candidate
+## uninstall candidate
 
 - Docker
 - GitLens
