@@ -411,12 +411,6 @@
   "breadcrumbs.enabled": true,
   "debug.inlineValues": "auto",
   "explorer.confirmDragAndDrop": false,
-  "editor.rulers": [
-    {
-      "column": 80,
-      "color": "#552355"
-    }
-  ],
   // indentRainbow
   "indentRainbow.colors": [
     "rgba(255,0,0,0.5)",
@@ -471,7 +465,13 @@
   // python
   "[python]": {
     "editor.tabSize": 4,
-    "editor.wordBasedSuggestions": false
+    "editor.wordBasedSuggestions": false,
+    "editor.rulers": [
+      {
+        "column": 80,
+        "color": "#552355"
+      }
+    ]
   },
   "python.linting.pylintEnabled": false,
   "python.linting.flake8Enabled": true,
