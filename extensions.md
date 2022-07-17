@@ -43,6 +43,7 @@
 - Prettier - Code formatter
 - Git History
 - Sonar Lint
+- Git Tree Compare
 
 ## uninstall candidate
 

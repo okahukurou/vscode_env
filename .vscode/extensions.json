@@ -21,6 +21,7 @@
     "vscodevim.vim",
     "vscode-icons-team.vscode-icons",
     "github.github-vscode-theme",
-    "usernamehw.errorlens"
+    "usernamehw.errorlens",
+    "letmaik.git-tree-compare"
   ]
 }

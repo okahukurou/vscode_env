@@ -143,6 +143,12 @@
   ],
   "vspacecode.bindingOverrides": [
     {
+      "keys": ">",
+      "name": "Commands",
+      "type": "command",
+      "command": "workbench.action.showCommands"
+    },
+    {
       "keys": " ",
       "name": "Easy motion",
       "type": "bindings",
@@ -284,7 +290,7 @@
           "command": "git.openFile"
         },
         {
-          "key": "w",
+          "key": "k",
           "name": "Focus other side",
           "type": "command",
           "command": "workbench.action.compareEditor.focusOtherSide"
@@ -302,7 +308,7 @@
           "command": "workbench.action.compareEditor.previousChange"
         },
         {
-          "key": "a",
+          "key": "s",
           "name": "Stage selected range",
           "type": "command",
           "command": "git.stageSelectedRanges"
@@ -332,10 +338,16 @@
           "command": "magit.dispatch"
         },
         {
-          "key": "s",
+          "key": "C",
           "name": "Magit status",
           "type": "command",
           "command": "magit.status"
+        },
+        {
+          "key": "P",
+          "name": "Push",
+          "type": "command",
+          "command": "magit.pushing"
         }
       ]
     },

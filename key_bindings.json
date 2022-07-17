@@ -202,6 +202,22 @@
     "command": "deleteRight",
     "when": "editorFocus && vim.mode == 'Insert'"
   },
+  // compare editor
+  {
+    "key": "ctrl+n",
+    "command": "workbench.action.compareEditor.nextChange",
+    "when": "textCompareEditorActive"
+  },
+  {
+    "key": "ctrl+p",
+    "command": "workbench.action.compareEditor.previousChange",
+    "when": "textCompareEditorActive"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "workbench.action.compareEditor.focusOtherSide",
+    "when": "textCompareEditorActive"
+  },
   // sidebar control
   {
     "key": "ctrl+h",
@@ -221,7 +237,25 @@
   },
   {
     "key": "ctrl+t",
+    "command": "workbench.action.focusSideBar"
+  },
+  {
+    "key": "ctrl+[BracketLeft]",
+    "command": "-workbench.action.terminal.toggleTerminal",
+    "when": "terminal.active"
+  },
+  {
+    "key": "ctrl+[BracketLeft]",
+    "command": "terminal.focus"
+  },
+  {
+    "key": "cmd+h",
     "command": "workbench.action.toggleSidebarVisibility",
+    "when": "vim.mode != 'SearchInProgressMode' && vim.mode != 'Insert'"
+  },
+  {
+    "key": "cmd+l",
+    "command": "workbench.action.toggleAuxiliaryBar",
     "when": "vim.mode != 'SearchInProgressMode' && vim.mode != 'Insert'"
   },
   // explorer control
