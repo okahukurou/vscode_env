@@ -220,8 +220,12 @@
   },
   // sidebar control
   {
-    "key": "ctrl+h",
+    "key": "ctrl+t",
     "command": "workbench.explorer.fileView.focus"
+  },
+  {
+    "key": "ctrl+s",
+    "command": "workbench.view.search.focus"
   },
   {
     "key": "ctrl+g",
@@ -229,15 +233,33 @@
   },
   {
     "key": "ctrl+l",
-    "command": "workbench.action.focusActiveEditorGroup"
+    "command": "workbench.action.focusAuxiliaryBar",
+    "when": "!sideBarFocus"
   },
   {
-    "key": "ctrl+s",
-    "command": "workbench.view.search.focus"
+    "key": "ctrl+l",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "sideBarFocus"
   },
   {
-    "key": "ctrl+t",
-    "command": "workbench.action.focusSideBar"
+    "key": "ctrl+h",
+    "command": "workbench.action.focusSideBar",
+    "when": "!auxiliaryBarFocus"
+  },
+  {
+    "key": "ctrl+h",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "auxiliaryBarFocus"
+  },
+  {
+    "key": "ctrl+p",
+    "command": "workbench.action.previousSideBarView",
+    "when": "sideBarFocus"
+  },
+  {
+    "key": "ctrl+n",
+    "command": "workbench.action.nextSideBarView",
+    "when": "sideBarFocus"
   },
   {
     "key": "ctrl+[BracketLeft]",
