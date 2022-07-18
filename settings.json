@@ -289,24 +289,24 @@
           "type": "command",
           "command": "git.openFile"
         },
-        {
-          "key": "k",
-          "name": "Focus other side",
-          "type": "command",
-          "command": "workbench.action.compareEditor.focusOtherSide"
-        },
-        {
-          "key": "n",
-          "name": "Next changes",
-          "type": "command",
-          "command": "workbench.action.compareEditor.nextChange"
-        },
-        {
-          "key": "p",
-          "name": "Previous changes",
-          "type": "command",
-          "command": "workbench.action.compareEditor.previousChange"
-        },
+        // {
+        //   "key": "k",
+        //   "name": "Focus other side",
+        //   "type": "command",
+        //   "command": "workbench.action.compareEditor.focusOtherSide"
+        // },
+        // {
+        //   "key": "n",
+        //   "name": "Next changes",
+        //   "type": "command",
+        //   "command": "workbench.action.compareEditor.nextChange"
+        // },
+        // {
+        //   "key": "p",
+        //   "name": "Previous changes",
+        //   "type": "command",
+        //   "command": "workbench.action.compareEditor.previousChange"
+        // },
         {
           "key": "s",
           "name": "Stage selected range",
@@ -320,7 +320,7 @@
           "command": "git.unstageSelectedRanges"
         },
         {
-          "key": "r",
+          "key": "x",
           "name": "Revert selected range",
           "type": "command",
           "command": "git.revertSelectedRanges"
@@ -338,7 +338,7 @@
           "command": "magit.dispatch"
         },
         {
-          "key": "C",
+          "key": "t",
           "name": "Magit status",
           "type": "command",
           "command": "magit.status"
@@ -348,6 +348,12 @@
           "name": "Push",
           "type": "command",
           "command": "magit.pushing"
+        },
+        {
+          "key": "R",
+          "name": "Reset soft",
+          "type": "command",
+          "command": "git.undoCommit"
         }
       ]
     },
