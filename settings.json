@@ -7,6 +7,7 @@
   "diffEditor.ignoreTrimWhitespace": false,
   "editor.renderWhitespace": "all",
   "files.insertFinalNewline": true,
+  "files.autoSave": "onFocusChange",
   "editor.minimap.enabled": false,
   "editor.lineNumbers": "on",
   "search.searchOnType": true,
@@ -387,6 +388,61 @@
           "command": "projectManager.editProjects"
         }
       ]
+    },
+    {
+      "keys": "t",
+      "name": "Test",
+      "type": "bindings",
+      "bindings": [
+        {
+          "key": "a",
+          "name": "Test All",
+          "type": "command",
+          "command": "testing.runAll"
+        },
+        {
+          "key": "f",
+          "name": "Test File",
+          "type": "command",
+          "command": "testing.runCurrentFile"
+        },
+        {
+          "key": "c",
+          "name": "Test Current",
+          "type": "command",
+          "command": "testing.runAtCursor"
+        },
+        {
+          "key": "e",
+          "name": "Test Failed",
+          "type": "command",
+          "command": "testing.reRunFailTests"
+        },
+        {
+          "key": "l",
+          "name": "Test Last",
+          "type": "command",
+          "command": "testing.reRunLastRun"
+        },
+        {
+          "key": "d",
+          "name": "Display Coverage",
+          "type": "command",
+          "command": "coverage-gutters.displayCoverage"
+        },
+        {
+          "key": "r",
+          "name": "Remove Coverage",
+          "type": "command",
+          "command": "coverage-gutters.removeCoverage"
+        },
+        {
+          "key": "t",
+          "name": "Execute Test Task",
+          "type": "command",
+          "command": "workbench.action.tasks.test"
+        }
+      ]
     }
   ],
   // magit
@@ -415,7 +471,6 @@
   "search.useIgnoreFiles": false,
   "editor.formatOnType": true,
   "editor.formatOnSave": true,
-  "editor.glyphMargin": false,
   "editor.cursorSurroundingLines": 5,
   "git.pruneOnFetch": true,
   "git.mergeEditor": true,
