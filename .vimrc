@@ -5,8 +5,8 @@ set history=1000
 set ruler
 
 " Show the line number.
-set number
-set relativenumber
+" set number
+" set relativenumber
 
 " Highlight in searching.
 set hlsearch
@@ -70,3 +70,23 @@ set backspace=indent,eol,start
 
 " turn off beep
 set belloff=all
+
+"plugin manager
+let s:jetpack_root = expand('~/.vim/jetpack-vim')
+let s:jetpack_vim = s:jetpack_root . '/jetpack.vim'
+
+if !filereadable(s:jetpack_vim)
+  execute '!curl -fLo' s:jetpack_vim '--create-dirs'
+    \ 'https://raw.githubusercontent.com/tani/vim-jetpack/master/plugin/jetpack.vim'
+  let s:jetpack_sync = 1
+endif
+execute 'source ' . s:jetpack_vim
+
+call jetpack#begin(s:jetpack_root)
+  call jetpack#add('tpope/vim-commentary')
+  call jetpack#add('vim-scripts/ReplaceWithRegister')
+call jetpack#end()
+
+if get(s:, 'jetpack_sync', 0)
+  call jetpack#sync()
+endif

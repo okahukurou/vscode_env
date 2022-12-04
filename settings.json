@@ -4,13 +4,14 @@
   "editor.tabSize": 2,
   "editor.insertSpaces": true,
   "files.trimTrailingWhitespace": true,
+  "files.trimFinalNewlines": true,
   "diffEditor.ignoreTrimWhitespace": false,
   "editor.renderWhitespace": "all",
   "files.insertFinalNewline": true,
-  "files.autoSave": "onFocusChange",
   "editor.minimap.enabled": false,
   "editor.lineNumbers": "on",
   "search.searchOnType": true,
+  "files.autoSave": "onFocusChange",
   // terminal
   "terminal.integrated.fontSize": 12,
   "terminal.integrated.cursorWidth": 1,
@@ -82,9 +83,7 @@
         "<ESC>"
       ],
       "commands": [
-        {
-          "command": ":nohlsearch"
-        }
+        ":nohlsearch"
       ]
     },
     {
@@ -169,7 +168,7 @@
         },
         {
           "key": "j",
-          "name": "Start of line backwards",
+          "name": "Start of line forwards",
           "type": "command",
           "command": "vim.remap",
           "args": {
@@ -286,28 +285,10 @@
         },
         {
           "key": "o",
-          "name": "Open files",
+          "name": "Open file",
           "type": "command",
           "command": "git.openFile"
         },
-        // {
-        //   "key": "k",
-        //   "name": "Focus other side",
-        //   "type": "command",
-        //   "command": "workbench.action.compareEditor.focusOtherSide"
-        // },
-        // {
-        //   "key": "n",
-        //   "name": "Next changes",
-        //   "type": "command",
-        //   "command": "workbench.action.compareEditor.nextChange"
-        // },
-        // {
-        //   "key": "p",
-        //   "name": "Previous changes",
-        //   "type": "command",
-        //   "command": "workbench.action.compareEditor.previousChange"
-        // },
         {
           "key": "s",
           "name": "Stage selected range",
@@ -408,7 +389,7 @@
         },
         {
           "key": "c",
-          "name": "Test Current",
+          "name": "Test Cursor",
           "type": "command",
           "command": "testing.runAtCursor"
         },
@@ -441,6 +422,18 @@
           "name": "Execute Test Task",
           "type": "command",
           "command": "workbench.action.tasks.test"
+        },
+        {
+          "key": "p",
+          "name": "Peek Test Result",
+          "type": "command",
+          "command": "testing.openOutputPeek"
+        },
+        {
+          "key": "C",
+          "name": "Cancel Test Run",
+          "type": "command",
+          "command": "testing.cancelRun"
         }
       ]
     }
@@ -484,6 +477,14 @@
   "breadcrumbs.enabled": true,
   "debug.inlineValues": "auto",
   "explorer.confirmDragAndDrop": false,
+  "workbench.colorCustomizations": {
+    "editor.findMatchHighlightBackground": "#553311",
+    "diffEditor.insertedTextBorder": "#000000",
+    "diffEditor.insertedTextBackground": "#004400",
+    "diffEditor.removeTextBorder": "#000000",
+    "diffEditor.removedTextBackground": "#440000",
+    "terminal.ansiBlue": "#4488ff"
+  },
   // indentRainbow
   "indentRainbow.colors": [
     "rgba(255,0,0,0.5)",
@@ -498,7 +499,8 @@
   "indentRainbow.indicatorStyle": "light",
   "indentRainbow.ignoreErrorLanguages": [
     "markdown",
-    "python"
+    "python",
+    "magit"
   ],
   // vscode icons
   "workbench.iconTheme": "vscode-icons",
@@ -548,24 +550,27 @@
   },
   "python.linting.pylintEnabled": false,
   "python.linting.flake8Enabled": true,
-  "python.formatting.provider": "autopep8",
-  // "python.linting.flake8Args": [
-  //   "--ignore=W503"
-  // ],
-  // "python.formatting.autopep8Args": [
-  //   "--aggressive",
-  //   "--aggressive",
-  //   "--ignore=E402"
-  // ],
+  "python.formatting.provider": "black",
+  "python.formatting.blackArgs": [
+    "--line-length=79"
+  ],
+  "python.linting.flake8Args": [
+    "--ignore=W503"
+  ],
   "python.languageServer": "Pylance",
   "python.analysis.typeCheckingMode": "basic",
   "python.analysis.autoImportCompletions": false,
+  // testing
+  "testing.followRunningTest": false,
+  "testing.openTesting": "neverOpen",
   // drawio
   "hediet.vscode-drawio.theme": "dark",
-  // vs-kubernetes
+  // kubernetes
   "vs-kubernetes": {
     "vs-kubernetes.crd-code-completion": "disabled"
   },
+  // redhat
+  "redhat.telemetry.enabled": false,
   // delays
   "editor.quickSuggestionsDelay": 600,
   "indentRainbow.updateDelay": 800,
@@ -573,7 +578,9 @@
   // associations
   "files.associations": {
     "Dockerfile*": "dockerfile",
-    "*.json": "jinja-json"
+    "*.json": "jinja-json",
+    "config": "properties",
+    "credentials": "properties"
   },
   "workbench.editorAssociations": {
     "*.ipynb": "jupyter-notebook"

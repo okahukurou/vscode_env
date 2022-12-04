@@ -45,6 +45,12 @@ setopt inc_append_history
 autoload -Uz compinit && compinit
 
 
+### command edit
+autoload -Uz edit-command-line
+zle -N edit-command-line
+bindkey "^O" edit-command-line
+
+
 ### prompt
 export PROMPT="%F{cyan}[%. %T]%F{green}%# "
 change_rprompt() {
