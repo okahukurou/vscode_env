@@ -84,6 +84,7 @@ execute 'source ' . s:jetpack_vim
 
 call jetpack#begin(s:jetpack_root)
   call jetpack#add('tpope/vim-commentary')
+  call jetpack#add('tpope/vim-surround')
   call jetpack#add('vim-scripts/ReplaceWithRegister')
 call jetpack#end()
 
