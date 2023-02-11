@@ -59,7 +59,13 @@ change_rprompt() {
     else
         local exec_result="%F{red}$COMMAND_EXECUTION_DURATION"
     fi
-    export RPROMPT="$exec_result %F{cyan}(%3~)"
+    if command -v pyenv&> /dev/null; then
+        local pyenv_version=$(pyenv version-name)
+    else
+        local pyenv_version=""
+    fi
+    # export RPROMPT="$exec_result %F{cyan}(%3~)"
+    export RPROMPT="$exec_result %F{sync}($pyenv_version)"
 }
 autoload -Uz add-zsh-hook
 add-zsh-hook precmd change_rprompt
@@ -131,10 +137,16 @@ eval "$(pyenv virtualenv-init -)"
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 
 
+### other aliases
+alias lg='lazygit'
+alias tf="terraform"
+
+
 ### other path
 eval "$(nodenv init -)"
 export PATH="/usr/local/opt/libpq/bin:$PATH"
 export PATH="${HOME}/scripts:$PATH"
+export PATH="${HOME}/.nodebrew/current/bin:$PATH"
 
 
 ### after source

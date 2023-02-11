@@ -5,12 +5,16 @@
 - autoDocstring
 - Better Jinja
 - Code Spell Checker
+- Coverage Gutters
 - DotENV
 - Draw.io integration
 - empty-indent
 - Error Lens
 - Git Graph
+- GitHub Theme
 - indent-rainbow
+- isort
+- JSON
 - json2yaml
 - Jupyter
 - Jupyter Keymap
@@ -19,7 +23,9 @@
 - Markdown All in One
 - Markdown Preview Mermaid Support
 - markdownlint
+- Mermaid Editor
 - Partial Diff
+- Project Manager
 - Pylance
 - Python
 - Python indent
@@ -29,8 +35,14 @@
 - Remote - SSH
 - Remote - SSH: Editing Configuration Files
 - REST Client
+- ShellCheck
+- SonarLint
+- Terminal Capture
+- Terraform
 - Vim
 - Visual Studio Keymap
+- VSpaceCode
+- Which Key
 - vscode-icons
 - YAML
 

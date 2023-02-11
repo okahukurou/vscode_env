@@ -1,0 +1,20 @@
+gui:
+  language: "en"
+  mouseEvents: false
+  expandFocusedSidePanel: true
+  showFileTree: false
+  showBottomLine: false
+os:
+  openCommand: "code -rg {{filename}}"
+  editCommand: "code"
+  editCommandTemplate: "{{editor}} --goto -- {{filename}}:{{line}}"
+git:
+  autoFetch: false
+  branchLogCmd: "git log --graph --color=always --abbrev-commit --decorate --date=relative --pretty=oneline {{branchName}} --"
+  allBranchesLogCmd: "git log --all --graph --color=always --abbrev-commit --decorate --date=relative --pretty=oneline --"
+  log:
+    showGraph: always
+  paging:
+    colorArg: always
+    pager: delta --dark --paging=never
+notARepository: skip

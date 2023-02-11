@@ -11,7 +11,9 @@
   "editor.minimap.enabled": false,
   "editor.lineNumbers": "on",
   "search.searchOnType": true,
-  "files.autoSave": "onFocusChange",
+  "files.autoSave": "afterDelay",
+  "editor.stickyScroll.enabled": true,
+  "editor.stickyTabStops": true,
   // terminal
   "terminal.integrated.fontSize": 12,
   "terminal.integrated.cursorWidth": 1,
@@ -22,6 +24,7 @@
   "terminal.integrated.cursorBlinking": false,
   "terminal.integrated.defaultProfile.osx": "zsh",
   "terminal.integrated.enableMultiLinePasteWarning": false,
+  "terminal.integrated.customGlyphs": false,
   // vim settings
   "vim.useSystemClipboard": true,
   "vim.foldfix": true,
@@ -314,24 +317,6 @@
           "command": "git-graph.view"
         },
         {
-          "key": "m",
-          "name": "Magit dispatch",
-          "type": "command",
-          "command": "magit.dispatch"
-        },
-        {
-          "key": "t",
-          "name": "Magit status",
-          "type": "command",
-          "command": "magit.status"
-        },
-        {
-          "key": "P",
-          "name": "Push",
-          "type": "command",
-          "command": "magit.pushing"
-        },
-        {
           "key": "R",
           "name": "Reset soft",
           "type": "command",
@@ -436,10 +421,29 @@
           "command": "testing.cancelRun"
         }
       ]
+    },
+    {
+      "keys": "c",
+      "name": "Commands",
+      "type": "bindings",
+      "bindings": [
+        {
+          "key": "p",
+          "name": "proxy-login",
+          "type": "command",
+          "command": "workbench.action.tasks.runTask",
+          "args": "proxy-login"
+        },
+        {
+          "key": "l",
+          "name": "lazygit",
+          "type": "command",
+          "command": "workbench.action.tasks.runTask",
+          "args": "lazygit"
+        }
+      ]
     }
   ],
-  // magit
-  "magit.display-buffer-function": "same-column",
   // settings for vim
   "workbench.editor.labelFormat": "short",
   "workbench.editor.revealIfOpen": true,
@@ -451,7 +455,6 @@
   "workbench.startupEditor": "none",
   "workbench.editor.openPositioning": "first",
   "workbench.list.automaticKeyboardNavigation": false,
-  "explorer.openEditors.visible": 0,
   "workbench.editor.showTabs": true,
   "workbench.editor.enablePreview": true,
   "workbench.editor.limit.enabled": true,
@@ -482,7 +485,7 @@
     "diffEditor.insertedTextBorder": "#000000",
     "diffEditor.insertedTextBackground": "#004400",
     "diffEditor.removeTextBorder": "#000000",
-    "diffEditor.removedTextBackground": "#440000",
+    "diffEditor.removeTextBackground": "#440000",
     "terminal.ansiBlue": "#4488ff"
   },
   // indentRainbow
@@ -499,8 +502,7 @@
   "indentRainbow.indicatorStyle": "light",
   "indentRainbow.ignoreErrorLanguages": [
     "markdown",
-    "python",
-    "magit"
+    "python"
   ],
   // vscode icons
   "workbench.iconTheme": "vscode-icons",
@@ -535,7 +537,6 @@
   },
   "markdown.extension.orderedList.marker": "one",
   "markdown.extension.orderedList.autoRenumber": false,
-  "markdown.extension.syntax.decorations": false,
   "markdown.extension.tableFormatter.enabled": false,
   // python
   "[python]": {
@@ -546,7 +547,8 @@
         "column": 80,
         "color": "#552355"
       }
-    ]
+    ],
+    "editor.formatOnType": true
   },
   "python.linting.pylintEnabled": false,
   "python.linting.flake8Enabled": true,
@@ -560,7 +562,23 @@
   "python.languageServer": "Pylance",
   "python.analysis.typeCheckingMode": "basic",
   "python.analysis.autoImportCompletions": false,
+  "python.terminal.activateEnvironment": false,
+  "autoDocstring.docstringFormat": "google",
+  // mypy
+  // "python.linting.mypyCategorySeverity.error": "Error",
+  // "python.linting.mypyCategorySeverity.note": "Information",
+  // "python.linting.mypyEnabled": true,
+  // "python.linting.mypyPath": "mypy",
+  // bandit
+  // "python.linting.banditEnabled": true,
+  // isort
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true
+  },
   // testing
+  "python.testing.unittestEnabled": false,
+  "python.testing.pytestEnabled": true,
+  "python.testing.autoTestDiscoverOnSaveEnabled": true,
   "testing.followRunningTest": false,
   "testing.openTesting": "neverOpen",
   // drawio
@@ -571,6 +589,13 @@
   },
   // redhat
   "redhat.telemetry.enabled": false,
+  // mermaid-editor
+  "mermaid-editor.generate.type": "png",
+  // cspell
+  "cSpell.autoFormatConfigFile": true,
+  "cSpell.enableFiletypes": [
+    "*"
+  ],
   // delays
   "editor.quickSuggestionsDelay": 600,
   "indentRainbow.updateDelay": 800,
@@ -589,6 +614,6 @@
     "**/venv/**": true,
     "**/__pycache__/**": true,
     "**/.mypy_cache/**": true,
-    "**/*egg-info/**": true
+    "**/*egg-info/**": true,
   }
 }

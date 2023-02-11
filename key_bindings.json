@@ -548,6 +548,11 @@
     "command": "workbench.action.terminal.scrollToBottom",
     "when": "terminalFocus && terminalProcessSupported"
   },
+  {
+    "key": "cmd+f",
+    "command": "workbench.action.toggleMaximizedPanel",
+    "when": "terminalFocus"
+  },
   // terminal alt (skip if windows)
   {
     "key": "alt+y",
@@ -702,7 +707,7 @@
   },
   {
     "key": "ctrl+j",
-    "command": "search.focus.nextInputBox",
+    "command": "search.action.focusSearchList",
     "when": "inSearchEditor || searchViewletFocus"
   },
   {
@@ -890,6 +895,31 @@
     "key": "space",
     "command": "vspacecode.space",
     "when": "sideBarFocus && !inputFocus && !whichkeyActive"
+  },
+  // Remove unnecessary ctrl+k bindings
+  {
+    "key": "ctrl+k",
+    "command": "-deleteAllRight",
+    "when": "textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+k ctrl+m",
+    "command": "-editor.foldAll",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+k ctrl+d",
+    "command": "-editor.action.formatDocument"
+  },
+  {
+    "key": "ctrl+k ctrl+x",
+    "command": "-insertSnippet"
+  },
+  // testing
+  {
+    "key": "escape",
+    "command": "editor.closeTestPeek",
+    "when": "testing.isPeekVisible"
   },
   // only for windows
   {
