@@ -1,0 +1,15 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "lazygit",
+      "type": "shell",
+      "command": "lazygit"
+    },
+    {
+      "label": "proxy-login",
+      "type": "shell",
+      "command": "proxy-login.sh"
+    }
+  ]
+}
