@@ -21,7 +21,7 @@
   "terminal.integrated.tabs.showActiveTerminal": "always",
   "terminal.integrated.tabs.enabled": true,
   "terminal.integrated.cursorStyle": "block",
-  "terminal.integrated.cursorBlinking": false,
+  "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.defaultProfile.osx": "zsh",
   "terminal.integrated.enableMultiLinePasteWarning": false,
   "terminal.integrated.customGlyphs": false,
@@ -40,6 +40,7 @@
   "vim.cursorStylePerMode.replace": "underline",
   "vim.highlightedyank.enable": true,
   "vim.highlightedyank.duration": 500,
+  "vim.showMarksInGutter": true,
   "vim.insertModeKeyBindings": [
     {
       "before": [
@@ -272,7 +273,20 @@
               "T"
             ]
           }
-        }
+        },
+        {
+          "key": "/",
+          "name": "Search pattern",
+          "type": "command",
+          "command": "vim.remap",
+          "args": {
+            "after": [
+              "<leader>",
+              "<leader>",
+              "/"
+            ]
+          }
+        },
       ]
     },
     {
@@ -352,7 +366,13 @@
           "name": "Edit projects",
           "type": "command",
           "command": "projectManager.editProjects"
-        }
+        },
+        {
+          "key": "C",
+          "name": "Close project",
+          "type": "command",
+          "command": "workbench.action.closeWindow"
+        },
       ]
     },
     {
