@@ -347,12 +347,6 @@
           "key": "o",
           "name": "Open project",
           "type": "command",
-          "command": "projectManager.listProjects"
-        },
-        {
-          "key": "O",
-          "name": "Open project with new window",
-          "type": "command",
           "command": "projectManager.listProjectsNewWindow"
         },
         {
@@ -442,27 +436,6 @@
         }
       ]
     },
-    {
-      "keys": "c",
-      "name": "Commands",
-      "type": "bindings",
-      "bindings": [
-        {
-          "key": "p",
-          "name": "proxy-login",
-          "type": "command",
-          "command": "workbench.action.tasks.runTask",
-          "args": "proxy-login"
-        },
-        {
-          "key": "l",
-          "name": "lazygit",
-          "type": "command",
-          "command": "workbench.action.tasks.runTask",
-          "args": "lazygit"
-        }
-      ]
-    }
   ],
   // settings for vim
   "workbench.editor.labelFormat": "short",
@@ -474,7 +447,6 @@
   "workbench.editor.tabCloseButton": "off",
   "workbench.startupEditor": "none",
   "workbench.editor.openPositioning": "first",
-  "workbench.list.automaticKeyboardNavigation": false,
   "workbench.editor.showTabs": true,
   "workbench.editor.enablePreview": true,
   "workbench.editor.limit.enabled": true,

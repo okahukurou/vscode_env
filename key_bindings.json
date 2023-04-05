@@ -202,6 +202,16 @@
     "command": "deleteRight",
     "when": "editorFocus && vim.mode == 'Insert'"
   },
+  {
+    "key": "cmd+f",
+    "command": "vim.remap",
+    "args": {
+      "after": [
+        "/"
+      ]
+    },
+    "when": "editorFocus || editorIsOpen"
+  },
   // compare editor
   {
     "key": "ctrl+n",
@@ -218,6 +228,11 @@
     "command": "workbench.action.compareEditor.focusOtherSide",
     "when": "textCompareEditorActive"
   },
+  {
+    "key": "tab",
+    "command": "workbench.action.compareEditor.focusOtherSide",
+    "when": "textCompareEditorActive"
+  },
   // sidebar control
   {
     "key": "ctrl+t",
@@ -228,12 +243,14 @@
     "command": "workbench.view.search.focus"
   },
   {
-    "key": "ctrl+g",
-    "command": "workbench.view.scm"
-  },
-  {
     "key": "ctrl+l",
-    "command": "workbench.action.focusAuxiliaryBar",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "workbench.action.focusAuxiliaryBar",
+        "workbench.action.focusAuxiliaryBar",
+      ]
+    },
     "when": "!sideBarFocus"
   },
   {
@@ -243,7 +260,13 @@
   },
   {
     "key": "ctrl+h",
-    "command": "workbench.action.focusSideBar",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "workbench.action.focusSideBar",
+        "workbench.action.focusSideBar",
+      ]
+    },
     "when": "!auxiliaryBarFocus"
   },
   {
@@ -284,6 +307,11 @@
   {
     "key": "r",
     "command": "renameFile",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "d",
+    "command": "deleteFile",
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
   },
   {
@@ -292,9 +320,9 @@
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
   },
   {
-    "key": "Y",
-    "command": "copyRelativeFilePath",
-    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+    "key": "x",
+    "command": "filesExplorer.cut",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
   },
   {
     "key": "p",
@@ -302,24 +330,19 @@
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
   },
   {
+    "key": "v",
+    "command": "explorer.openToSide",
+    "when": "explorerViewletFocus && explorerViewletVisible && !inputFocus"
+  },
+  {
     "key": "a",
     "command": "explorer.newFile",
-    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+    "when": "filesExplorerFocus && !inputFocus"
   },
   {
-    "key": "d",
-    "command": "filesExplorer.cut",
-    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
-  },
-  {
-    "key": "D",
-    "command": "deleteFile",
-    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
-  },
-  {
-    "key": "f",
+    "key": "shift+a",
     "command": "explorer.newFolder",
-    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+    "when": "filesExplorerFocus && !inputFocus"
   },
   // scm control
   {
@@ -337,80 +360,6 @@
     "command": "git.clean",
     "when": "sideBarFocus && activeViewlet == 'workbench.view.scm' && !textInputFocus"
   },
-  // magit
-  {
-    "key": "g g",
-    "command": "cursorTop",
-    "when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
-  },
-  {
-    "key": "g r",
-    "command": "magit.refresh",
-    "when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
-  },
-  {
-    "key": "tab",
-    "command": "extension.vim_tab",
-    "when": "editorFocus && vim.active && !inDebugRepl && vim.mode != 'Insert' && editorLangId != 'magit'"
-  },
-  {
-    "key": "tab",
-    "command": "-extension.vim_tab",
-    "when": "editorFocus && vim.active && !inDebugRepl && vim.mode != 'Insert'"
-  },
-  {
-    "key": "x",
-    "command": "magit.discard-at-point",
-    "when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
-  },
-  {
-    "key": "k",
-    "command": "-magit.discard-at-point"
-  },
-  {
-    "key": "v",
-    "command": "-magit.reverse-at-point"
-  },
-  {
-    "key": "shift+-",
-    "command": "magit.reverting",
-    "when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
-  },
-  {
-    "key": "shift+v",
-    "command": "-magit.reverting"
-  },
-  {
-    "key": "x",
-    "command": "-magit.reset-mixed"
-  },
-  {
-    "key": "ctrl+u x",
-    "command": "-magit.reset-hard"
-  },
-  {
-    "key": "l",
-    "command": "-magit.logging"
-  },
-  {
-    "key": "shift+l",
-    "command": "magit.logging",
-    "when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
-  },
-  {
-    "key": "t",
-    "command": "-magit.tagging"
-  },
-  {
-    "key": "T",
-    "command": "magit.tagging",
-    "when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
-  },
-  {
-    "key": "t",
-    "command": "magit.status",
-    "when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
-  },
   // enter (execute, insert line)
   {
     "key": "ctrl+enter",
@@ -425,11 +374,6 @@
     "key": "shift+enter",
     "command": "-python.execSelectionInTerminal",
     "when": "editorTextFocus && !findInputFocussed && !jupyter.ownsSelection && !notebookEditorFocused && !replaceInputFocussed && editorLangId == 'python'"
-  },
-  {
-    "key": "cmd+enter",
-    "command": "editor.action.insertLineAfter",
-    "when": "editorTextFocus && !editorReadonly"
   },
   {
     "key": "shift+enter",
@@ -447,10 +391,6 @@
     "when": "editorTextFocus && !editorReadonly"
   },
   // terminal control
-  {
-    "key": "cmd+i [BracketLeft]",
-    "command": "terminal.focus"
-  },
   {
     "key": "cmd+i l",
     "command": "workbench.action.terminal.focusNextPane",
@@ -549,70 +489,9 @@
     "when": "terminalFocus && terminalProcessSupported"
   },
   {
-    "key": "cmd+f",
+    "key": "ctrl+w m",
     "command": "workbench.action.toggleMaximizedPanel",
     "when": "terminalFocus"
-  },
-  // terminal alt (skip if windows)
-  {
-    "key": "alt+y",
-    "command": "workbench.action.terminal.scrollUp",
-    "when": "terminalFocus && terminalProcessSupported"
-  },
-  {
-    "key": "alt+e",
-    "command": "workbench.action.terminal.scrollDown",
-    "when": "terminalFocus && terminalProcessSupported"
-  },
-  {
-    "key": "shift+alt+y",
-    "command": "workbench.action.terminal.scrollUpPage",
-    "when": "terminalFocus && terminalProcessSupported"
-  },
-  {
-    "key": "shift+alt+e",
-    "command": "workbench.action.terminal.scrollDown",
-    "when": "terminalFocus && terminalProcessSupported"
-  },
-  {
-    "key": "alt+k",
-    "command": "workbench.action.terminal.selectToPreviousLine",
-    "when": "terminalFocus && terminalProcessSupported"
-  },
-  {
-    "key": "alt+j",
-    "command": "workbench.action.terminal.selectToNextLine",
-    "when": "terminalFocus && terminalProcessSupported"
-  },
-  {
-    "key": "shift+alt+k",
-    "command": "workbench.action.terminal.selectToPreviousCommand",
-    "when": "terminalFocus && terminalProcessSupported"
-  },
-  {
-    "key": "shift+alt+j",
-    "command": "workbench.action.terminal.selectToNextCommand",
-    "when": "terminalFocus && terminalProcessSupported"
-  },
-  {
-    "key": "alt+y",
-    "command": "workbench.action.terminal.scrollUp",
-    "when": "terminalFocus && terminalProcessSupported"
-  },
-  {
-    "key": "alt+e",
-    "command": "workbench.action.terminal.scrollDown",
-    "when": "terminalFocus && terminalProcessSupported"
-  },
-  {
-    "key": "shift+alt+y",
-    "command": "workbench.action.terminal.scrollUpPage",
-    "when": "terminalFocus && terminalProcessSupported"
-  },
-  {
-    "key": "shift+alt+e",
-    "command": "workbench.action.terminal.scrollDownPage",
-    "when": "terminalFocus && terminalProcessSupported"
   },
   {
     "key": "cmd+i y",
@@ -869,33 +748,6 @@
     "command": "-actions.find",
     "when": "editorFocus || editorIsOpen"
   },
-  {
-    "key": "cmd+f",
-    "command": "vim.remap",
-    "args": {
-      "after": [
-        "/"
-      ]
-    },
-    "when": "editorFocus || editorIsOpen"
-  },
-  // rest client
-  {
-    "key": "ctrl+enter",
-    "command": "rest-client.request",
-    "when": "editorTextFocus && editorLangId == 'http'"
-  },
-  // VSpaceCode
-  {
-    "key": "space",
-    "command": "vspacecode.space",
-    "when": "activeEditorGroupEmpty && focusedView == '' && !whichkeyActive && !inputFocus"
-  },
-  {
-    "key": "space",
-    "command": "vspacecode.space",
-    "when": "sideBarFocus && !inputFocus && !whichkeyActive"
-  },
   // Remove unnecessary ctrl+k bindings
   {
     "key": "ctrl+k",
@@ -914,6 +766,28 @@
   {
     "key": "ctrl+k ctrl+x",
     "command": "-insertSnippet"
+  },
+  // rest client
+  {
+    "key": "ctrl+enter",
+    "command": "rest-client.request",
+    "when": "editorTextFocus && editorLangId == 'http'"
+  },
+  // VSpaceCode
+  {
+    "key": "space",
+    "command": "vspacecode.space",
+    "when": "activeEditorGroupEmpty && focusedView == '' && !whichkeyActive && !inputFocus"
+  },
+  {
+    "key": "space",
+    "command": "vspacecode.space",
+    "when": "sideBarFocus && !inputFocus && !whichkeyActive"
+  },
+  {
+    "key": "shift+space",
+    "command": "vspacecode.space",
+    "when": "terminalFocus"
   },
   // testing
   {
