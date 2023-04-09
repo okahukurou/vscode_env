@@ -285,15 +285,6 @@
     "when": "sideBarFocus"
   },
   {
-    "key": "ctrl+[BracketLeft]",
-    "command": "-workbench.action.terminal.toggleTerminal",
-    "when": "terminal.active"
-  },
-  {
-    "key": "ctrl+[BracketLeft]",
-    "command": "terminal.focus"
-  },
-  {
     "key": "cmd+h",
     "command": "workbench.action.toggleSidebarVisibility",
     "when": "vim.mode != 'SearchInProgressMode' && vim.mode != 'Insert'"
@@ -330,11 +321,6 @@
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
   },
   {
-    "key": "v",
-    "command": "explorer.openToSide",
-    "when": "explorerViewletFocus && explorerViewletVisible && !inputFocus"
-  },
-  {
     "key": "a",
     "command": "explorer.newFile",
     "when": "filesExplorerFocus && !inputFocus"
@@ -345,30 +331,25 @@
     "when": "filesExplorerFocus && !inputFocus"
   },
   // scm control
-  {
-    "key": "s",
-    "command": "git.stage",
-    "when": "sideBarFocus && activeViewlet == 'workbench.view.scm' && !textInputFocus"
-  },
-  {
-    "key": "u",
-    "command": "git.unstage",
-    "when": "sideBarFocus && activeViewlet == 'workbench.view.scm' && !textInputFocus"
-  },
-  {
-    "key": "x",
-    "command": "git.clean",
-    "when": "sideBarFocus && activeViewlet == 'workbench.view.scm' && !textInputFocus"
-  },
+  // {
+  //   "key": "s",
+  //   "command": "git.stage",
+  //   "when": "sideBarFocus && activeViewlet == 'workbench.view.scm' && !textInputFocus"
+  // },
+  // {
+  //   "key": "u",
+  //   "command": "git.unstage",
+  //   "when": "sideBarFocus && activeViewlet == 'workbench.view.scm' && !textInputFocus"
+  // },
+  // {
+  //   "key": "x",
+  //   "command": "git.clean",
+  //   "when": "sideBarFocus && activeViewlet == 'workbench.view.scm' && !textInputFocus"
+  // },
   // enter (execute, insert line)
   {
     "key": "ctrl+enter",
     "command": "workbench.action.terminal.runSelectedText"
-  },
-  {
-    "key": "ctrl+enter",
-    "command": "python.execSelectionInTerminal",
-    "when": "editorTextFocus && !findInputFocussed && !jupyter.ownsSelection && !notebookEditorFocused && !replaceInputFocussed && editorLangId == 'python'"
   },
   {
     "key": "shift+enter",
@@ -381,16 +362,20 @@
     "when": "editorTextFocus && !editorReadonly"
   },
   {
-    "key": "shift+cmd+enter",
-    "command": "editor.action.insertLineBefore",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
     "key": "ctrl+enter",
     "command": "-editor.action.insertLineBefore",
     "when": "editorTextFocus && !editorReadonly"
   },
   // terminal control
+  {
+    "key": "ctrl+[BracketLeft]",
+    "command": "-workbench.action.terminal.toggleTerminal",
+    "when": "terminal.active"
+  },
+  {
+    "key": "ctrl+[BracketLeft]",
+    "command": "terminal.focus"
+  },
   {
     "key": "cmd+i l",
     "command": "workbench.action.terminal.focusNextPane",
@@ -603,17 +588,6 @@
     "key": "ctrl+j",
     "command": "selectNextCodeAction",
     "when": "codeActionMenuVisible"
-  },
-  // ctrl+ey
-  {
-    "key": "ctrl+e",
-    "command": "list.scrollDown",
-    "when": "listFocus && !inputFocus"
-  },
-  {
-    "key": "ctrl+y",
-    "command": "list.scrollUp",
-    "when": "listFocus && !inputFocus"
   },
   // tab
   {
