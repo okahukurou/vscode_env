@@ -14,3 +14,10 @@
 
 [core]
   editor = /usr/bin/vim
+  pager = delta --dark --paging=never
+
+[interactive]
+  diffFilter = delta --color-only
+
+[delta]
+  navigate = true

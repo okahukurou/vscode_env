@@ -1,20 +1,41 @@
 gui:
-  language: "en"
-  mouseEvents: false
+  scrollPastBottom: false
   expandFocusedSidePanel: true
-  showFileTree: false
+  language: en
+  mouseEvents: false
   showBottomLine: false
-os:
-  openCommand: "code -rg {{filename}}"
-  editCommand: "code"
-  editCommandTemplate: "{{editor}} --goto -- {{filename}}:{{line}}"
+  showRandomTip: false
+  commandLogSize: 20
+  skipRewordInEditorWarning: true
 git:
-  autoFetch: false
-  branchLogCmd: "git log --graph --color=always --abbrev-commit --decorate --date=relative --pretty=oneline {{branchName}} --"
-  allBranchesLogCmd: "git log --all --graph --color=always --abbrev-commit --decorate --date=relative --pretty=oneline --"
-  log:
-    showGraph: always
   paging:
     colorArg: always
-    pager: delta --dark --paging=never
+    useConfig: true
+  log:
+    showGraph: always
+  autoFetch: false
+  branchLogCmd: "git log --graph --color=always --abbrev-commit --decorate --date=relative --pretty=oneline {{branchName}} --"
+  allBranchesLogCmd: "git log --graph --all --color=always --abbrev-commit --decorate --date=relative  --pretty=oneline --"
+  diffContextSize: 3
+os:
+  editCommand: "code"
+  editCommandTemplate: "{{editor}} --goto -- {{filename}}:{{line}}"
+  openCommand: "code -rg {{filename}}"
+refresher:
+  refreshInterval: 10
 notARepository: skip
+promptToReturnFromSubprocess: false
+customCommands:
+  - key: "U"
+    command: "git reset --soft HEAD~1"
+    description: "Undo last commit"
+    context: "files"
+  - key: "Q"
+    command: "proxy-login.sh"
+    description: "Execute proxy-login.sh"
+    context: "global"
+    stream: true
+  - key: "e"
+    command: "code '{{.SelectedFile.Name}}'"
+    description: "edit file"
+    context: "files"
