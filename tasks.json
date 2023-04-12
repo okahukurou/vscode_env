@@ -4,12 +4,37 @@
     {
       "label": "lazygit",
       "type": "shell",
-      "command": "lazygit"
+      "command": "lazygit",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "focus": true,
+        "panel": "dedicated",
+        "clear": true,
+        "close": true,
+      },
+      "options": {
+        "env": {
+          "PATH": "/opt/homebrew/bin:~/scripts:${env:PATH}"
+        }
+      }
     },
     {
       "label": "proxy-login",
-      "type": "shell",
-      "command": "proxy-login.sh"
+      "type": "process",
+      "command": "proxy-login.sh",
+      "presentation": {
+        "reveal": "never",
+        "focus": false,
+        "panel": "dedicated",
+        "clear": true,
+        "close": true,
+      },
+      "options": {
+        "env": {
+          "PATH": "~/scripts:${env:PATH}"
+        }
+      }
     }
   ]
 }
