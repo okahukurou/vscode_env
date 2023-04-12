@@ -11,6 +11,7 @@
 - empty-indent
 - Error Lens
 - Git Graph
+- Git Lens
 - GitHub Theme
 - indent-rainbow
 - isort

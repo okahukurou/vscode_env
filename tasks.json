@@ -20,6 +20,15 @@
       }
     },
     {
+      "label": "lazygitAndToggleMaximizePanel",
+      "type": "shell",
+      "command": "echo ${input:togglePanel}",
+      "dependsOn": [
+        "lazygit"
+      ],
+      "problemMatcher": [],
+    },
+    {
       "label": "proxy-login",
       "type": "process",
       "command": "proxy-login.sh",
@@ -35,6 +44,13 @@
           "PATH": "~/scripts:${env:PATH}"
         }
       }
+    }
+  ],
+  "inputs": [
+    {
+      "id": "togglePanel",
+      "type": "command",
+      "command": "workbench.action.toggleMaximizedPanel"
     }
   ]
 }

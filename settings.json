@@ -325,17 +325,50 @@
           "command": "git.revertSelectedRanges"
         },
         {
+          "key": "U",
+          "name": "Reset soft",
+          "type": "command",
+          "command": "git.undoCommit"
+        },
+        {
           "key": "v",
           "name": "Git graph",
           "type": "command",
           "command": "git-graph.view"
         },
         {
-          "key": "R",
-          "name": "Reset soft",
+          "key": "h",
+          "name": "File history",
           "type": "command",
-          "command": "git.undoCommit"
-        }
+          "command": "gitlens.openFileHistory"
+        },
+        {
+          "key": "b",
+          "name": "File blame",
+          "type": "command",
+          "command": "gitlens.toggleFileBlame"
+        },
+        {
+          "key": "b",
+          "name": "File blame",
+          "type": "command",
+          "command": "gitlens.toggleFileBlame"
+        },
+        {
+          "key": "l",
+          "name": "Lazygit",
+          "type": "command",
+          "command": "extension.multiCommand.execute",
+          "args": {
+            "sequence": [
+              {
+                "command": "workbench.action.tasks.runTask",
+                "args": "lazygitAndToggleMaximizePanel"
+              },
+              "workbench.action.toggleMaximizedPanel",
+            ]
+          },
+        },
       ]
     },
     {
@@ -588,6 +621,20 @@
   "cSpell.enableFiletypes": [
     "*"
   ],
+  // gitlens
+  "gitlens.showWelcomeOnInstall": false,
+  "gitlens.plusFeatures.enabled": false,
+  "gitlens.codeLens.enabled": false,
+  "gitlens.currentLine.enabled": false,
+  "gitlens.views.searchAndCompare.pullRequests.showForCommits": false,
+  "gitlens.views.searchAndCompare.pullRequests.enabled": false,
+  "gitlens.hovers.enabled": false,
+  "gitlens.blame.format": "${message|25} ${date|10}",
+  "gitlens.defaultDateLocale": null,
+  "gitlens.defaultDateFormat": "YYYY/MM/DD",
+  "gitlens.defaultDateShortFormat": "MM/DD",
+  "gitlens.menus": false,
+  "gitlens.keymap": "none",
   // delays
   "editor.quickSuggestionsDelay": 600,
   "indentRainbow.updateDelay": 800,

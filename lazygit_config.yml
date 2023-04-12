@@ -3,10 +3,13 @@ gui:
   expandFocusedSidePanel: true
   language: en
   mouseEvents: false
+  showFileTree: false
   showBottomLine: false
   showRandomTip: false
   commandLogSize: 20
   skipRewordInEditorWarning: true
+services:
+  "<domain>": "gitlab:<domain>"
 git:
   paging:
     colorArg: always
@@ -39,3 +42,13 @@ customCommands:
     command: "code '{{.SelectedFile.Name}}'"
     description: "edit file"
     context: "files"
+  - key: "y"
+    command: "pre-commit"
+    description: "pre-commit"
+    context: "files"
+    subprocess: true
+    stream: true
+  - key: "y"
+    command: "git pull --rebase"
+    description: "pull (rebase)"
+    context: "branch"
