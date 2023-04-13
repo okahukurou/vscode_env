@@ -109,6 +109,15 @@
         "b"
       ]
     },
+    {
+      "before": [
+        "g",
+        "H"
+      ],
+      "commands": [
+        "editor.action.showDefinitionPreviewHover"
+      ]
+    },
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
     {

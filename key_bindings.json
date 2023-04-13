@@ -212,6 +212,16 @@
     },
     "when": "editorFocus || editorIsOpen"
   },
+  {
+    "key": "j",
+    "command": "editor.action.selectNextStickyScrollLine",
+    "when": "stickyScrollFocused"
+  },
+  {
+    "key": "k",
+    "command": "editor.action.selectPreviousStickyScrollLine",
+    "when": "stickyScrollFocused"
+  },
   // compare editor
   {
     "key": "ctrl+n",
@@ -588,6 +598,16 @@
     "key": "ctrl+j",
     "command": "selectNextCodeAction",
     "when": "codeActionMenuVisible"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "editor.action.scrollDownHover",
+    "when": "editorHoverFocused"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "editor.action.scrollUpHover",
+    "when": "editorHoverFocused"
   },
   // tab
   {
