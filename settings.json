@@ -25,6 +25,12 @@
   "terminal.integrated.defaultProfile.osx": "zsh",
   "terminal.integrated.enableMultiLinePasteWarning": false,
   "terminal.integrated.customGlyphs": false,
+  "terminal.integrated.shellIntegration.decorationsEnabled": "overviewRuler",
+  // debug
+  "debug.console.acceptSuggestionOnEnter": "on",
+  "debug.console.closeOnEnd": true,
+  "debug.console.historySuggestions": false,
+  "debug.showBreakpointsInOverviewRuler": true,
   // vim settings
   "vim.useSystemClipboard": true,
   "vim.foldfix": true,
@@ -435,6 +441,12 @@
           "command": "testing.runAtCursor"
         },
         {
+          "key": "d",
+          "name": "Debug Test Cursor",
+          "type": "command",
+          "command": "testing.debugAtCursor"
+        },
+        {
           "key": "e",
           "name": "Test Failed",
           "type": "command",
@@ -445,12 +457,6 @@
           "name": "Test Last",
           "type": "command",
           "command": "testing.reRunLastRun"
-        },
-        {
-          "key": "d",
-          "name": "Display Coverage",
-          "type": "command",
-          "command": "coverage-gutters.displayCoverage"
         },
         {
           "key": "r",
@@ -475,7 +481,125 @@
           "name": "Cancel Test Run",
           "type": "command",
           "command": "testing.cancelRun"
-        }
+        },
+        {
+          "key": "g",
+          "name": "Display Coverage",
+          "type": "command",
+          "command": "coverage-gutters.displayCoverage"
+        },
+      ]
+    },
+    {
+      "keys": "d",
+      "name": "Debug",
+      "type": "bindings",
+      "bindings": [
+        {
+          "key": "d",
+          "name": "Debug Start",
+          "icon": "debug-start",
+          "type": "command",
+          "command": "workbench.action.debug.start"
+        },
+        {
+          "key": "D",
+          "name": "Disconnect",
+          "icon": "debug-disconnect",
+          "type": "command",
+          "command": "workbench.action.debug.disconnect"
+        },
+        {
+          "key": "b",
+          "name": "Breakpoint",
+          "icon": "debug-breakpoint",
+          "type": "command",
+          "command": "editor.debug.action.toggleBreakpoint"
+        },
+        {
+          "key": "n",
+          "name": "Step over (F10)",
+          "icon": "debug-step-over",
+          "type": "command",
+          "command": "workbench.action.debug.stepOver"
+        },
+        {
+          "key": "s",
+          "name": "Step into (F11)",
+          "icon": "debug-step-into",
+          "type": "command",
+          "command": "workbench.action.debug.stepInto"
+        },
+        {
+          "key": "r",
+          "name": "Step out (⇧F11)",
+          "icon": "debug-step-out",
+          "type": "command",
+          "command": "workbench.action.debug.stepInto"
+        },
+        {
+          "key": "c",
+          "name": "Continue",
+          "icon": "debug-continue",
+          "type": "command",
+          "command": "workbench.action.debug.continue"
+        },
+        {
+          "key": "C",
+          "name": "Continue to Cursor",
+          "icon": "debug-continue-small",
+          "type": "command",
+          "command": "editor.debug.action.runToCursor"
+        },
+        {
+          "key": "j",
+          "name": "Jump to Cursor",
+          "icon": "arrow-right",
+          "type": "command",
+          "command": "debug.jumpToCursor"
+        },
+        {
+          "key": "u",
+          "name": "Up Call Stack",
+          "icon": "arrow-up",
+          "type": "command",
+          "command": "workbench.action.debug.callStackUp"
+        },
+        {
+          "key": "U",
+          "name": "Down Call Stack",
+          "icon": "arrow-down",
+          "type": "command",
+          "command": "workbench.action.debug.callStackDown"
+        },
+        {
+          "key": "t",
+          "name": "Debug Console",
+          "icon": "debug-console",
+          "type": "command",
+          "command": "workbench.debug.action.focusRepl"
+        },
+        {
+          "key": "v",
+          "name": "View Variables",
+          "icon": "variable",
+          "type": "command",
+          "command": "workbench.debug.action.focusVariablesView"
+        },
+        {
+          "key": "w",
+          "name": "View Stack Trace",
+          "icon": "callstack-view-icon",
+          "type": "command",
+          "command": "workbench.debug.action.focusCallStackView"
+        },
+        {
+          "key": "W",
+          "name": "View Watch",
+          "icon": "eye-watch",
+          "type": "command",
+          "command": "workbench.debug.action.focusWatchView"
+        },
       ]
     },
   ],
