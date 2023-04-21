@@ -9,11 +9,11 @@
     "command": "workbench.action.navigateEditorGroups"
   },
   {
-    "key": "ctrl+w c",
+    "key": "ctrl+w x",
     "command": "workbench.action.closeActiveEditor"
   },
   {
-    "key": "ctrl+w ctrl+c",
+    "key": "ctrl+w ctrl+x",
     "command": "workbench.action.closeActiveEditor"
   },
   {
@@ -52,6 +52,23 @@
     "key": "ctrl+w ctrl+h",
     "command": "workbench.action.focusPreviousGroup"
   },
+  // tab
+  {
+    "key": "ctrl+w n",
+    "command": "workbench.action.nextEditorInGroup"
+  },
+  {
+    "key": "ctrl+w ctrl+n",
+    "command": "workbench.action.nextEditorInGroup"
+  },
+  {
+    "key": "ctrl+w p",
+    "command": "workbench.action.previousEditorInGroup"
+  },
+  {
+    "key": "ctrl+w ctrl+p",
+    "command": "workbench.action.previousEditorInGroup"
+  },
   // switch terminal
   {
     "key": "ctrl+w j",
@@ -71,26 +88,6 @@
   {
     "key": "ctrl+w ctrl+k",
     "command": "workbench.action.focusActiveEditorGroup",
-    "when": "terminalFocus"
-  },
-  {
-    "key": "ctrl+w h",
-    "command": "workbench.action.terminal.focusPreviousPane",
-    "when": "terminalFocus"
-  },
-  {
-    "key": "ctrl+w ctrl+h",
-    "command": "workbench.action.terminal.focusPreviousPane",
-    "when": "terminalFocus"
-  },
-  {
-    "key": "ctrl+w l",
-    "command": "workbench.action.terminal.focusNextPane",
-    "when": "terminalFocus"
-  },
-  {
-    "key": "ctrl+w ctrl+l",
-    "command": "workbench.action.terminal.focusNextPane",
     "when": "terminalFocus"
   },
   // split window
@@ -157,10 +154,6 @@
     "key": "ctrl+w shift+p",
     "command": "openapi.preview",
     "when": "editorTextFocus && editorLangId == 'yaml' && !openapiErrors"
-  },
-  {
-    "key": "ctrl+w n",
-    "command": "notifications.focusToasts"
   },
   {
     "key": "ctrl+w f12",
@@ -376,99 +369,317 @@
     "command": "-editor.action.insertLineBefore",
     "when": "editorTextFocus && !editorReadonly"
   },
-  // terminal control
+  // terminal window/pane control
   {
-    "key": "ctrl+[BracketLeft]",
-    "command": "-workbench.action.terminal.toggleTerminal",
-    "when": "terminal.active"
+    "key": "ctrl+g n",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "workbench.action.terminal.focusNext",
+        "workbench.action.focusActiveEditorGroup",
+      ]
+    },
+    "when": "!terminalFocus"
   },
   {
-    "key": "ctrl+[BracketLeft]",
-    "command": "terminal.focus"
-  },
-  {
-    "key": "cmd+i l",
-    "command": "workbench.action.terminal.focusNextPane",
-    "when": "terminalProcessSupported"
-  },
-  {
-    "key": "cmd+i h",
-    "command": "workbench.action.terminal.focusPreviousPane",
-    "when": "terminalProcessSupported"
-  },
-  {
-    "key": "cmd+i j",
+    "key": "ctrl+g n",
     "command": "workbench.action.terminal.focusNext",
-    "when": "terminalProcessSupported"
+    "when": "terminalFocus"
   },
   {
-    "key": "cmd+i k",
+    "key": "ctrl+g ctrl+n",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "workbench.action.terminal.focusNext",
+        "workbench.action.focusActiveEditorGroup",
+      ]
+    },
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "ctrl+g ctrl+n",
+    "command": "workbench.action.terminal.focusNext",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+g p",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "workbench.action.terminal.focusPrevious",
+        "workbench.action.focusActiveEditorGroup",
+      ]
+    },
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "ctrl+g p",
     "command": "workbench.action.terminal.focusPrevious",
-    "when": "terminalProcessSupported"
+    "when": "terminalFocus"
   },
   {
-    "key": "cmd+i s",
+    "key": "ctrl+g ctrl+p",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "workbench.action.terminal.focusPrevious",
+        "workbench.action.focusActiveEditorGroup",
+      ]
+    },
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "ctrl+g ctrl+p",
+    "command": "workbench.action.terminal.focusPrevious",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+g l",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "workbench.action.terminal.focusNextPane",
+        "workbench.action.focusActiveEditorGroup",
+      ]
+    },
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "ctrl+g l",
+    "command": "workbench.action.terminal.focusNextPane",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+g ctrl+l",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "workbench.action.terminal.focusNextPane",
+        "workbench.action.focusActiveEditorGroup",
+      ]
+    },
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "ctrl+g ctrl+l",
+    "command": "workbench.action.terminal.focusNextPane",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+g h",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "workbench.action.terminal.focusPreviousPane",
+        "workbench.action.focusActiveEditorGroup",
+      ]
+    },
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "ctrl+g h",
+    "command": "workbench.action.terminal.focusPreviousPane",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+g ctrl+h",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "workbench.action.terminal.focusPreviousPane",
+        "workbench.action.focusActiveEditorGroup",
+      ]
+    },
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "ctrl+g ctrl+h",
+    "command": "workbench.action.terminal.focusPreviousPane",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+g s",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "workbench.action.terminal.split",
+        "workbench.action.focusActiveEditorGroup",
+      ]
+    },
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "ctrl+g s",
     "command": "workbench.action.terminal.split",
-    "when": "terminalProcessSupported"
+    "when": "terminalFocus"
   },
   {
-    "key": "cmd+i c",
+    "key": "ctrl+g ctrl+s",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "workbench.action.terminal.split",
+        "workbench.action.focusActiveEditorGroup",
+      ]
+    },
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "ctrl+g ctrl+s",
+    "command": "workbench.action.terminal.split",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+g c",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "workbench.action.terminal.new",
+        "workbench.action.focusActiveEditorGroup",
+      ]
+    },
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "ctrl+g c",
     "command": "workbench.action.terminal.new",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+g ctrl+c",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "workbench.action.terminal.new",
+        "workbench.action.focusActiveEditorGroup",
+      ]
+    },
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "ctrl+g ctrl+c",
+    "command": "workbench.action.terminal.new",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+g x",
+    "command": "workbench.action.terminal.kill",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+g ctrl+x",
+    "command": "workbench.action.terminal.kill",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+g ,",
+    "command": "workbench.action.terminal.rename",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+g ctrl+,",
+    "command": "workbench.action.terminal.rename",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+g 1",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "workbench.action.terminal.focusAtIndex1",
+        "workbench.action.focusActiveEditorGroup",
+      ]
+    },
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "ctrl+g 1",
+    "command": "workbench.action.terminal.focusAtIndex1",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+g 2",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "workbench.action.terminal.focusAtIndex1",
+        "workbench.action.focusActiveEditorGroup",
+      ]
+    },
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "ctrl+g 2",
+    "command": "workbench.action.terminal.focusAtIndex1",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+g 3",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "workbench.action.terminal.focusAtIndex1",
+        "workbench.action.focusActiveEditorGroup",
+      ]
+    },
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "ctrl+g 3",
+    "command": "workbench.action.terminal.focusAtIndex1",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+g 4",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "workbench.action.terminal.focusAtIndex1",
+        "workbench.action.focusActiveEditorGroup",
+      ]
+    },
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "ctrl+g 4",
+    "command": "workbench.action.terminal.focusAtIndex1",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+g 5",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "workbench.action.terminal.focusAtIndex1",
+        "workbench.action.focusActiveEditorGroup",
+      ]
+    },
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "ctrl+g 5",
+    "command": "workbench.action.terminal.focusAtIndex1",
+    "when": "terminalFocus"
+  },
+  // other terminal control
+  {
+    "key": "ctrl+g [",
+    "command": "extension.terminalCapture.runCapture",
     "when": "terminalProcessSupported"
   },
   {
-    "key": "cmd+i d",
-    "command": "workbench.action.terminal.kill",
-    "when": "terminalFocus && terminalProcessSupported"
+    "key": "ctrl+g ctrl+[",
+    "command": "extension.terminalCapture.runCapture",
+    "when": "terminalProcessSupported"
   },
   {
-    "key": "cmd+i r",
-    "command": "workbench.action.terminal.rename",
-    "when": "terminalFocus && terminalProcessSupported"
+    "key": "ctrl+g m",
+    "command": "workbench.action.toggleMaximizedPanel"
   },
   {
-    "key": "cmd+i 1",
-    "command": "workbench.action.terminal.focusAtIndex1"
-  },
-  {
-    "key": "cmd+i 2",
-    "command": "workbench.action.terminal.focusAtIndex2"
-  },
-  {
-    "key": "cmd+i 3",
-    "command": "workbench.action.terminal.focusAtIndex3"
-  },
-  {
-    "key": "cmd+i 4",
-    "command": "workbench.action.terminal.focusAtIndex4"
-  },
-  {
-    "key": "cmd+i 5",
-    "command": "workbench.action.terminal.focusAtIndex5"
-  },
-  {
-    "key": "cmd+i 6",
-    "command": "workbench.action.terminal.focusAtIndex6"
-  },
-  {
-    "key": "cmd+i 7",
-    "command": "workbench.action.terminal.focusAtIndex7"
-  },
-  {
-    "key": "cmd+i 8",
-    "command": "workbench.action.terminal.focusAtIndex8"
-  },
-  {
-    "key": "cmd+i 9",
-    "command": "workbench.action.terminal.focusAtIndex9"
-  },
-  {
-    "key": "cmd+i e",
-    "command": "workbench.action.terminal.moveToEditor"
-  },
-  {
-    "key": "cmd+i shift+e",
-    "command": "workbench.action.terminal.moveToTerminalPanel"
+    "key": "ctrl+g ctrl+m",
+    "command": "workbench.action.toggleMaximizedPanel"
   },
   {
     "key": "ctrl+r",
@@ -483,15 +694,16 @@
     "command": "workbench.action.terminal.scrollToBottom",
     "when": "terminalFocus && terminalProcessSupported"
   },
+  // task
   {
-    "key": "ctrl+w m",
-    "command": "workbench.action.toggleMaximizedPanel",
-    "when": "terminalFocus"
+    "key": "ctrl+g g",
+    "command": "workbench.action.tasks.runTask",
+    "args": "lazygit"
   },
   {
-    "key": "cmd+i y",
-    "command": "extension.terminalCapture.runCapture",
-    "when": "terminalFocus && terminalProcessSupported"
+    "key": "ctrl+g ctrl+g",
+    "command": "workbench.action.tasks.runTask",
+    "args": "lazygit"
   },
   // ctrl+jk
   {
