@@ -22,6 +22,8 @@
     "vscode-icons-team.vscode-icons",
     "github.github-vscode-theme",
     "usernamehw.errorlens",
-    "letmaik.git-tree-compare"
+    "letmaik.git-tree-compare",
+    "ibm.output-colorizer",
+    "eamodio.gitlens"
   ]
 }

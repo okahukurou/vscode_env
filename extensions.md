@@ -25,6 +25,7 @@
 - Markdown Preview Mermaid Support
 - markdownlint
 - Mermaid Editor
+- Output Colorizer
 - Partial Diff
 - Project Manager
 - Pylance
