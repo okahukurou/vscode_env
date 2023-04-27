@@ -118,11 +118,13 @@
   // resize window
   {
     "key": "ctrl+w m",
-    "command": "workbench.action.toggleEditorWidths"
+    "command": "workbench.action.toggleEditorWidths",
+    "when": "!terminalFocus"
   },
   {
     "key": "ctrl+w ctrl+m",
-    "command": "workbench.action.toggleEditorWidths"
+    "command": "workbench.action.toggleEditorWidths",
+    "when": "!terminalFocus"
   },
   {
     "key": "ctrl+w [Minus]",
@@ -169,6 +171,47 @@
     "key": "ctrl+shift+w",
     "command": "workbench.action.switchWindow"
   },
+  // scroll
+  {
+    "key": "cmd+e",
+    "command": "scrollLineDown",
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "cmd+y",
+    "command": "scrollLineUp",
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "cmd+d",
+    "command": "scrollPageDown",
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "cmd+u",
+    "command": "scrollPageUp",
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "cmd+e",
+    "command": "workbench.action.terminal.scrollDown",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "cmd+y",
+    "command": "workbench.action.terminal.scrollUp",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "cmd+d",
+    "command": "workbench.action.terminal.scrollDownPage",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "cmd+u",
+    "command": "workbench.action.terminal.scrollUpPage",
+    "when": "terminalFocus"
+  },
   // vim control
   {
     "key": "ctrl+h",
@@ -203,7 +246,7 @@
         "/"
       ]
     },
-    "when": "editorFocus || editorIsOpen"
+    "when": "!terminalFocus"
   },
   {
     "key": "j",
@@ -370,6 +413,16 @@
     "when": "editorTextFocus && !editorReadonly"
   },
   // terminal window/pane control
+  {
+    "key": "ctrl+g g",
+    "command": "workbench.action.terminal.focus",
+    "when": "editorFocus"
+  },
+  {
+    "key": "ctrl+g ctrl+g",
+    "command": "workbench.action.terminal.focus",
+    "when": "editorFocus"
+  },
   {
     "key": "ctrl+g n",
     "command": "extension.multiCommand.execute",
@@ -662,6 +715,47 @@
     "command": "workbench.action.terminal.focusAtIndex1",
     "when": "terminalFocus"
   },
+  // terminal ctrl+w
+  {
+    "key": "ctrl+w l",
+    "command": "workbench.action.terminal.focusNextPane",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+w ctrl+l",
+    "command": "workbench.action.terminal.focusNextPane",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+w h",
+    "command": "workbench.action.terminal.focusPreviousPane",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+w ctrl+h",
+    "command": "workbench.action.terminal.focusPreviousPane",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+w s",
+    "command": "workbench.action.terminal.split",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+w ctrl+s",
+    "command": "workbench.action.terminal.split",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+w m",
+    "command": "workbench.action.toggleMaximizedPanel",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+w ctrl+m",
+    "command": "workbench.action.toggleMaximizedPanel",
+    "when": "terminalFocus"
+  },
   // other terminal control
   {
     "key": "ctrl+g [",
@@ -696,12 +790,12 @@
   },
   // task
   {
-    "key": "ctrl+g g",
+    "key": "ctrl+g i",
     "command": "workbench.action.tasks.runTask",
     "args": "lazygit"
   },
   {
-    "key": "ctrl+g ctrl+g",
+    "key": "ctrl+g ctrl+i",
     "command": "workbench.action.tasks.runTask",
     "args": "lazygit"
   },
@@ -952,7 +1046,7 @@
   {
     "key": "cmd+f",
     "command": "-actions.find",
-    "when": "editorFocus || editorIsOpen"
+    "when": "!terminalFocus"
   },
   // Remove unnecessary ctrl+k bindings
   {
