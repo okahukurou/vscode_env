@@ -285,10 +285,6 @@
     "command": "workbench.explorer.fileView.focus"
   },
   {
-    "key": "ctrl+s",
-    "command": "workbench.view.search.focus"
-  },
-  {
     "key": "ctrl+l",
     "command": "extension.multiCommand.execute",
     "args": {
@@ -887,7 +883,7 @@
   },
   {
     "key": "ctrl+j",
-    "command": "search.action.focusSearchList",
+    "command": "search.action.nextInputBox",
     "when": "inSearchEditor || searchViewletFocus"
   },
   {
@@ -942,44 +938,16 @@
     "command": "-workbench.action.openEditorAtIndex1"
   },
   {
-    "key": "cmd+2",
-    "command": "workbench.action.openEditorAtIndex2"
-  },
-  {
-    "key": "ctrl+2",
-    "command": "-workbench.action.openEditorAtIndex2"
-  },
-  {
-    "key": "cmd+3",
-    "command": "workbench.action.openEditorAtIndex3"
-  },
-  {
-    "key": "ctrl+3",
-    "command": "-workbench.action.openEditorAtIndex3"
-  },
-  {
-    "key": "cmd+4",
-    "command": "workbench.action.openEditorAtIndex4"
-  },
-  {
-    "key": "ctrl+4",
-    "command": "-workbench.action.openEditorAtIndex4"
-  },
-  {
-    "key": "cmd+5",
-    "command": "workbench.action.openEditorAtIndex5"
-  },
-  {
-    "key": "ctrl+5",
-    "command": "-workbench.action.openEditorAtIndex5"
-  },
-  {
     "key": "ctrl+1",
     "command": "workbench.action.focusFirstEditorGroup"
   },
   {
     "key": "cmd+1",
     "command": "-workbench.action.focusFirstEditorGroup"
+  },
+  {
+    "key": "ctrl+2",
+    "command": "-workbench.action.openEditorAtIndex2"
   },
   {
     "key": "ctrl+2",
@@ -990,6 +958,14 @@
     "command": "-workbench.action.focusSecondEditorGroup"
   },
   {
+    "key": "cmd+3",
+    "command": "workbench.action.openEditorAtIndex3"
+  },
+  {
+    "key": "ctrl+3",
+    "command": "-workbench.action.openEditorAtIndex3"
+  },
+  {
     "key": "ctrl+3",
     "command": "workbench.action.focusThirdEditorGroup"
   },
@@ -998,12 +974,28 @@
     "command": "-workbench.action.focusThirdEditorGroup"
   },
   {
+    "key": "cmd+4",
+    "command": "workbench.action.openEditorAtIndex4"
+  },
+  {
+    "key": "ctrl+4",
+    "command": "-workbench.action.openEditorAtIndex4"
+  },
+  {
     "key": "ctrl+4",
     "command": "workbench.action.focusFourthEditorGroup"
   },
   {
     "key": "cmd+4",
     "command": "-workbench.action.focusFourthEditorGroup"
+  },
+  {
+    "key": "cmd+5",
+    "command": "workbench.action.openEditorAtIndex5"
+  },
+  {
+    "key": "ctrl+5",
+    "command": "-workbench.action.openEditorAtIndex5"
   },
   {
     "key": "ctrl+5",
@@ -1084,11 +1076,6 @@
     "command": "vspacecode.space",
     "when": "sideBarFocus && !inputFocus && !whichkeyActive"
   },
-  {
-    "key": "shift+space",
-    "command": "vspacecode.space",
-    "when": "terminalFocus"
-  },
   // testing
   {
     "key": "escape",
@@ -1137,28 +1124,8 @@
     "command": "workbench.action.problems.focus",
   },
   {
-    "key": "ctrl+oem_plus",
-    "command": "-workbench.action.zoomIn"
-  },
-  {
-    "key": "shift+alt+oem_plus",
-    "command": "workbench.action.zoomIn"
-  },
-  {
-    "key": "ctrl+shift+oem_plus",
-    "command": "-workbench.action.zoomIn"
-  },
-  {
-    "key": "ctrl+shift+oem_minus",
-    "command": "-workbench.action.zoomOut"
-  },
-  {
     "key": "alt+oem_minus",
     "command": "workbench.action.zoomOut"
-  },
-  {
-    "key": "ctrl+oem_minus",
-    "command": "-workbench.action.zoomOut"
   },
   {
     "key": "shift+alt+f",
@@ -1196,5 +1163,15 @@
     "key": "ctrl+f",
     "command": "-extension.vim_ctrl+f",
     "when": "editorTextFocus && vim.active && vim.use<C-f> && !inDebugRepl && vim.mode != 'Insert'"
+  },
+  {
+    "key": "alt+oem_period",
+    "command": "editor.action.quickFix",
+    "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+oem_period",
+    "command": "-editor.action.quickFix",
+    "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
   },
 ]
