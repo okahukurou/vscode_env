@@ -53,134 +53,66 @@
   "vim.showMarksInGutter": true,
   "vim.insertModeKeyBindings": [
     {
-      "before": [
-        "j",
-        "j"
-      ],
-      "after": [
-        "<Esc>"
-      ]
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
     },
     {
-      "before": [
-        "<C-a>"
-      ],
-      "after": [
-        "<C-o>",
-        "^"
-      ]
+      "before": ["<C-a>"],
+      "after": ["<C-o>", "^"]
     },
     {
-      "before": [
-        "<C-e>"
-      ],
-      "after": [
-        "<C-o>",
-        "$"
-      ]
+      "before": ["<C-e>"],
+      "after": ["<C-o>", "$"]
     }
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
     {
-      "before": [
-        "<space>"
-      ],
-      "commands": [
-        "vspacecode.space"
-      ]
+      "before": ["<space>"],
+      "commands": ["vspacecode.space"]
     },
     {
-      "before": [
-        "<ESC>"
-      ],
-      "after": [
-        "<ESC>"
-      ],
-      "commands": [
-        ":nohlsearch"
-      ]
+      "before": ["<ESC>"],
+      "after": ["<ESC>"],
+      "commands": [":nohlsearch"]
     },
     {
-      "before": [
-        "x"
-      ],
-      "after": [
-        "\"",
-        "_",
-        "x"
-      ]
+      "before": ["x"],
+      "after": ["\"", "_", "x"]
     },
     {
-      "before": [
-        "<C-n>"
-      ],
-      "after": [
-        "g",
-        "b"
-      ]
+      "before": ["<C-n>"],
+      "after": ["g", "b"]
     },
     {
-      "before": [
-        "g",
-        "H"
-      ],
-      "commands": [
-        "editor.action.showDefinitionPreviewHover"
-      ]
+      "before": ["g", "H"],
+      "commands": ["editor.action.showDefinitionPreviewHover"]
     },
     {
-      "before": [
-        "g",
-        "l"
-      ],
-      "commands": [
-        "editor.action.openLink"
-      ]
+      "before": ["g", "l"],
+      "commands": ["editor.action.openLink"]
     },
     {
-      "before": [
-        "g",
-        "s"
-      ],
-      "commands": [
-        "editor.action.focusStickyScroll"
-      ]
-    },
+      "before": ["g", "s"],
+      "commands": ["editor.action.focusStickyScroll"]
+    }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
     {
-      "before": [
-        "<space>"
-      ],
-      "commands": [
-        "vspacecode.space"
-      ]
+      "before": ["<space>"],
+      "commands": ["vspacecode.space"]
     },
     {
-      "before": [
-        ">"
-      ],
-      "commands": [
-        "editor.action.indentLines"
-      ]
+      "before": [">"],
+      "commands": ["editor.action.indentLines"]
     },
     {
-      "before": [
-        "<"
-      ],
-      "commands": [
-        "editor.action.outdentLines"
-      ]
+      "before": ["<"],
+      "commands": ["editor.action.outdentLines"]
     },
     {
-      "before": [
-        "<C-n>"
-      ],
-      "after": [
-        "g",
-        "b"
-      ]
-    },
+      "before": ["<C-n>"],
+      "after": ["g", "b"]
+    }
   ],
   "vspacecode.bindingOverrides": [
     {
@@ -200,11 +132,7 @@
           "type": "command",
           "command": "vim.remap",
           "args": {
-            "after": [
-              "<leader>",
-              "<leader>",
-              "s"
-            ]
+            "after": ["<leader>", "<leader>", "s"]
           }
         },
         {
@@ -213,11 +141,7 @@
           "type": "command",
           "command": "vim.remap",
           "args": {
-            "after": [
-              "<leader>",
-              "<leader>",
-              "j"
-            ]
+            "after": ["<leader>", "<leader>", "j"]
           }
         },
         {
@@ -226,11 +150,7 @@
           "type": "command",
           "command": "vim.remap",
           "args": {
-            "after": [
-              "<leader>",
-              "<leader>",
-              "k"
-            ]
+            "after": ["<leader>", "<leader>", "k"]
           }
         },
         {
@@ -239,11 +159,7 @@
           "type": "command",
           "command": "vim.remap",
           "args": {
-            "after": [
-              "<leader>",
-              "<leader>",
-              "l"
-            ]
+            "after": ["<leader>", "<leader>", "l"]
           }
         },
         {
@@ -252,11 +168,7 @@
           "type": "command",
           "command": "vim.remap",
           "args": {
-            "after": [
-              "<leader>",
-              "<leader>",
-              "h"
-            ]
+            "after": ["<leader>", "<leader>", "h"]
           }
         },
         {
@@ -265,11 +177,7 @@
           "type": "command",
           "command": "vim.remap",
           "args": {
-            "after": [
-              "<leader>",
-              "<leader>",
-              "f"
-            ]
+            "after": ["<leader>", "<leader>", "f"]
           }
         },
         {
@@ -278,11 +186,7 @@
           "type": "command",
           "command": "vim.remap",
           "args": {
-            "after": [
-              "<leader>",
-              "<leader>",
-              "F"
-            ]
+            "after": ["<leader>", "<leader>", "F"]
           }
         },
         {
@@ -291,11 +195,7 @@
           "type": "command",
           "command": "vim.remap",
           "args": {
-            "after": [
-              "<leader>",
-              "<leader>",
-              "t"
-            ]
+            "after": ["<leader>", "<leader>", "t"]
           }
         },
         {
@@ -304,11 +204,7 @@
           "type": "command",
           "command": "vim.remap",
           "args": {
-            "after": [
-              "<leader>",
-              "<leader>",
-              "T"
-            ]
+            "after": ["<leader>", "<leader>", "T"]
           }
         },
         {
@@ -317,13 +213,9 @@
           "type": "command",
           "command": "vim.remap",
           "args": {
-            "after": [
-              "<leader>",
-              "<leader>",
-              "/"
-            ]
+            "after": ["<leader>", "<leader>", "/"]
           }
-        },
+        }
       ]
     },
     {
@@ -402,10 +294,10 @@
                 "command": "workbench.action.tasks.runTask",
                 "args": "lazygitAndToggleMaximizePanel"
               },
-              "workbench.action.toggleMaximizedPanel",
+              "workbench.action.toggleMaximizedPanel"
             ]
-          },
-        },
+          }
+        }
       ]
     },
     {
@@ -436,7 +328,7 @@
           "name": "Close project",
           "type": "command",
           "command": "workbench.action.closeWindow"
-        },
+        }
       ]
     },
     {
@@ -509,7 +401,7 @@
           "name": "Display Coverage",
           "type": "command",
           "command": "coverage-gutters.displayCoverage"
-        },
+        }
       ]
     },
     {
@@ -621,9 +513,9 @@
           "icon": "eye-watch",
           "type": "command",
           "command": "workbench.debug.action.focusWatchView"
-        },
+        }
       ]
-    },
+    }
   ],
   // settings for vim
   "workbench.editor.labelFormat": "short",
@@ -680,10 +572,7 @@
   ],
   "indentRainbow.errorColor": "rgba(255,255,255,0.5)",
   "indentRainbow.indicatorStyle": "light",
-  "indentRainbow.ignoreErrorLanguages": [
-    "markdown",
-    "python"
-  ],
+  "indentRainbow.ignoreErrorLanguages": ["markdown", "python"],
   // vscode icons
   "workbench.iconTheme": "vscode-icons",
   "vsicons.dontShowNewVersionMessage": true,
@@ -693,9 +582,7 @@
   "rest-client.previewResponsePanelTakeFocus": false,
   "rest-client.previewResponseInUntitledDocument": true,
   "rest-client.requestNameAsResponseTabTitle": true,
-  "rest-client.excludeHostsForProxy": [
-    "localhost"
-  ],
+  "rest-client.excludeHostsForProxy": ["localhost"],
   // remote
   "remote.SSH.enableAgentForwarding": false,
   "remote.SSH.enableDynamicForwarding": false,
@@ -716,9 +603,9 @@
     "editor.quickSuggestions": {
       "comments": "off",
       "strings": "off",
-      "other": "off",
+      "other": "off"
     },
-    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
   },
   "markdownlint.config": {
     "MD13": false,
@@ -738,7 +625,7 @@
       }
     ],
     "editor.formatOnType": true,
-    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.defaultFormatter": "charliermarsh.ruff"
   },
   "python.languageServer": "Pylance",
   "python.analysis.typeCheckingMode": "basic",
@@ -773,14 +660,7 @@
   // todo trees
   "todo-tree.general.showActivityBarBadge": true,
   "todo-tree.general.statusBar": "top three",
-  "todo-tree.general.tags": [
-    "BUG",
-    "HACK",
-    "FIXME",
-    "TODO",
-    "XXX",
-    "[ ]"
-  ],
+  "todo-tree.general.tags": ["BUG", "HACK", "FIXME", "TODO", "XXX", "[ ]"],
   "todo-tree.highlights.defaultHighlight": {
     "icon": "alert",
     "type": "tag",
@@ -790,9 +670,7 @@
   },
   // cspell
   "cSpell.autoFormatConfigFile": true,
-  "cSpell.enableFiletypes": [
-    "*"
-  ],
+  "cSpell.enableFiletypes": ["*"],
   "cSpell.ignorePaths": [
     "package-lock.json",
     "node_modules",
@@ -835,6 +713,6 @@
     "**/__pycache__/**": true,
     "**/.mypy_cache/**": true,
     "**/*egg-info/**": true,
-    "**/.pytest_cache": true,
+    "**/.pytest_cache": true
   }
 }

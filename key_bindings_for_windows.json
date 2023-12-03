@@ -1,44 +1,44 @@
-{
+[
   // only for windows
   {
     "key": "ctrl+w",
-    "command": "-workbench.action.closeWindow",
+    "command": "-workbench.action.closeWindow"
   },
   {
     "key": "alt+w",
-    "command": "workbench.action.closeActiveEditor",
+    "command": "workbench.action.closeActiveEditor"
   },
   {
     "key": "alt+j",
-    "command": "workbench.action.togglePanel",
+    "command": "workbench.action.togglePanel"
   },
   {
     "key": "ctrl+j",
-    "command": "-workbench.action.togglePanel",
+    "command": "-workbench.action.togglePanel"
   },
   {
     "key": "alt+b",
-    "command": "workbench.action.toggleSidebarVisibility",
+    "command": "workbench.action.toggleSidebarVisibility"
   },
   {
     "key": "ctrl+b",
-    "command": "-workbench.action.toggleSidebarVisibility",
+    "command": "-workbench.action.toggleSidebarVisibility"
   },
   {
     "key": "alt+0",
-    "command": "workbench.action.focusSideBar",
+    "command": "workbench.action.focusSideBar"
   },
   {
     "key": "ctrl+0",
-    "command": "-workbench.action.focusSideBar",
+    "command": "-workbench.action.focusSideBar"
   },
   {
     "key": "ctrl+shift+m",
-    "command": "-workbench.actions.view.problems",
+    "command": "-workbench.actions.view.problems"
   },
   {
     "key": "shift+alt+m",
-    "command": "workbench.action.problems.focus",
+    "command": "workbench.action.problems.focus"
   },
   {
     "key": "alt+oem_minus",
@@ -90,5 +90,5 @@
     "key": "ctrl+oem_period",
     "command": "-editor.action.quickFix",
     "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
-  },
-}
+  }
+]
