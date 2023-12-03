@@ -434,21 +434,21 @@
           "key": "n",
           "name": "Step over (F10)",
           "icon": "debug-step-over",
-          "type": "command",
+          "type": "transient",
           "command": "workbench.action.debug.stepOver"
         },
         {
           "key": "s",
           "name": "Step into (F11)",
           "icon": "debug-step-into",
-          "type": "command",
+          "type": "transient",
           "command": "workbench.action.debug.stepInto"
         },
         {
           "key": "r",
           "name": "Step out (⇧F11)",
           "icon": "debug-step-out",
-          "type": "command",
+          "type": "transient",
           "command": "workbench.action.debug.stepInto"
         },
         {

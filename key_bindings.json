@@ -328,12 +328,24 @@
   },
   {
     "key": "ctrl+p",
-    "command": "workbench.action.previousSideBarView",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "workbench.action.focusSideBar",
+        "workbench.action.previousSideBarView",
+      ]
+    },
     "when": "sideBarFocus"
   },
   {
     "key": "ctrl+n",
-    "command": "workbench.action.nextSideBarView",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "workbench.action.focusSideBar",
+        "workbench.action.nextSideBarView",
+      ]
+    },
     "when": "sideBarFocus"
   },
   {
