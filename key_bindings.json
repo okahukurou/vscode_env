@@ -97,13 +97,13 @@
     "when": "!terminalFocus"
   },
   {
-    "key": "ctrl+w v",
-    "command": "workbench.action.splitEditorRight",
+    "key": "ctrl+w ctrl+s",
+    "command": "workbench.action.splitEditorDown",
     "when": "!terminalFocus"
   },
   {
-    "key": "ctrl+w ctrl+s",
-    "command": "workbench.action.splitEditorDown",
+    "key": "ctrl+w v",
+    "command": "workbench.action.splitEditorRight",
     "when": "!terminalFocus"
   },
   {
@@ -246,9 +246,7 @@
     "key": "cmd+f",
     "command": "vim.remap",
     "args": {
-      "after": [
-        "/"
-      ]
+      "after": ["/"]
     },
     "when": "!terminalFocus"
   },
@@ -300,7 +298,7 @@
     "args": {
       "sequence": [
         "workbench.action.focusAuxiliaryBar",
-        "workbench.action.focusAuxiliaryBar",
+        "workbench.action.focusAuxiliaryBar"
       ]
     },
     "when": "!sideBarFocus"
@@ -316,7 +314,7 @@
     "args": {
       "sequence": [
         "workbench.action.focusSideBar",
-        "workbench.action.focusSideBar",
+        "workbench.action.focusSideBar"
       ]
     },
     "when": "!auxiliaryBarFocus"
@@ -332,7 +330,7 @@
     "args": {
       "sequence": [
         "workbench.action.focusSideBar",
-        "workbench.action.previousSideBarView",
+        "workbench.action.previousSideBarView"
       ]
     },
     "when": "sideBarFocus"
@@ -343,20 +341,18 @@
     "args": {
       "sequence": [
         "workbench.action.focusSideBar",
-        "workbench.action.nextSideBarView",
+        "workbench.action.nextSideBarView"
       ]
     },
     "when": "sideBarFocus"
   },
   {
     "key": "cmd+h",
-    "command": "workbench.action.toggleSidebarVisibility",
-    "when": "vim.mode != 'SearchInProgressMode' && vim.mode != 'Insert'"
+    "command": "workbench.action.toggleSidebarVisibility"
   },
   {
     "key": "cmd+l",
-    "command": "workbench.action.toggleAuxiliaryBar",
-    "when": "vim.mode != 'SearchInProgressMode' && vim.mode != 'Insert'"
+    "command": "workbench.action.toggleAuxiliaryBar"
   },
   // explorer control
   {
@@ -394,22 +390,6 @@
     "command": "explorer.newFolder",
     "when": "filesExplorerFocus && !inputFocus"
   },
-  // scm control
-  // {
-  //   "key": "s",
-  //   "command": "git.stage",
-  //   "when": "sideBarFocus && activeViewlet == 'workbench.view.scm' && !textInputFocus"
-  // },
-  // {
-  //   "key": "u",
-  //   "command": "git.unstage",
-  //   "when": "sideBarFocus && activeViewlet == 'workbench.view.scm' && !textInputFocus"
-  // },
-  // {
-  //   "key": "x",
-  //   "command": "git.clean",
-  //   "when": "sideBarFocus && activeViewlet == 'workbench.view.scm' && !textInputFocus"
-  // },
   // enter (execute, insert line)
   {
     "key": "ctrl+enter",
@@ -447,7 +427,7 @@
     "args": {
       "sequence": [
         "workbench.action.terminal.focusNext",
-        "workbench.action.focusActiveEditorGroup",
+        "workbench.action.focusActiveEditorGroup"
       ]
     },
     "when": "!terminalFocus"
@@ -463,7 +443,7 @@
     "args": {
       "sequence": [
         "workbench.action.terminal.focusNext",
-        "workbench.action.focusActiveEditorGroup",
+        "workbench.action.focusActiveEditorGroup"
       ]
     },
     "when": "!terminalFocus"
@@ -479,7 +459,7 @@
     "args": {
       "sequence": [
         "workbench.action.terminal.focusPrevious",
-        "workbench.action.focusActiveEditorGroup",
+        "workbench.action.focusActiveEditorGroup"
       ]
     },
     "when": "!terminalFocus"
@@ -495,7 +475,7 @@
     "args": {
       "sequence": [
         "workbench.action.terminal.focusPrevious",
-        "workbench.action.focusActiveEditorGroup",
+        "workbench.action.focusActiveEditorGroup"
       ]
     },
     "when": "!terminalFocus"
@@ -511,7 +491,7 @@
     "args": {
       "sequence": [
         "workbench.action.terminal.focusNextPane",
-        "workbench.action.focusActiveEditorGroup",
+        "workbench.action.focusActiveEditorGroup"
       ]
     },
     "when": "!terminalFocus"
@@ -527,7 +507,7 @@
     "args": {
       "sequence": [
         "workbench.action.terminal.focusNextPane",
-        "workbench.action.focusActiveEditorGroup",
+        "workbench.action.focusActiveEditorGroup"
       ]
     },
     "when": "!terminalFocus"
@@ -543,7 +523,7 @@
     "args": {
       "sequence": [
         "workbench.action.terminal.focusPreviousPane",
-        "workbench.action.focusActiveEditorGroup",
+        "workbench.action.focusActiveEditorGroup"
       ]
     },
     "when": "!terminalFocus"
@@ -559,7 +539,7 @@
     "args": {
       "sequence": [
         "workbench.action.terminal.focusPreviousPane",
-        "workbench.action.focusActiveEditorGroup",
+        "workbench.action.focusActiveEditorGroup"
       ]
     },
     "when": "!terminalFocus"
@@ -575,7 +555,7 @@
     "args": {
       "sequence": [
         "workbench.action.terminal.split",
-        "workbench.action.focusActiveEditorGroup",
+        "workbench.action.focusActiveEditorGroup"
       ]
     },
     "when": "!terminalFocus"
@@ -591,7 +571,7 @@
     "args": {
       "sequence": [
         "workbench.action.terminal.split",
-        "workbench.action.focusActiveEditorGroup",
+        "workbench.action.focusActiveEditorGroup"
       ]
     },
     "when": "!terminalFocus"
@@ -607,7 +587,7 @@
     "args": {
       "sequence": [
         "workbench.action.terminal.new",
-        "workbench.action.focusActiveEditorGroup",
+        "workbench.action.focusActiveEditorGroup"
       ]
     },
     "when": "!terminalFocus"
@@ -623,7 +603,7 @@
     "args": {
       "sequence": [
         "workbench.action.terminal.new",
-        "workbench.action.focusActiveEditorGroup",
+        "workbench.action.focusActiveEditorGroup"
       ]
     },
     "when": "!terminalFocus"
@@ -659,7 +639,7 @@
     "args": {
       "sequence": [
         "workbench.action.terminal.focusAtIndex1",
-        "workbench.action.focusActiveEditorGroup",
+        "workbench.action.focusActiveEditorGroup"
       ]
     },
     "when": "!terminalFocus"
@@ -675,7 +655,7 @@
     "args": {
       "sequence": [
         "workbench.action.terminal.focusAtIndex1",
-        "workbench.action.focusActiveEditorGroup",
+        "workbench.action.focusActiveEditorGroup"
       ]
     },
     "when": "!terminalFocus"
@@ -691,7 +671,7 @@
     "args": {
       "sequence": [
         "workbench.action.terminal.focusAtIndex1",
-        "workbench.action.focusActiveEditorGroup",
+        "workbench.action.focusActiveEditorGroup"
       ]
     },
     "when": "!terminalFocus"
@@ -707,7 +687,7 @@
     "args": {
       "sequence": [
         "workbench.action.terminal.focusAtIndex1",
-        "workbench.action.focusActiveEditorGroup",
+        "workbench.action.focusActiveEditorGroup"
       ]
     },
     "when": "!terminalFocus"
@@ -723,7 +703,7 @@
     "args": {
       "sequence": [
         "workbench.action.terminal.focusAtIndex1",
-        "workbench.action.focusActiveEditorGroup",
+        "workbench.action.focusActiveEditorGroup"
       ]
     },
     "when": "!terminalFocus"
@@ -920,7 +900,7 @@
   },
   {
     "key": "ctrl+j",
-    "command": "search.action.nextInputBox",
+    "command": "search.focus.nextInputBox",
     "when": "inSearchEditor || searchViewletFocus"
   },
   {
@@ -981,6 +961,10 @@
   {
     "key": "cmd+1",
     "command": "-workbench.action.focusFirstEditorGroup"
+  },
+  {
+    "key": "cmd+2",
+    "command": "workbench.action.openEditorAtIndex2"
   },
   {
     "key": "ctrl+2",
@@ -1075,6 +1059,23 @@
   {
     "key": "cmd+f",
     "command": "-actions.find",
+    "when": "editorFocus || editorIsOpen"
+  },
+  // Rest Client
+  {
+    "key": "ctrl+enter",
+    "command": "rest-client.request",
+    "when": "editorTextFocus && editorLangId == 'http'"
+  },
+  // VSpaceCode
+  {
+    "key": "space",
+    "command": "vspacecode.space",
+    "when": "activeEditorGroupEmpty && focusedView == '' && !whichkeyActive && !inputFocus"
+  },
+  {
+    "key": "cmd+shift+space",
+    "command": "vspacecode.space",
     "when": "!terminalFocus"
   },
   // Remove unnecessary ctrl+k bindings
@@ -1096,27 +1097,10 @@
     "key": "ctrl+k ctrl+x",
     "command": "-insertSnippet"
   },
-  // rest client
-  {
-    "key": "ctrl+enter",
-    "command": "rest-client.request",
-    "when": "editorTextFocus && editorLangId == 'http'"
-  },
-  // VSpaceCode
-  {
-    "key": "space",
-    "command": "vspacecode.space",
-    "when": "activeEditorGroupEmpty && focusedView == '' && !whichkeyActive && !inputFocus"
-  },
-  {
-    "key": "space",
-    "command": "vspacecode.space",
-    "when": "sideBarFocus && !inputFocus && !whichkeyActive"
-  },
   // testing
   {
     "key": "escape",
     "command": "editor.closeTestPeek",
     "when": "testing.isPeekVisible"
-  },
+  }
 ]

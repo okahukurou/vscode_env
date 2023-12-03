@@ -328,6 +328,56 @@
           "name": "Close project",
           "type": "command",
           "command": "workbench.action.closeWindow"
+        },
+        {
+          "key": "v",
+          "name": "View projects",
+          "type": "command",
+          "command": "projectsExplorerFavorites.focus"
+        }
+      ]
+    },
+    {
+      "keys": "n",
+      "name": "Notes",
+      "type": "bindings",
+      "bindings": [
+        {
+          "key": "n",
+          "name": "New note",
+          "type": "command",
+          "command": "vsnotes.newNote"
+        },
+        {
+          "key": "o",
+          "name": "Open note",
+          "type": "command",
+          "command": "vsnotes.listNotes"
+        },
+        {
+          "key": "s",
+          "name": "Search note",
+          "type": "command",
+          "command": "workbench.action.findInFiles",
+          "args": {
+            "triggerSearch": false,
+            "filesToInclude": "/.../workspace/vsnotes"
+          }
+        },
+        {
+          "key": "v",
+          "name": "View notes",
+          "type": "command",
+          "command": "extension.multiCommand.execute",
+          "args": {
+            "sequence": ["vsnotes.focus", "refresh"]
+          }
+        },
+        {
+          "key": "v",
+          "name": "View projects",
+          "type": "command",
+          "command": "projectsExplorerFavorites.focus"
         }
       ]
     },
@@ -515,6 +565,25 @@
           "command": "workbench.debug.action.focusWatchView"
         }
       ]
+    },
+    {
+      "keys": "D",
+      "name": "Diff",
+      "type": "bindings",
+      "bindings": [
+        {
+          "key": "s",
+          "name": "Select for compare",
+          "type": "command",
+          "command": "extension.partialDiff.markSection1"
+        },
+        {
+          "key": "c",
+          "name": "Compare Text with Previous Selection",
+          "type": "command",
+          "command": "extension.partialDiff.markSection2AndTakeDiff"
+        }
+      ]
     }
   ],
   // settings for vim
@@ -527,7 +596,7 @@
   "workbench.editor.tabCloseButton": "off",
   "workbench.startupEditor": "none",
   "workbench.editor.openPositioning": "first",
-  "workbench.editor.showTabs": true,
+  "workbench.editor.showTabs": "multiple",
   "workbench.editor.enablePreview": true,
   "workbench.editor.limit.enabled": true,
   "workbench.editor.limit.perEditorGroup": true,
