@@ -278,12 +278,6 @@
           "command": "gitlens.toggleFileBlame"
         },
         {
-          "key": "b",
-          "name": "File blame",
-          "type": "command",
-          "command": "gitlens.toggleFileBlame"
-        },
-        {
           "key": "l",
           "name": "Lazygit",
           "type": "command",
@@ -372,12 +366,25 @@
           "args": {
             "sequence": ["vsnotes.focus", "refresh"]
           }
+        }
+      ]
+    },
+    {
+      "keys": "D",
+      "name": "Diff",
+      "type": "bindings",
+      "bindings": [
+        {
+          "key": "s",
+          "name": "Select for compare",
+          "type": "command",
+          "command": "extension.partialDiff.markSection1"
         },
         {
-          "key": "v",
-          "name": "View projects",
+          "key": "c",
+          "name": "Compare Text with Previous Selection",
           "type": "command",
-          "command": "projectsExplorerFavorites.focus"
+          "command": "extension.partialDiff.markSection2AndTakeDiff"
         }
       ]
     },
