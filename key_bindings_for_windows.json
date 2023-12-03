@@ -1,0 +1,94 @@
+{
+  // only for windows
+  {
+    "key": "ctrl+w",
+    "command": "-workbench.action.closeWindow",
+  },
+  {
+    "key": "alt+w",
+    "command": "workbench.action.closeActiveEditor",
+  },
+  {
+    "key": "alt+j",
+    "command": "workbench.action.togglePanel",
+  },
+  {
+    "key": "ctrl+j",
+    "command": "-workbench.action.togglePanel",
+  },
+  {
+    "key": "alt+b",
+    "command": "workbench.action.toggleSidebarVisibility",
+  },
+  {
+    "key": "ctrl+b",
+    "command": "-workbench.action.toggleSidebarVisibility",
+  },
+  {
+    "key": "alt+0",
+    "command": "workbench.action.focusSideBar",
+  },
+  {
+    "key": "ctrl+0",
+    "command": "-workbench.action.focusSideBar",
+  },
+  {
+    "key": "ctrl+shift+m",
+    "command": "-workbench.actions.view.problems",
+  },
+  {
+    "key": "shift+alt+m",
+    "command": "workbench.action.problems.focus",
+  },
+  {
+    "key": "alt+oem_minus",
+    "command": "workbench.action.zoomOut"
+  },
+  {
+    "key": "shift+alt+f",
+    "command": "workbench.action.findInFiles"
+  },
+  {
+    "key": "ctrl+shift+f",
+    "command": "-workbench.action.findInFiles"
+  },
+  {
+    "key": "alt+p",
+    "command": "workbench.action.quickOpen"
+  },
+  {
+    "key": "ctrl+p",
+    "command": "-workbench.action.quickOpen"
+  },
+  {
+    "key": "shift+alt+p",
+    "command": "workbench.action.showCommands"
+  },
+  {
+    "key": "ctrl+shift+p",
+    "command": "-workbench.action.showCommands"
+  },
+  {
+    "key": "ctrl+z",
+    "command": "editor.action.toggleWordWrap"
+  },
+  {
+    "key": "alt+z",
+    "command": "-editor.action.toggleWordWrap"
+  },
+  {
+    "key": "ctrl+f",
+    "command": "-extension.vim_ctrl+f",
+    "when": "editorTextFocus && vim.active && vim.use<C-f> && !inDebugRepl && vim.mode != 'Insert'"
+  },
+  {
+    "key": "alt+oem_period",
+    "command": "editor.action.quickFix",
+    "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+oem_period",
+    "command": "-editor.action.quickFix",
+    "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+  },
+}

@@ -14,6 +14,10 @@
   "files.autoSave": "afterDelay",
   "editor.stickyScroll.enabled": true,
   "editor.stickyTabStops": true,
+  "editor.accessibilitySupport": "off",
+  "window.restoreWindows": "one",
+  "window.density.editorTabHeight": "compact",
+  "outline.collapseItems": "alwaysCollapse",
   // terminal
   "terminal.integrated.fontSize": 12,
   "terminal.integrated.cursorWidth": 1,
@@ -122,6 +126,24 @@
       ],
       "commands": [
         "editor.action.showDefinitionPreviewHover"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "l"
+      ],
+      "commands": [
+        "editor.action.openLink"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "s"
+      ],
+      "commands": [
+        "editor.action.focusStickyScroll"
       ]
     },
   ],
@@ -689,6 +711,15 @@
   "yaml.completion": false,
   "yaml.format.bracketSpacing": false,
   // markdown
+  "[markdown]": {
+    "editor.wordWrap": "on",
+    "editor.quickSuggestions": {
+      "comments": "off",
+      "strings": "off",
+      "other": "off",
+    },
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
+  },
   "markdownlint.config": {
     "MD13": false,
     "MD14": false
@@ -706,33 +737,18 @@
         "color": "#552355"
       }
     ],
-    "editor.formatOnType": true
+    "editor.formatOnType": true,
+    "editor.defaultFormatter": "charliermarsh.ruff",
   },
-  "python.linting.pylintEnabled": false,
-  "python.linting.flake8Enabled": true,
-  "python.formatting.provider": "black",
-  "python.formatting.blackArgs": [
-    "--line-length=79"
-  ],
-  "python.linting.flake8Args": [
-    "--ignore=W503"
-  ],
   "python.languageServer": "Pylance",
   "python.analysis.typeCheckingMode": "basic",
   "python.analysis.autoImportCompletions": false,
   "python.terminal.activateEnvironment": false,
   "autoDocstring.docstringFormat": "google",
-  // mypy
-  // "python.linting.mypyCategorySeverity.error": "Error",
-  // "python.linting.mypyCategorySeverity.note": "Information",
-  // "python.linting.mypyEnabled": true,
-  // "python.linting.mypyPath": "mypy",
-  // bandit
-  // "python.linting.banditEnabled": true,
   // isort
-  "editor.codeActionsOnSave": {
-    "source.organizeImports": true
-  },
+  // "editor.codeActionsOnSave": {
+  //   "source.organizeImports": true
+  // },
   // testing
   "python.testing.unittestEnabled": false,
   "python.testing.pytestEnabled": true,
@@ -749,10 +765,42 @@
   "redhat.telemetry.enabled": false,
   // mermaid-editor
   "mermaid-editor.generate.type": "png",
+  "mermaid-editor.generate.quality": 9,
+  "mermaid-editor.generate.scale": 10,
+  // vsnotes
+  "vsnotes.defalutNoteTitle": "{title}_{dt}.{ext}",
+  "vsnotes.defaultNoteName": "",
+  // todo trees
+  "todo-tree.general.showActivityBarBadge": true,
+  "todo-tree.general.statusBar": "top three",
+  "todo-tree.general.tags": [
+    "BUG",
+    "HACK",
+    "FIXME",
+    "TODO",
+    "XXX",
+    "[ ]"
+  ],
+  "todo-tree.highlights.defaultHighlight": {
+    "icon": "alert",
+    "type": "tag",
+    "background": "#f22",
+    "opacity": 0.3,
+    "gutterIcon": true
+  },
   // cspell
   "cSpell.autoFormatConfigFile": true,
   "cSpell.enableFiletypes": [
     "*"
+  ],
+  "cSpell.ignorePaths": [
+    "package-lock.json",
+    "node_modules",
+    "vscode-extension",
+    ".git/objects",
+    ".vscode",
+    ".vscode-insiders",
+    "**/vsnotes/**"
   ],
   // gitlens
   "gitlens.showWelcomeOnInstall": false,
@@ -787,5 +835,6 @@
     "**/__pycache__/**": true,
     "**/.mypy_cache/**": true,
     "**/*egg-info/**": true,
+    "**/.pytest_cache": true,
   }
 }

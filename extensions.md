@@ -10,9 +10,12 @@
 - Draw.io integration
 - empty-indent
 - Error Lens
+- Even Better TOML
 - Git Graph
 - Git Lens
 - GitHub Theme
+- HashiCorp HCL
+- HashiCorp Terraform
 - indent-rainbow
 - isort
 - JSON
@@ -27,6 +30,7 @@
 - Mermaid Editor
 - Output Colorizer
 - Partial Diff
+- Prettier - Code formatter
 - Project Manager
 - Pylance
 - Python
@@ -37,12 +41,15 @@
 - Remote - SSH
 - Remote - SSH: Editing Configuration Files
 - REST Client
+- Ruff
 - ShellCheck
 - SonarLint
 - Terminal Capture
 - Terraform
+- Todo Tree
 - Vim
 - Visual Studio Keymap
+- VSNotes
 - VSpaceCode
 - Which Key
 - vscode-icons
@@ -54,7 +61,6 @@
 - Path Intellisense
 - Openapi系
 - Terminal Capture
-- Prettier - Code formatter
 - Git History
 - Sonar Lint
 - Git Tree Compare

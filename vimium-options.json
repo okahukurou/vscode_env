@@ -1,6 +1,19 @@
 {
   "settingsVersion": "1.67",
-  "exclusionRules": [],
+  "exclusionRules": [
+    {
+      "passKeys": "",
+      "pattern": "docs.google.com/*",
+    },
+    {
+      "passKeys": "z",
+      "pattern": "https?://www.youtube.com/*",
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://*.udemy.com/*",
+    },
+  ],
   "filterLinkHints": false,
   "waitForEnterForFilteredHints": false,
   "hideHud": false,
